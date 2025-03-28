@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Confirmar el pago</title>
+</head>
+<body>
+
+    <header>
+        <nav>
+          <div class="nav-container">
+            <button class="menu-toggle" aria-label="Abrir menú">
+              &#9776;
+            </button>
+      
+            <a href="index.html" class="logo">
+              <img src="logo.png" alt="Logo del sitio">
+            </a>
+      
+            <form action="search.php" method="get" class="search-bar">
+              <input type="text" name="campo" placeholder="Buscar...">
+              <button type="submit" aria-label="Buscar">
+                <img src="search.png" alt="Ícono de búsqueda">
+              </button>
+            </form>
+      
+            <div class="nav-icons">
+              <a href="account.html" aria-label="Cuenta">
+                <img src="account.png" alt="Ícono de cuenta">
+              </a>
+              <a href="shop.html" aria-label="Carrito">
+                <img src="shop.png" alt="Ícono de carrito">
+              </a>
+            </div>
+          </div>
+      
+          <ul class="nav-links">
+            <li><a href="books.html">Libros</a></li>
+            <li><a href="contact.html">Contacto</a></li>
+            <li><a href="fiction.html">Ficción</a></li>
+            <li><a href="terror.html">Terror</a></li>
+            <li><a href="fantasy.html">Fantasía</a></li>
+          </ul>
+        </nav>
+      </header>
+
+  <main>
+    <section>
+      <h2 id="detalle-compra">Detalle de mi compra</h2>
+      <div class="botonDetalle">
+        <a href="detalle.html">
+          <img src="arrow.png" alt="Flecha para desplegar detalles">
+          <span>Ver detalle de mi compra</span>
+          <strong>$$$</strong>
+        </a>
+      </div>
+    </section>
+
+    <section>
+      <h2>Información de contacto y envío</h2>
+
+      <div>
+        <div>
+          <img src="mail.png" alt="Icono de correo">
+          <p><strong>correo@example.com</strong></p>
+          <a href="cambiar-correo.html">Cambiar</a>
+        </div>
+
+        <div>
+          <img src="location.png" alt="Icono de ubicación">
+          <p>
+            <strong>Dirección</strong><br>
+            Código postal<br>
+            Ciudad<br>
+            Teléfono
+          </p>
+          <a href="cambiar-direccion.html">Cambiar</a>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Medio de pago</h2>
+
+      <form action="realizar-pedido.php" method="POST">
+
+        <label for="tarjeta">Número de tarjeta</label>
+        <input type="text" id="tarjeta" name="tarjeta" placeholder="Número de tarjeta" required>
+
+        <label for="titular">Titular de la tarjeta</label>
+        <input type="text" id="titular" name="titular" placeholder="Titular de la tarjeta" required>
+
+        <label for="vencimiento">Vencimiento (MM/AA)</label>
+        <input type="text" id="vencimiento" name="vencimiento" placeholder="MM/AA" required>
+        
+        <label for="cvv">CVV</label>
+        <input type="text" id="cvv" name="cvv" placeholder="CVV" required>
+
+        <label for="cuotas">Cuotas</label>
+        <select id="cuotas" name="cuotas" required>
+          <option value="">Seleccionar</option>
+          <option value="1">1 cuota</option>
+          <option value="3">3 cuotas</option>
+          <option value="6">6 cuotas</option>
+          <option value="12">12 cuotas</option>
+        </select>
+
+        <label for="tipo-doc">Tipo documento</label>
+        <select id="tipo-doc" name="tipo-doc" required>
+          <option value="">Seleccionar</option>
+          <option value="dni">DNI</option>
+          <option value="cuit">CUIT</option>
+        </select>
+
+        <label for="doc">Documento</label>
+        <input type="text" id="doc" name="doc" placeholder="Documento (el anterior default)" required>
+
+        <label for="telefono">Teléfono</label>
+        <input type="text" id="telefono" name="telefono" placeholder="Teléfono (el anterior default)" required>
+
+        <input type="submit" value="Realizar pedido">
+      </form>
+    </section>
+  </main>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Index</title>
+</head>
+<body>
+	<header>
+        <nav>
+          <div class="nav-container">
+            <button class="menu-toggle">
+              &#9776;
+            </button>
+      
+            <a href="index.html" class="logo">
+              <img src="logo.png" alt="Logo del sitio">
+            </a>
+      
+            <form action="search.php" method="get" class="search-bar">
+              <input type="text" name="campo" placeholder="Buscar...">
+              <button type="submit" aria-label="Buscar">
+                <img src="search.png" alt="Ícono de búsqueda">
+              </button>
+            </form>
+      
+            <div class="nav-icons">
+              <a href="account.html">
+                <img src="account.png" alt="Ícono de cuenta">
+              </a>
+              <a href="shop.html">
+                <img src="shop.png" alt="Ícono de carrito">
+              </a>
+            </div>
+          </div>
+      
+          <ul class="nav-links">
+            <li><a href="books.html">Libros</a></li>
+            <li><a href="contact.html">Contacto</a></li>
+            <li><a href="fiction.html">Ficción</a></li>
+            <li><a href="terror.html">Terror</a></li>
+            <li><a href="fantasy.html">Fantasía</a></li>
+          </ul>
+        </nav>
+      </header>
+      <main>
+        <section>
+          <h2>Filtrados por &lt;categoría&gt;</h2>
+    
+          <div>
+            <figure>
+              <img src="ruta-del-libro.jpg" alt="Portada del libro">
+              <figcaption>Libro</figcaption>
+            </figure>
+    
+            <div>
+              <h1>Nombre</h1>
+              <p><strong>Autor</strong></p>
+              <p>$precio</p>
+    
+              <form>
+                <label for="cantidad">Cantidad:</label>
+                <div>
+                  <button type="button">-</button>
+                  <input type="number" id="cantidad" name="cantidad" value="1" min="1">
+                  <button type="button">+</button>
+                </div>
+                <button type="submit">Comprar</button>
+              </form>
+    
+              <p>ISBN: 123123123</p>
+            </div>
+          </div>
+        </section>
+    
+        <section>
+          <h2>Descripción</h2>
+          <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+          </p>
+        </section>
+      </main>
+</body>
+</html>
