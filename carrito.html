@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Carrito</title>
+</head>
+<body>
+  <header>
+    <nav>
+      <section class="nav-icons">
+        <a href="#" class="logo">
+          <img src="logo.png" alt="Mi sitio">
+        </a>
+        <form action="search.php" method="get" class="search-bar">
+          <input type="text" name="campo" placeholder="Buscar...">
+          <input type="submit" value="Buscar">
+        </form>
+        <a href="account.html">
+          <img src="account.png" alt="Mi cuenta">
+        </a>
+        <a href="shop.html">
+          <img src="shop.png" alt="Mi carrito">
+        </a>
+      </section> 
+      <section>
+        <ul class="nav-links">
+          <li><a href="books.html">Libros</a></li>
+          <li><a href="contact.html">Contacto</a></li>
+          <li><a href="fiction.html">Ficción</a></li>
+          <li><a href="terror.html">Terror</a></li>
+          <li><a href="fantasy.html">Fantasía</a></li>
+        </ul>
+      </section>
+    </nav>
+  </header>
+  <main>
+    <h1>Carrito</h1>
+    <section class="books">
+      <table>
+        <tr>
+          <th>Producto</th>
+          <th>Precio</th>
+          <th>Cantidad</th>
+          <th>Subtotal</th>
+        </tr>
+        <tr>
+          <td>
+            <figure>
+              <picture>
+                <img src="tapa.png" alt="">
+              </picture>
+            </figure>
+            <p>Libro</p>
+          </td>
+          <td>$123123</td>
+          <td>1</td>
+          <td>$123123</td>
+        </tr>
+        <tr>
+          <td>
+            <figure>
+              <picture>
+                <img src="tapa.png" alt="">
+              </picture>
+            </figure>
+            <p>Libro</p>
+          </td>
+          <td>$123123</td>
+          <td>1</td>
+          <td>$123123</td>
+        </tr>
+      </table>
+      <a href="tienda.html">Seguir Comprando</a>
+    </section>
+    <section class="finish-purchase">
+      <h2>Total del carrito</h2>
+      <table>  
+        <tr>
+          <th>Subtotal</th>
+          <td>$123123</td>
+        </tr>
+        <tr>
+          <th>Envio</th>
+          <td>$111</td>
+        </tr>
+        <tr>
+          <th>Total</th>
+          <td>$123234</td>
+        </tr>
+      </table>
+      <a href="compraDestino.html">Finalizar compra</a>
+    </section>
+  </main>
+</body>
