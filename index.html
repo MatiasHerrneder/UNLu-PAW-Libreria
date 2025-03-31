@@ -3,126 +3,104 @@
 <head>
     <meta charset="utf-8">
     <title>Mi libreria</title>
+	<link rel="stylesheet" href="./css/common.css">
 </head>
 <body>
 	<header>
-    <nav>
-      <section class="nav-icons">
-        <a href="#" class="logo">
-          <img src="logo.png" alt="Mi sitio">
+    <nav> <!--Las clases estan anidadas entre si y referencian a la clase padre en su nombre-->
+      <section class="nav_icons">
+        <a class="nav_icons_item" href="#"> <!--Estas ids son necesarias para mantener un control individual sobre los demas elementos-->
+          <img src="./img/logo.png" alt="Mi sitio">
         </a>
-        <search>
-          <form action="search.php" method="get" class="search-bar">
-            <input type="search" name="campo" placeholder="Buscar...">
-            <input type="submit" value="Buscar">
+        <search class="nav_icons_item">
+          <form action="search.php" method="get"  id="nav_icons_item_search_bar">
+            <input id="nav_icons_item_search_bar_search" type="search" name="campo" placeholder="Buscar...">
+            <input id="nav_icons_item_search_bar_submit" type="submit" value="Buscar">
           </form>
         </search>
-        <a href="account.html">
-          <img src="account.png" alt="Mi cuenta">
+        <a class="nav_icons_item" href="account.html">
+          <img src="./img/account.jpg" alt="Mi cuenta">
         </a>
-        <a href="shop.html">
-          <img src="shop.png" alt="Mi carrito">
+        <a  class="nav_icons_item" href="shop.html">
+          <img src="./img/shop.png" alt="Mi carrito">
         </a>
       </section>
-      <section>
-        <ul class="nav-links">
-          <li><a href="books.html">Libros</a></li>
-          <li><a href="contact.html">Contacto</a></li>
-          <li><a href="fiction.html">Ficción</a></li>
-          <li><a href="terror.html">Terror</a></li>
-          <li><a href="fantasy.html">Fantasía</a></li>
+      <section class="nav_section"> <!--El css de aca esta pensado para pantallas de computadora, no eso que se esconde en el celular-->
+        <ul class="nav_section_links">
+          <li class="nav_section_links_element"><a href="books.html">Libros</a></li>
+          <li class="nav_section_links_element"><a href="contact.html">Contacto</a></li>
+          <li class="nav_section_links_element"><a href="fiction.html">Ficción</a></li>
+          <li class="nav_section_links_element"><a href="terror.html">Terror</a></li>
+          <li class="nav_section_links_element"><a href="fantasy.html">Fantasía</a></li>
         </ul>
       </section>
     </nav>
   </header>
   <main>
-    <section>
-      <section class="carousel">
-        <button>&#8249;</button>
-        <figure>
-          <img src="promo.jpg" alt="Imagen de promoción">
-        </figure>
-        <button>&#8250;</button>
-      </section>
-      <nav>
-        <ul>
-          <li><button class="input-page-carousel"></button></li>
-          <li><button class="input-page-carousel"></button></li>
-          <li><button class="input-page-carousel"></button></li>
-        </ul>
-      </nav>
+	<section class="carousel_sales">
+    	<figure>
+			<div id="sale_placeholder"><p>Placeholder Promociones</p></div>
+    		<!--<img src="promo.jpg" alt="Imagen de promoción">-->
+      	</figure>
     </section>
-    <section>
-      <h1>Mas vendidos</h1>
-      <section>
-        <button>&#8249;</button>
-        <ul>
-          <li>
-            <article>
-              <figure>
-                <img src="img-libro.jpg" alt="Imagen de libro">
-              </figure>
-              <h2>Mi libro</h2>
-              <p>Juan Perez</p>
-              <p>$123123</p>
-            </article>
-          </li>
-          <li>
-            <article>
-              <figure>
-                <img src="img-libro.jpg" alt="Imagen de libro">
-              </figure>
-              <h2>Mi libro</h2>
-              <p>Juan Perez</p>
-              <p>$123123</p>
-            </article>
-          </li>
-          <li>
-            <article>
-              <figure>
-                <img src="img-libro.jpg" alt="Imagen de libro">
-              </figure>
-              <h2>Mi libro</h2>
-              <p>Juan Perez</p>
-              <p>$123123</p>
-            </article>
-          </li>
-        </ul>
-        <button>&#8250;</button>
-      </section>
+    <section class="slider_books">
+    	<h1 id="slider_books_title">Mas vendidos</h1>
+      	<section>
+        	<ul id="slider_books_list">
+          		<li class="slider_books_list_book">
+            		<a class="slider_books_list_book_link">
+              			<figure>
+							<div class="book_placeholder"></div>
+                			<!--<img src="img-libro.jpg" alt="Imagen de libro">--> <!--Se comento por motivos de proof-of-concept, ver README css-->
+                			<!--Tanto nombre del autor como el titulo apareceran en la imagen del libro-->
+                			<figcaption class="slider_books_list_book_price">$9.99</figcaption><!--Precio, por otro lado, ira abajo del libro-->
+              			</figure>
+            		</a>
+          		</li>
+				<li class="slider_books_list_book">
+            		<a class="slider_books_list_book_link">
+              			<figure>
+							<div class="book_placeholder"></div>
+                			<!--<img src="img-libro.jpg" alt="Imagen de libro">-->
+                			<!--Tanto nombre del autor como el titulo apareceran en la imagen del libro-->
+                			<figcaption class="slider_books_list_book_price">$9.99</figcaption><!--Precio, por otro lado, ira abajo del libro-->
+              			</figure>
+            		</a>
+          		</li>
+				<li class="slider_books_list_book">
+            		<a class="slider_books_list_book_link">
+              			<figure>
+							<div class="book_placeholder"></div>
+                			<!--<img src="img-libro.jpg" alt="Imagen de libro">-->
+                			<!--Tanto nombre del autor como el titulo apareceran en la imagen del libro-->
+                			<figcaption class="slider_books_list_book_price">$9.99</figcaption><!--Precio, por otro lado, ira abajo del libro-->
+              			</figure>
+            		</a>
+          		</li>
+				  <li class="slider_books_list_book">
+            		<a class="slider_books_list_book_link">
+              			<figure>
+							<div class="book_placeholder"></div>
+                			<!--<img src="img-libro.jpg" alt="Imagen de libro">-->
+                			<!--Tanto nombre del autor como el titulo apareceran en la imagen del libro-->
+                			<figcaption class="slider_books_list_book_price">$9.99</figcaption><!--Precio, por otro lado, ira abajo del libro-->
+              			</figure>
+            		</a>
+          		</li>
+				  <li class="slider_books_list_book">
+            		<a class="slider_books_list_book_link">
+              			<figure>
+							<div class="book_placeholder"></div>
+                			<!--<img src="img-libro.jpg" alt="Imagen de libro">-->
+                			<!--Tanto nombre del autor como el titulo apareceran en la imagen del libro-->
+                			<figcaption class="slider_books_list_book_price">$9.99</figcaption><!--Precio, por otro lado, ira abajo del libro-->
+              			</figure>
+            		</a>
+          		</li>
+        	</ul>
+    	</section>
     </section>
-  </main>
-  <footer>
-    <section>
-      <h1>Redes Sociales</h1>
-      <address>
-      <ul>
-          <li>
-            <a href="https://www.instagram.com/milibreria">
-              <img src="logo_ig.png" alt="Instagram">
-            </a>
-          </li>
-          <li>
-            <a href="https://www.facebook.com/milibreria">
-              <img src="logo_fb.png" alt="Facebook">
-            </a>
-          </li>
-        </ul>
-      </address>
-    </section>
-      <section>
-        <h2>Contacto</h2>
-        <address>
-          <ul>
-            <li>
-              <a href="mailto/milibreria@gmail.com">milibreria@gmail.com</a>
-            </li>
-            <li>
-              <a href="contact.html">Escribinos</a>
-            </li>
-          </ul>
-        </address>
-      </section>
-  </footer>
+  	</main>
+  <!--Me base en el figma que dice inicio (arriba de todo). No tiene un footer visible, por lo tanto no hay maqueta-->
 </body>
 </html>

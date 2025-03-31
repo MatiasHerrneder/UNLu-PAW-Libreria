@@ -95,3 +95,5 @@ Hosting y Dominio: Costos recurrentes para mantener el sitio web en línea.
 
 Esta propuesta general proporciona una visión clara de las funcionalidades, el sitemap y una estimación de tiempo y presupuesto para el desarrollo de la aplicación web de venta de panchos.
 
+# Modificaciones:
+* Las etiquetas HTML ya no estan separadas en archivos individuales.

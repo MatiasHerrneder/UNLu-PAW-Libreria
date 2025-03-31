@@ -1,0 +1,110 @@
+.book_placeholder { /* Borrar mas adelante */
+    border: 1px solid black;
+    background-color: aqua;
+    width: 150px;
+    height: 250px;
+}
+
+#sale_placeholder { /* Borrar mas adelante */
+    display: flex;
+    height: 300px;
+    align-items: center;
+    justify-content: center;
+    background-color: orange;
+}
+
+#sale_placeholder p { /* Borrar mas adelante */
+    font-size: 2em;
+    font-weight: bold;
+}
+
+#slider_books_list {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: coral;
+}
+
+.slider_books_list_book_link {
+    text-align: center;
+    font-weight: bold;
+}
+
+#slider_books_title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2em;
+}
+
+.nav_icons {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 0.5%;
+}
+
+.nav_icons_item {
+    background-color: #f2f2f2;
+    border-style: solid;
+    border-color: black;
+    height: 100px;
+    margin-left: 3px;
+    margin-right: 1px;
+}
+
+.nav_icons_item img {
+    background-color: brown;
+    object-fit: contain;
+    height: auto;
+    border-color: red;
+    border-style: solid;
+    height: 99%;
+}
+
+#nav_icons_item_search_bar {
+    background-color: blue;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 100%;
+    /* justify-content: center; */
+    /* height: 30%;*/
+}
+
+#nav_icons_item_search_bar_search {
+    width: 80%;
+    margin-left: 1.5%;
+    margin-right: 1%;
+    height: 50%;
+    font-size: 2em;
+}
+
+#nav_icons_item_search_bar_submit {
+    height: 50%;
+    /* width: 16%; */ 
+    font-size: 2em;
+}
+
+.nav_section {
+    background-color: blueviolet;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+}
+
+.nav_section_links {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+}
+
+.nav_section_links_element {
+    
+    background-color: yellow;
+    border: 1px solid black;
+    margin-right: 1%;
+}
+
+.nav_section_links_element a {
+    font-size: 3em;
+}
