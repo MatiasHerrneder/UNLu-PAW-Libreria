@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Tienda</title>
+</head>
+<body>
+  <header>
+    <nav>
+      <section class="nav-icons">
+        <a href="#" class="logo">
+          <img src="logo.png" alt="Mi sitio">
+        </a>
+        <search>
+          <form action="search.php" method="get" class="search-bar">
+            <input type="text" name="campo" placeholder="Buscar...">
+            <input type="submit" value="Buscar">
+          </form>
+        </search>
+        <a href="account.html">
+          <img src="account.png" alt="Mi cuenta">
+        </a>
+        <a href="shop.html">
+          <img src="shop.png" alt="Mi carrito">
+        </a>
+      </section> 
+      <section>
+        <ul class="nav-links">
+          <li><a href="books.html">Libros</a></li>
+          <li><a href="contact.html">Contacto</a></li>
+          <li><a href="fiction.html">Ficción</a></li>
+          <li><a href="terror.html">Terror</a></li>
+          <li><a href="fantasy.html">Fantasía</a></li>
+        </ul>
+      </section>
+    </nav>
+  </header>
+  <main>
+    <header>
+    <h1>Tienda</h1>
+      <section class="breadcrumb">
+        <ol>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="#">Tienda</a></li>
+        </ol>
+      </section>
+      <section>
+        <label for="ordenar">Ordenar por:</label>
+        <select id="ordenar" name="ordenar">
+          <option value="popularidad">Popularidad</option>
+        </select>
+      </section>
+  </header>
+  <section>
+    <search>
+        <section class="filter-editorial">
+          <h2>Filtrar por Editorial</h2>
+          <label for="editorial">Selecciona una editorial:</label>
+          <select id="editorial" name="editorial">
+            <option value="">Selecciona una editorial</option>
+          </select>
+        </section>
+        <section class="filter-precio">
+          <h2>Filtrar por Precios</h2>
+          <form>
+            <label for="min-precio">Mín:</label>
+            <input type="number" id="min-precio" name="min-precio" min="2000" max="100000">
+            <label for="max-precio">Máx:</label>
+            <input type="number" id="max-precio" name="max-precio" min="2000" max="100000">
+            <input type="submit" value="Filtrar">
+          </form>
+        </section>
+        <section class="filter-categorias">
+          <h2 id="filter-categorias">Categorías</h2>
+          <ol>
+            <li><a href="#">Artes</a></li>
+            <li><a href="#">Bibliotecología y museología</a></li>
+            <li><a href="#">Ciencias de la Tierra</a></li>
+            <li><a href="#">Computación y tecnología de la información</a></li>
+            <li><a href="#">Ficción</a></li>
+            <li><a href="#">Historia y arqueología</a></li>
+            <li><a href="#">Infantil y Juvenil</a></li>
+          </ol>
+        </section>
+      </search>
+    </section>
+    <section>
+      <ul>
+        <li>
+          <article>
+            <figure>
+              <img src="img-libro.jpg" alt="">
+            </figure>
+            <h2>Mi libro</h2>
+            <p>Juan Perez</p>
+            <p>$123123</p>
+          </article>
+        </li>
+        <li>
+          <article>
+            <figure>
+              <img src="img-libro.jpg" alt="">
+            </figure>
+            <h2>Mi libro</h2>
+            <p>Juan Perez</p>
+            <p>$123123</p>
+          </article>
+        </li>
+      </ul>
+    </section>
+  </main>
+  <footer>
+    <section>
+      <h1>Redes Sociales</h1>
+      <address>
+      <ul>
+          <li>
+            <a href="https://www.instagram.com/milibreria">
+              <img src="logo_ig.png" alt="Instagram">
+            </a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/milibreria">
+              <img src="logo_fb.png" alt="Facebook">
+            </a>
+          </li>
+        </ul>
+      </address>
+    </section>
+      <section>
+        <h2>Contacto</h2>
+        <address>
+          <ul>
+            <li>
+              <a href="mailto/milibreria@gmail.com">milibreria@gmail.com</a>
+            </li>
+            <li>
+              <a href="contact.html">Escribinos</a>
+            </li>
+          </ul>
+        </address>
+      </section>
+  </footer>
+</body>
+</html>

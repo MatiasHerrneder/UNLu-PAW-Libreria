@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="utf-8">
-    <title>Mi libreria</title>
+  <meta charset="utf-8">
+  <title>Carrito</title>
 </head>
 <body>
-	<header>
+  <header>
     <nav>
       <section class="nav-icons">
         <a href="#" class="logo">
@@ -36,60 +36,68 @@
     </nav>
   </header>
   <main>
-    <section>
-      <section class="carousel">
-        <button>&#8249;</button>
-        <figure>
-          <img src="promo.jpg" alt="Imagen de promoción">
-        </figure>
-        <button>&#8250;</button>
+    <h1>Carrito</h1>
+    <section class="books">
+      <form action="/checkout" method="POST">
+        <table>
+          <tr>
+            <th>Producto</th>
+            <th>Precio</th>
+            <th>Cantidad</th>
+            <th>Subtotal</th>
+          </tr>
+          <tr>
+            <!-- ejemplos para mostrar el maquetado -->
+            <td>       
+              <figure>
+                <picture>
+                  <img src="tapa.png" alt="">
+                </picture>
+              </figure>
+              <p>Libro</p>
+            </td>
+            <td>$123123</td>
+            <td>
+              <input type="number" name="cantidad_nexus" id="ejemplo1" value="1" min="1" step="1">
+            </td>
+            <td>$123123</td>
+          </tr>
+          <tr>
+            <td>
+              <figure>
+                <picture>
+                  <img src="tapa.png" alt="">
+                </picture>
+              </figure>
+              <p>Libro</p>
+            </td>
+            <td>$123123</td>
+            <td>
+              <input type="number" name="cantidad_nexus" id="ejemplo2" value="1" min="1" step="1">
+            </td>
+            <td>$123123</td>
+          </tr>
+        </table>
+        <a href="tienda.html">Seguir Comprando</a>
       </section>
-      <nav>
-        <ul>
-          <li><button class="input-page-carousel"></button></li>
-          <li><button class="input-page-carousel"></button></li>
-          <li><button class="input-page-carousel"></button></li>
-        </ul>
-      </nav>
-    </section>
-    <section>
-      <h1>Mas vendidos</h1>
-      <section>
-        <button>&#8249;</button>
-        <ul>
-          <li>
-            <article>
-              <figure>
-                <img src="img-libro.jpg" alt="Imagen de libro">
-              </figure>
-              <h2>Mi libro</h2>
-              <p>Juan Perez</p>
-              <p>$123123</p>
-            </article>
-          </li>
-          <li>
-            <article>
-              <figure>
-                <img src="img-libro.jpg" alt="Imagen de libro">
-              </figure>
-              <h2>Mi libro</h2>
-              <p>Juan Perez</p>
-              <p>$123123</p>
-            </article>
-          </li>
-          <li>
-            <article>
-              <figure>
-                <img src="img-libro.jpg" alt="Imagen de libro">
-              </figure>
-              <h2>Mi libro</h2>
-              <p>Juan Perez</p>
-              <p>$123123</p>
-            </article>
-          </li>
-        </ul>
-        <button>&#8250;</button>
-      </section>
+      <section class="finish-purchase">
+        <h2>Total del carrito</h2>
+        <table>  
+          <tr>
+            <th>Subtotal</th>
+            <td>$123123</td>
+          </tr>
+          <tr>
+            <th>Envio</th>
+            <td>$111</td>
+          </tr>
+          <tr>
+            <th>Total</th>
+            <td>$123234</td>
+          </tr>
+        </table>
+        <a href="compraDestino.html">Finalizar compra</a>
+      </form>
     </section>
   </main>
   <footer>

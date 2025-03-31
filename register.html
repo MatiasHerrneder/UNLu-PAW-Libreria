@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="utf-8">
-    <title>Mi libreria</title>
+  <meta charset="utf-8">
+  <title>Registro</title>
 </head>
 <body>
-	<header>
+  <header>
     <nav>
       <section class="nav-icons">
         <a href="#" class="logo">
@@ -35,63 +35,21 @@
       </section>
     </nav>
   </header>
-  <main>
-    <section>
-      <section class="carousel">
-        <button>&#8249;</button>
-        <figure>
-          <img src="promo.jpg" alt="Imagen de promoción">
-        </figure>
-        <button>&#8250;</button>
-      </section>
-      <nav>
-        <ul>
-          <li><button class="input-page-carousel"></button></li>
-          <li><button class="input-page-carousel"></button></li>
-          <li><button class="input-page-carousel"></button></li>
-        </ul>
-      </nav>
-    </section>
-    <section>
-      <h1>Mas vendidos</h1>
-      <section>
-        <button>&#8249;</button>
-        <ul>
-          <li>
-            <article>
-              <figure>
-                <img src="img-libro.jpg" alt="Imagen de libro">
-              </figure>
-              <h2>Mi libro</h2>
-              <p>Juan Perez</p>
-              <p>$123123</p>
-            </article>
-          </li>
-          <li>
-            <article>
-              <figure>
-                <img src="img-libro.jpg" alt="Imagen de libro">
-              </figure>
-              <h2>Mi libro</h2>
-              <p>Juan Perez</p>
-              <p>$123123</p>
-            </article>
-          </li>
-          <li>
-            <article>
-              <figure>
-                <img src="img-libro.jpg" alt="Imagen de libro">
-              </figure>
-              <h2>Mi libro</h2>
-              <p>Juan Perez</p>
-              <p>$123123</p>
-            </article>
-          </li>
-        </ul>
-        <button>&#8250;</button>
-      </section>
-    </section>
-  </main>
+	<main>
+    <h1>Crear cuenta</h1>
+      <form action="register.php" method="POST">
+        <label for="nombre">Nombre y apellido *</label>
+        <input type="text" id="nombre" name="nombre" required>
+        <label for="correo">Correo *</label>
+        <input type="email" id="correo" name="correo" required>
+        <label for="contrasenia">Contraseña *</label>
+        <input type="password" id="contrasenia" name="contrasenia" required>
+        <label for="confirmarContrasenia">Confirmar contraseña *</label>
+        <input type="password" id="confirmarContrasenia" name="confirmarContrasenia" required>
+        <input type="submit" value="Acceder">
+      </form>
+      <p>¿Ya tienes una cuenta? <a href="login.html">Iniciar sesión</a></p>
+    </main>
   <footer>
     <section>
       <h1>Redes Sociales</h1>
