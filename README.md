@@ -1,93 +1,97 @@
-# ProgWeb2025
+# Propuesta Integrador
+
+Aplicación web cuyo propósito es ser una forma de pedir panchos personalizados o menúes ya armados, ya sea para delivery como pedir en el local.
+
+# 1. Funcionalidades Principales (Presupuesto Funcional)
+
+La aplicación web se dividirá en las siguientes secciones y funcionalidades clave:
+
+# 1.1. Página de Inicio (Index)
+
+Top 5 de Combinaciones Más Pedidas: Sección destacada mostrando las cinco combinaciones de panchos más populares, con imágenes y una breve descripción.
+Destacados/Promociones: Posibilidad de mostrar ofertas especiales o productos destacados.
+Llamada a la Acción: Botón claro para comenzar a realizar un pedido o explorar el menú.
+
+# 1.2. Página de Selección de Ingredientes y Pedido
+
+Menú de Ingredientes:
+Categorización de ingredientes (panes, salchichas, salsas, toppings, extras).
+Visualización de imágenes de los ingredientes para facilitar la elección.
+Posibilidad de seleccionar la cantidad de cada ingrediente.
+Opción de crear combinaciones personalizadas.
+Posibilidad de seleccionar combinaciones predefinidas.
+
+Carrito de Compras:
+Visualización del pedido actual con los ingredientes seleccionados y sus cantidades.
+Cálculo automático del precio total.
+Opción de modificar o eliminar ítems del carrito.
+Proceso de Pago:
+Integración con múltiples pasarelas de pago digitales (ej. Mercado Pago).
+Formulario para ingresar datos de envío (dirección, etc.).
+        Confirmación del pedido y envío de notificación al cliente y al administrador.
+
+# 1.3. Mapa
+
+Integración de Mapas: Uso de una API de mapas (ej. Google Maps) para mostrar la ubicación del negocio.
+Información del pedido: Posibilidad de mostrar el estado del pedido y el tiempo estimado de llegada.
+
+# 1.4. Página de Contacto y Sobre Nosotros
+
+Información de Contacto:
+Número de teléfono, correo electrónico, dirección física (si aplica).
+Formulario de contacto para consultas generales.
+Enlaces a redes sociales.
+
+Sobre Nosotros:
+Breve historia y valores de la organización.
+Información sobre la calidad de los productos y el servicio.
+
+# 2. Sitemap del Sitio Web
+Archivo adjunto en el repo
+
+# 3. Presupuesto Temporal (Aproximado)
+
+Fase 1: Planificación y Diseño (1-2 semanas)
+Implica:
+Creación de wireframes y prototipos de las interfaces.
+Diseño visual de la página web (colores, tipografía, etc.).
+
+Fase 2: Desarrollo Front-End (3-4 semanas)
+Implica:
+Implementación de la interfaz de usuario (HTML, CSS, JavaScript).
+Desarrollo de la página de inicio, menú, carrito, etc.
+
+Fase 3: Desarrollo Back-End (4-6 semanas)
+Desarrollo del sistema de gestión de pedidos y pagos.
+Integración con pasarelas de pago.
+Implementación del sistema de seguimiento del delivery.
+Desarrollo de la base de datos.
+
+Fase 4: Integración y Pruebas (2-3 semanas)
+Integración de todas las funcionalidades.
+Pruebas exhaustivas de usabilidad y funcionalidad.
+Pruebas de seguridad.
+
+Fase 5: Lanzamiento y Mantenimiento (Continuo)
+Despliegue de la página web en un servidor.
+Monitoreo y mantenimiento continuo.
+Posibles actualizaciones y adición de nuevas funcionalidades.
+
+Tiempo Total Estimado: 12 - 18 semanas (3 - 4 meses)
+
+# 4. Presupuesto Funcional (Estimación de Costos)
+
+Componentes:
+Diseño UX/UI: Diseño de la experiencia de usuario y la interfaz visual.
+Desarrollo Front-End: Desarrollo de la parte visible del sitio web.
+Desarrollo Back-End: Desarrollo de la lógica del servidor y la base de datos.
+Integración de Pasarelas de Pago: Costos asociados a la integración con los sistemas de pago.
+Integración de Mapas: Costos asociados a la API de mapas (algunas APIs tienen costos según el uso).
+Pruebas y Control de Calidad: Pruebas exhaustivas para asegurar el correcto funcionamiento.
+Hosting y Dominio: Costos recurrentes para mantener el sitio web en línea.
 
 
+# Conclusión
 
-## Getting started
+Esta propuesta general proporciona una visión clara de las funcionalidades, el sitemap y una estimación de tiempo y presupuesto para el desarrollo de la aplicación web de venta de panchos.
 
-To make it easy for you to get started with GitLab, here's a list of recommended next steps.
-
-Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
-
-## Add your files
-
-- [ ] [Create](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#create-a-file) or [upload](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#upload-a-file) files
-- [ ] [Add files using the command line](https://docs.gitlab.com/topics/git/add_files/#add-files-to-a-git-repository) or push an existing Git repository with the following command:
-
-```
-cd existing_repo
-git remote add origin https://gitlab.com/ThiagoPuyelli/progweb2025.git
-git branch -M main
-git push -uf origin main
-```
-
-## Integrate with your tools
-
-- [ ] [Set up project integrations](https://gitlab.com/ThiagoPuyelli/progweb2025/-/settings/integrations)
-
-## Collaborate with your team
-
-- [ ] [Invite team members and collaborators](https://docs.gitlab.com/ee/user/project/members/)
-- [ ] [Create a new merge request](https://docs.gitlab.com/ee/user/project/merge_requests/creating_merge_requests.html)
-- [ ] [Automatically close issues from merge requests](https://docs.gitlab.com/ee/user/project/issues/managing_issues.html#closing-issues-automatically)
-- [ ] [Enable merge request approvals](https://docs.gitlab.com/ee/user/project/merge_requests/approvals/)
-- [ ] [Set auto-merge](https://docs.gitlab.com/user/project/merge_requests/auto_merge/)
-
-## Test and Deploy
-
-Use the built-in continuous integration in GitLab.
-
-- [ ] [Get started with GitLab CI/CD](https://docs.gitlab.com/ee/ci/quick_start/)
-- [ ] [Analyze your code for known vulnerabilities with Static Application Security Testing (SAST)](https://docs.gitlab.com/ee/user/application_security/sast/)
-- [ ] [Deploy to Kubernetes, Amazon EC2, or Amazon ECS using Auto Deploy](https://docs.gitlab.com/ee/topics/autodevops/requirements.html)
-- [ ] [Use pull-based deployments for improved Kubernetes management](https://docs.gitlab.com/ee/user/clusters/agent/)
-- [ ] [Set up protected environments](https://docs.gitlab.com/ee/ci/environments/protected_environments.html)
-
-***
-
-# Editing this README
-
-When you're ready to make this README your own, just edit this file and use the handy template below (or feel free to structure it however you want - this is just a starting point!). Thanks to [makeareadme.com](https://www.makeareadme.com/) for this template.
-
-## Suggestions for a good README
-
-Every project is different, so consider which of these sections apply to yours. The sections used in the template are suggestions for most open source projects. Also keep in mind that while a README can be too long and detailed, too long is better than too short. If you think your README is too long, consider utilizing another form of documentation rather than cutting out information.
-
-## Name
-Choose a self-explaining name for your project.
-
-## Description
-Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be unfamiliar with. A list of Features or a Background subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.
-
-## Badges
-On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge.
-
-## Visuals
-Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
-
-## Installation
-Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
-
-## Usage
-Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
-
-## Support
-Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
-
-## Roadmap
-If you have ideas for releases in the future, it is a good idea to list them in the README.
-
-## Contributing
-State if you are open to contributions and what your requirements are for accepting them.
-
-For people who want to make changes to your project, it's helpful to have some documentation on how to get started. Perhaps there is a script that they should run or some environment variables that they need to set. Make these steps explicit. These instructions could also be useful to your future self.
-
-You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce the likelihood that the changes inadvertently break something. Having instructions for running tests is especially helpful if it requires external setup, such as starting a Selenium server for testing in a browser.
-
-## Authors and acknowledgment
-Show your appreciation to those who have contributed to the project.
-
-## License
-For open source projects, say how it is licensed.
-
-## Project status
-If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
