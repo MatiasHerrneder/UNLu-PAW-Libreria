@@ -6,62 +6,123 @@
 </head>
 <body>
 	<header>
-        <nav>
-          <div class="nav-container">
-            <button class="menu-toggle" aria-label="Abrir menú">
-              &#9776;
-            </button>
-      
-            <a href="index.html" class="logo">
-              <img src="logo.png" alt="Logo del sitio">
+    <nav>
+      <section class="nav-icons">
+        <a href="#" class="logo">
+          <img src="logo.png" alt="Mi sitio">
+        </a>
+        <search>
+          <form action="search.php" method="get" class="search-bar">
+            <input type="search" name="campo" placeholder="Buscar...">
+            <input type="submit" value="Buscar">
+          </form>
+        </search>
+        <a href="account.html">
+          <img src="account.png" alt="Mi cuenta">
+        </a>
+        <a href="shop.html">
+          <img src="shop.png" alt="Mi carrito">
+        </a>
+      </section>
+      <section>
+        <ul class="nav-links">
+          <li><a href="books.html">Libros</a></li>
+          <li><a href="contact.html">Contacto</a></li>
+          <li><a href="fiction.html">Ficción</a></li>
+          <li><a href="terror.html">Terror</a></li>
+          <li><a href="fantasy.html">Fantasía</a></li>
+        </ul>
+      </section>
+    </nav>
+  </header>
+  <main>
+    <section>
+      <section class="carousel">
+        <button>&#8249;</button>
+        <figure>
+          <img src="promo.jpg" alt="Imagen de promoción">
+        </figure>
+        <button>&#8250;</button>
+      </section>
+      <nav>
+        <ul>
+          <li><button class="input-page-carousel"></button></li>
+          <li><button class="input-page-carousel"></button></li>
+          <li><button class="input-page-carousel"></button></li>
+        </ul>
+      </nav>
+    </section>
+    <section>
+      <h1>Mas vendidos</h1>
+      <section>
+        <button>&#8249;</button>
+        <ul>
+          <li>
+            <article>
+              <figure>
+                <img src="img-libro.jpg" alt="Imagen de libro">
+              </figure>
+              <h2>Mi libro</h2>
+              <p>Juan Perez</p>
+              <p>$123123</p>
+            </article>
+          </li>
+          <li>
+            <article>
+              <figure>
+                <img src="img-libro.jpg" alt="Imagen de libro">
+              </figure>
+              <h2>Mi libro</h2>
+              <p>Juan Perez</p>
+              <p>$123123</p>
+            </article>
+          </li>
+          <li>
+            <article>
+              <figure>
+                <img src="img-libro.jpg" alt="Imagen de libro">
+              </figure>
+              <h2>Mi libro</h2>
+              <p>Juan Perez</p>
+              <p>$123123</p>
+            </article>
+          </li>
+        </ul>
+        <button>&#8250;</button>
+      </section>
+    </section>
+  </main>
+  <footer>
+    <section>
+      <h1>Redes Sociales</h1>
+      <address>
+      <ul>
+          <li>
+            <a href="https://www.instagram.com/milibreria">
+              <img src="logo_ig.png" alt="Instagram">
             </a>
-      
-            <form action="search.php" method="get" class="search-bar">
-              <input type="text" name="campo" placeholder="Buscar...">
-              <button type="submit" aria-label="Buscar">
-                <img src="search.png" alt="Ícono de búsqueda">
-              </button>
-            </form>
-      
-            <div class="nav-icons">
-              <a href="account.html" aria-label="Cuenta">
-                <img src="account.png" alt="Ícono de cuenta">
-              </a>
-              <a href="shop.html" aria-label="Carrito">
-                <img src="shop.png" alt="Ícono de carrito">
-              </a>
-            </div>
-          </div>
-      
-          <ul class="nav-links">
-            <li><a href="books.html">Libros</a></li>
-            <li><a href="contact.html">Contacto</a></li>
-            <li><a href="fiction.html">Ficción</a></li>
-            <li><a href="terror.html">Terror</a></li>
-            <li><a href="fantasy.html">Fantasía</a></li>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/milibreria">
+              <img src="logo_fb.png" alt="Facebook">
+            </a>
+          </li>
+        </ul>
+      </address>
+    </section>
+      <section>
+        <h2>Contacto</h2>
+        <address>
+          <ul>
+            <li>
+              <a href="mailto/milibreria@gmail.com">milibreria@gmail.com</a>
+            </li>
+            <li>
+              <a href="contact.html">Escribinos</a>
+            </li>
           </ul>
-        </nav>
-      </header>
-	<section id="sales">
-        <!--Carrousel-->
-        <a href="sale.php?promo=22_03_2025">
-            <img src="promo_22_03_2025.png">
-        </a>
-        <a href="sale.php?promo=23_03_2025">
-            <img src="promo_23_03_2025.png">
-        </a>
-    </section>
-    <section id="mas_vendidos">
-        <!--Debe deslizarse horizontalmente-->
-        <a href="mas_vendidos.php?item=1">
-            <img src="mas_vendido_1.png">
-        </a>
-        <a href="mas_vendidos.php?item=2">
-            <img src="mas_vendido_2.png">
-        </a>
-        <a href="mas_vendidos.php?item=3">
-            <img src="mas_vendido_3.png">
-        </a>
-    </section>
+        </address>
+      </section>
+  </footer>
 </body>
 </html>
