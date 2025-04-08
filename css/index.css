@@ -1,0 +1,96 @@
+main {
+    width: 100%;
+    margin-top: 200px;
+}
+
+main > section {
+    width: 100%;
+}
+
+.carousel {
+    width: 100%;
+}
+
+.carousel figure {
+    width: 100%;
+}
+
+.carousel figure img {
+    width: 100%;
+}
+
+.arrow {
+    position: absolute;
+    display: none;
+    top: 50%;
+    bottom: 50%;
+    height: 40px;
+    width: 40px;
+}
+
+.arrow.left {
+    left: 10px;
+}
+
+.arrow.right {
+    right: 10px;
+}
+
+.buttons-carousel > ul {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.buttons-carousel > ul li {
+    margin: 10px;
+}
+
+.buttons-carousel > ul li button {
+    border-radius: 99px;
+    width: 30px;
+    height: 30px;
+    border: 3px solid black;
+    background: black;
+}
+
+.buttons-carousel > ul li:first-child button {
+    background: white;
+}
+
+.sell-section {
+    margin-top: 40px;
+}
+
+.sell-section > h1 {
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.sell-slide {
+    overflow: scroll;
+}
+
+.sell-slide > ul {
+    display: flex;
+    margin-top: 20px;
+    width: 1400px;
+}
+
+.sell-slide > ul li {
+    width: 200px;
+    padding: 10px;
+    margin-left: 20px;
+    border: 2px solid black;
+    box-shadow: 0px 0px 6px black inset;
+}
+
+.sell-slide > ul li figure {
+    padding: 20px;
+}
+    
+.sell-slide > ul li figure img {
+    width: 100%;
+}
+
