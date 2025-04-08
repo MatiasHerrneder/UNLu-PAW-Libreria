@@ -11,17 +11,19 @@
         <a href="#" class="logo">
           <img src="logo.png" alt="Mi sitio">
         </a>
-        <form action="search.php" method="get" class="search-bar">
-          <input type="text" name="campo" placeholder="Buscar...">
-          <input type="submit" value="Buscar">
-        </form>
+        <search>
+          <form action="search.php" method="get" class="search-bar">
+            <input type="search" name="campo" placeholder="Buscar...">
+            <input type="submit" value="Buscar">
+          </form>
+        </search>
         <a href="account.html">
           <img src="account.png" alt="Mi cuenta">
         </a>
         <a href="shop.html">
           <img src="shop.png" alt="Mi carrito">
         </a>
-      </section> 
+      </section>
       <section>
         <ul class="nav-links">
           <li><a href="books.html">Libros</a></li>
@@ -36,59 +38,99 @@
   <main>
     <h1>Carrito</h1>
     <section class="books">
-      <table>
-        <tr>
-          <th>Producto</th>
-          <th>Precio</th>
-          <th>Cantidad</th>
-          <th>Subtotal</th>
-        </tr>
-        <tr>
-          <td>
-            <figure>
-              <picture>
-                <img src="tapa.png" alt="">
-              </picture>
-            </figure>
-            <p>Libro</p>
-          </td>
-          <td>$123123</td>
-          <td>1</td>
-          <td>$123123</td>
-        </tr>
-        <tr>
-          <td>
-            <figure>
-              <picture>
-                <img src="tapa.png" alt="">
-              </picture>
-            </figure>
-            <p>Libro</p>
-          </td>
-          <td>$123123</td>
-          <td>1</td>
-          <td>$123123</td>
-        </tr>
-      </table>
-      <a href="tienda.html">Seguir Comprando</a>
-    </section>
-    <section class="finish-purchase">
-      <h2>Total del carrito</h2>
-      <table>  
-        <tr>
-          <th>Subtotal</th>
-          <td>$123123</td>
-        </tr>
-        <tr>
-          <th>Envio</th>
-          <td>$111</td>
-        </tr>
-        <tr>
-          <th>Total</th>
-          <td>$123234</td>
-        </tr>
-      </table>
-      <a href="compraDestino.html">Finalizar compra</a>
+      <form action="/checkout" method="POST">
+        <table>
+          <tr>
+            <th>Producto</th>
+            <th>Precio</th>
+            <th>Cantidad</th>
+            <th>Subtotal</th>
+          </tr>
+          <tr>
+            <!-- ejemplos para mostrar el maquetado -->
+            <td>       
+              <figure>
+                <picture>
+                  <img src="tapa.png" alt="">
+                </picture>
+              </figure>
+              <p>Libro</p>
+            </td>
+            <td>$123123</td>
+            <td>
+              <input type="number" name="cantidad_nexus" id="ejemplo1" value="1" min="1" step="1">
+            </td>
+            <td>$123123</td>
+          </tr>
+          <tr>
+            <td>
+              <figure>
+                <picture>
+                  <img src="tapa.png" alt="">
+                </picture>
+              </figure>
+              <p>Libro</p>
+            </td>
+            <td>$123123</td>
+            <td>
+              <input type="number" name="cantidad_nexus" id="ejemplo2" value="1" min="1" step="1">
+            </td>
+            <td>$123123</td>
+          </tr>
+        </table>
+        <a href="tienda.html">Seguir Comprando</a>
+      </section>
+      <section class="finish-purchase">
+        <h2>Total del carrito</h2>
+        <table>  
+          <tr>
+            <th>Subtotal</th>
+            <td>$123123</td>
+          </tr>
+          <tr>
+            <th>Envio</th>
+            <td>$111</td>
+          </tr>
+          <tr>
+            <th>Total</th>
+            <td>$123234</td>
+          </tr>
+        </table>
+        <a href="compraDestino.html">Finalizar compra</a>
+      </form>
     </section>
   </main>
+  <footer>
+    <section>
+      <h1>Redes Sociales</h1>
+      <address>
+      <ul>
+          <li>
+            <a href="https://www.instagram.com/milibreria">
+              <img src="logo_ig.png" alt="Instagram">
+            </a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/milibreria">
+              <img src="logo_fb.png" alt="Facebook">
+            </a>
+          </li>
+        </ul>
+      </address>
+    </section>
+      <section>
+        <h2>Contacto</h2>
+        <address>
+          <ul>
+            <li>
+              <a href="mailto/milibreria@gmail.com">milibreria@gmail.com</a>
+            </li>
+            <li>
+              <a href="contact.html">Escribinos</a>
+            </li>
+          </ul>
+        </address>
+      </section>
+  </footer>
 </body>
+</html>

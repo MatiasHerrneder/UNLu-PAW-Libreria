@@ -2,83 +2,52 @@
 <html lang="es">
 <head>
   <meta charset="utf-8">
-  <title>Confirmar el pago</title>
+  <title>Compra</title>
 </head>
 <body>
-
-    <header>
-        <nav>
-          <div class="nav-container">
-            <button class="menu-toggle" aria-label="Abrir menú">
-              &#9776;
-            </button>
-      
-            <a href="index.html" class="logo">
-              <img src="logo.png" alt="Logo del sitio">
-            </a>
-      
-            <form action="search.php" method="get" class="search-bar">
-              <input type="text" name="campo" placeholder="Buscar...">
-              <button type="submit" aria-label="Buscar">
-                <img src="search.png" alt="Ícono de búsqueda">
-              </button>
-            </form>
-      
-            <div class="nav-icons">
-              <a href="account.html" aria-label="Cuenta">
-                <img src="account.png" alt="Ícono de cuenta">
-              </a>
-              <a href="shop.html" aria-label="Carrito">
-                <img src="shop.png" alt="Ícono de carrito">
-              </a>
-            </div>
-          </div>
-      
-          <ul class="nav-links">
-            <li><a href="books.html">Libros</a></li>
-            <li><a href="contact.html">Contacto</a></li>
-            <li><a href="fiction.html">Ficción</a></li>
-            <li><a href="terror.html">Terror</a></li>
-            <li><a href="fantasy.html">Fantasía</a></li>
-          </ul>
-        </nav>
-      </header>
-
+  <header>
+    <nav>
+      <a href="#" class="logo">
+        <img src="logo.png" alt="Mi sitio">
+      </a> 
+    </nav>
+  </header>
   <main>
+    <h1>Pagina de cobro</h1>
     <section>
-      <h2 id="detalle-compra">Detalle de mi compra</h2>
-      <div class="botonDetalle">
-        <a href="detalle.html">
-          <img src="arrow.png" alt="Flecha para desplegar detalles">
-          <span>Ver detalle de mi compra</span>
-          <strong>$$$</strong>
-        </a>
-      </div>
+      <h2>Detalles de mi compra</h2>
+      <table>
+        <tr>
+          <th></th>
+          <th>$123123</th>
+        </tr>
+        <tr>
+          <td>Libro1</td>
+          <td>$23123</td>
+        </tr>
+        <tr>
+          <td>Libro2</td>
+          <td>$100000</td>
+        </tr>
+      </table>
     </section>
-
     <section>
       <h2>Información de contacto y envío</h2>
-
-      <div>
-        <div>
-          <img src="mail.png" alt="Icono de correo">
+      <section>
+        <section>
+          <img src="mail.png" alt="Mi correo">
           <p><strong>correo@example.com</strong></p>
-          <a href="cambiar-correo.html">Cambiar</a>
-        </div>
-
-        <div>
-          <img src="location.png" alt="Icono de ubicación">
-          <p>
-            <strong>Dirección</strong><br>
-            Código postal<br>
-            Ciudad<br>
-            Teléfono
-          </p>
-          <a href="cambiar-direccion.html">Cambiar</a>
-        </div>
-      </div>
+        </section>
+        <section>
+          <img src="location.png" alt="Mi ubicación">
+            <p>Dirección</p>
+            <p>Código postal</p>
+            <p>Ciudad</p>
+            <p>Teléfono</p>
+          <a href="compraDestino.html">Cambiar</a>
+        </section>
+      </section>
     </section>
-
     <section>
       <h2>Medio de pago</h2>
 

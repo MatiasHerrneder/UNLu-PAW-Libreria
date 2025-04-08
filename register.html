@@ -1,61 +1,86 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="utf-8">
-    <title>Index</title>
+  <meta charset="utf-8">
+  <title>Registro</title>
 </head>
 <body>
-	<header>
-        <nav>
-          <div class="nav-container">
-            <button class="menu-toggle" aria-label="Abrir menú">
-              &#9776;
-            </button>
-      
-            <a href="index.html" class="logo">
-              <img src="logo.png" alt="Logo del sitio">
-            </a>
-      
-            <form action="search.php" method="get" class="search-bar">
-              <input type="text" name="campo" placeholder="Buscar...">
-              <button type="submit" aria-label="Buscar">
-                <img src="search.png" alt="Ícono de búsqueda">
-              </button>
-            </form>
-      
-            <div class="nav-icons">
-              <a href="account.html" aria-label="Cuenta">
-                <img src="account.png" alt="Ícono de cuenta">
-              </a>
-              <a href="shop.html" aria-label="Carrito">
-                <img src="shop.png" alt="Ícono de carrito">
-              </a>
-            </div>
-          </div>
-      
-          <ul class="nav-links">
-            <li><a href="books.html">Libros</a></li>
-            <li><a href="contact.html">Contacto</a></li>
-            <li><a href="fiction.html">Ficción</a></li>
-            <li><a href="terror.html">Terror</a></li>
-            <li><a href="fantasy.html">Fantasía</a></li>
-          </ul>
-        </nav>
-      </header>
+  <header>
+    <nav>
+      <section class="nav-icons">
+        <a href="#" class="logo">
+          <img src="logo.png" alt="Mi sitio">
+        </a>
+        <search>
+          <form action="search.php" method="get" class="search-bar">
+            <input type="search" name="campo" placeholder="Buscar...">
+            <input type="submit" value="Buscar">
+          </form>
+        </search>
+        <a href="account.html">
+          <img src="account.png" alt="Mi cuenta">
+        </a>
+        <a href="shop.html">
+          <img src="shop.png" alt="Mi carrito">
+        </a>
+      </section>
+      <section>
+        <ul class="nav-links">
+          <li><a href="books.html">Libros</a></li>
+          <li><a href="contact.html">Contacto</a></li>
+          <li><a href="fiction.html">Ficción</a></li>
+          <li><a href="terror.html">Terror</a></li>
+          <li><a href="fantasy.html">Fantasía</a></li>
+        </ul>
+      </section>
+    </nav>
+  </header>
 	<main>
-        <h1>Crear cuenta</h1>
-        <form action="register.php" method="POST">
-            <label for="nombre">Nombre y apellido *</label>
-            <input type="text" id="nombre" name="nombre" required>
-            <label for="correo">Correo *</label>
-            <input type="email" id="correo" name="correo" required>
-            <label for="contrasenia">Contraseña *</label>
-            <input type="password" id="contrasenia" name="contrasenia" required>
-            <label for="confirmarContrasenia">Confirmar contraseña *</label>
-            <input type="password" id="confirmarContrasenia" name="confirmarContrasenia" required>
-            <input type="submit" value="Acceder">
-        </form>
-        <p>¿Ya tienes una cuenta? <a href="login.html">Iniciar sesión</a></p>
+    <h1>Crear cuenta</h1>
+      <form action="register.php" method="POST">
+        <label for="nombre">Nombre y apellido *</label>
+        <input type="text" id="nombre" name="nombre" required>
+        <label for="correo">Correo *</label>
+        <input type="email" id="correo" name="correo" required>
+        <label for="contrasenia">Contraseña *</label>
+        <input type="password" id="contrasenia" name="contrasenia" required>
+        <label for="confirmarContrasenia">Confirmar contraseña *</label>
+        <input type="password" id="confirmarContrasenia" name="confirmarContrasenia" required>
+        <input type="submit" value="Acceder">
+      </form>
+      <p>¿Ya tienes una cuenta? <a href="login.html">Iniciar sesión</a></p>
     </main>
+  <footer>
+    <section>
+      <h1>Redes Sociales</h1>
+      <address>
+      <ul>
+          <li>
+            <a href="https://www.instagram.com/milibreria">
+              <img src="logo_ig.png" alt="Instagram">
+            </a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/milibreria">
+              <img src="logo_fb.png" alt="Facebook">
+            </a>
+          </li>
+        </ul>
+      </address>
+    </section>
+      <section>
+        <h2>Contacto</h2>
+        <address>
+          <ul>
+            <li>
+              <a href="mailto/milibreria@gmail.com">milibreria@gmail.com</a>
+            </li>
+            <li>
+              <a href="contact.html">Escribinos</a>
+            </li>
+          </ul>
+        </address>
+      </section>
+  </footer>
 </body>
 </html>
