@@ -2,18 +2,23 @@
 <html lang="es">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Compra</title>
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/elements.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/compraDestino.css">
 </head>
 <body>
-  <header>
-    <nav>
-      <a href="#" class="logo">
-        <img src="logo.png" alt="Mi sitio">
+  <header class="header-app">
+    <nav class="logo-pay">
+      <a href="#">
+        <img src="img/PAWPrints.svg" alt="Mi sitio">
       </a> 
     </nav>
   </header>
 	<main>
-    <section>
+    <section class="details-pay">
       <h2>Detalles de mi compra</h2>
       <table>
         <tr>
@@ -29,46 +34,47 @@
           <td>$100000</td>
         </tr>
       </table>
+      <p>$$$</p>
     </section>
     <form action="destinatario.php" method="POST">
       <fieldset>
         <legend>Datos del destinatario</legend>
     
         <label for="nombre">Nombre</label>
-        <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
+        <input class="input-text" type="text" id="nombre" name="nombre" placeholder="Nombre" required>
     
         <label for="apellido">Apellido</label>
-        <input type="text" id="apellido" name="apellido" placeholder="Apellido" required>
+        <input class="input-text" type="text" id="apellido" name="apellido" placeholder="Apellido" required>
     
         <label for="telefono">Teléfono</label>
-        <input type="tel" id="telefono" name="telefono" placeholder="Teléfono" required>
+        <input class="input-text" type="tel" id="telefono" name="telefono" placeholder="Teléfono" required>
     
         <label for="codigoPostal">Código postal</label>
-        <input type="text" id="codigoPostal" name="codigoPostal" placeholder="Código postal" required>
+        <input class="input-text" type="text" id="codigoPostal" name="codigoPostal" placeholder="Código postal" required>
     
         <label for="calle">Calle</label>
-        <input type="text" id="calle" name="calle" placeholder="Calle" required>
+        <input class="input-text" type="text" id="calle" name="calle" placeholder="Calle" required>
     
         <label for="numero">Número</label>
-        <input type="text" id="numero" name="numero" placeholder="Número" required>
+        <input class="input-text" type="text" id="numero" name="numero" placeholder="Número" required>
     
         <label for="departamento">Departamento</label>
-        <input type="text" id="departamento" name="departamento" placeholder="Departamento (opcional)">
+        <input class="input-text" type="text" id="departamento" name="departamento" placeholder="Departamento (opcional)">
     
         <label for="barrio">Barrio</label>
-        <input type="text" id="barrio" name="barrio" placeholder="Barrio (opcional)">
+        <input class="input-text" type="text" id="barrio" name="barrio" placeholder="Barrio (opcional)">
     
         <label for="ciudad">Ciudad</label>
-        <input type="text" id="ciudad" name="ciudad" placeholder="Ciudad" required>
+        <input class="input-text" type="text" id="ciudad" name="ciudad" placeholder="Ciudad" required>
       </fieldset>
     
       <fieldset>
         <legend>Datos de facturación</legend>
         <label for="dni">DNI o CUIT</label>
-        <input type="text" id="dni" name="dni" placeholder="DNI o CUIT" required>
+        <input class="input-text" type="text" id="dni" name="dni" placeholder="DNI o CUIT" required>
       </fieldset>
     
-      <input type="submit" value="Continuar con el pago">
+      <input type="submit" class="button-submit" value="Continuar con el pago">
     </form>
   </main>
 </body>

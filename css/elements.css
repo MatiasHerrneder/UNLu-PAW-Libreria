@@ -40,3 +40,37 @@
     box-shadow: 0px 0px 5px var(--violeta) inset;
     border-radius: 20px;
 }
+
+.input-text {
+    padding: 10px;
+    font-size: 20px;
+    border: 1px solid black;
+}
+
+.details-pay {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 2px solid var(--violeta-claro-3);
+}
+
+.details-pay h2 {
+    text-decoration: underline;
+}
+
+.details-pay p, .details-pay h2 {
+    font-size: 20px;
+}
+
+.details-pay > table {
+    display: none;
+}
+
+.logo-pay {
+    width: 100px;
+    margin: auto;   
+}
+
+.logo-pay img {
+    width: 100%;
+}
