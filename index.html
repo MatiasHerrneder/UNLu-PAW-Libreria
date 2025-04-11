@@ -4,8 +4,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Index</title>
-    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/footer.css">
 </head>
@@ -20,10 +21,10 @@
         <search>
           <form action="search.php" method="get" class="search-bar">
             <input type="search" name="campo" placeholder="Buscar..." class="input-search">
-            <button type="submit" class="submit-search">
-              <img src="img/lupa.png" alt="Buscar">
-            </button>
           </form>
+          <button type="submit" class="submit-search">
+            <img src="img/lupa.png" alt="Buscar">
+          </button>
         </search>
         <a href="account.html">
           <img src="img/usuario.png" alt="Mi cuenta">
@@ -48,18 +49,18 @@
     <section>
       <section class="carousel">
         <button class="arrow left">&#8249;</button>
-        <figure>
-          <img src="img/publicar-libros-online.jpg" alt="Imagen de promoción">
-        </figure>
+        <!--<figure>  (rompe la disposicion de la imagen y los botones)-->
+          <img class="carousel-img" src="img/publicar-libros-online.jpg" alt="Imagen de promoción">
+        <!--</figure>-->
         <button class="arrow right">&#8250;</button>
+        <nav class="buttons-carousel">
+          <ul>
+            <li><button class="input-page-carousel"></button></li>
+            <li><button class="input-page-carousel"></button></li>
+            <li><button class="input-page-carousel"></button></li>
+          </ul>
+        </nav>
       </section>
-      <nav class="buttons-carousel">
-        <ul>
-          <li><button class="input-page-carousel"></button></li>
-          <li><button class="input-page-carousel"></button></li>
-          <li><button class="input-page-carousel"></button></li>
-        </ul>
-      </nav>
     </section>
     <section class="sell-section">
       <h1>Mas vendidos</h1>

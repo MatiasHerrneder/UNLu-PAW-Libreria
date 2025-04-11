@@ -94,3 +94,39 @@ main > section {
     width: 100%;
 }
 
+/* Estilos para pantallas de al menos 768px (típico para escritorio o tablet horizontal) */
+@media (min-width: 768px) {
+    
+    body {
+        font-size: 18px;
+        padding: 20px;
+    }
+    
+    main {
+        margin-top: 2.5%;
+    }
+
+    .arrow.right {
+        position: static;
+        width: 1px;
+        height: 1px;
+        background-color: #f44336;
+        border: 1px solid black;
+    }
+
+    .carousel {
+        display: flex;
+        flex-direction: column;
+        height: 50%;
+        border: 1px solid black;
+    }
+
+    .carousel-img {
+        height: 40%;
+        border: 1px solid red;
+    }
+
+    .sell-section {
+        margin-top: 3%;
+    }
+  }
