@@ -4,65 +4,75 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Index</title>
-    <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/footer.css">
+    <script src="js/header.js"></script>
 </head>
 <body>
-  
-	<header class="header-app">
-    <nav>
-      <section class="nav-icons">
+<header class="header-app">
+    <nav class="nav-bar">
+        <section class="nav-icons">
+            <section class="nav-links">
+                <ul>
+                <li><a href="books.html">Libros</a></li>
+                <li><a href="contact.html">Contacto</a></li>
+                <li><a href="fiction.html">Ficción</a></li>
+                <li><a href="terror.html">Terror</a></li>
+                <li><a href="fantasy.html">Fantasía</a></li>
+                </ul>
+            </section>
+        </section>
         <a href="#" class="logo">
-          <img src="img/PAWPrints.svg" alt="Mi sitio">
+            <img src="img/PAWPrints.svg" alt="Mi sitio">
         </a>
-        <search>
-          <form action="search.php" method="get" class="search-bar">
-            <input type="search" name="campo" placeholder="Buscar..." class="input-search">
-          </form>
-          <button type="submit" class="submit-search">
-            <img src="img/lupa.png" alt="Buscar">
-          </button>
-        </search>
-        <a href="account.html">
-          <img src="img/usuario.png" alt="Mi cuenta">
+        <a href="account.html" class="account">
+            <img src="img/usuario.png" alt="Mi cuenta">
         </a>
-        <a href="shop.html">
-          <img src="img/carrito-de-compras.png" alt="Mi carrito">
+        <a href="shop.html" class="shop">
+            <img src="img/carrito-de-compras.png" alt="Mi carrito">
         </a>
-      </section>
-      <section class="nav-links">
-        <ul>
-          <li><a href="books.html">Libros</a></li>
-          <li><a href="contact.html">Contacto</a></li>
-          <li><a href="fiction.html">Ficción</a></li>
-          <li><a href="terror.html">Terror</a></li>
-          <li><a href="fantasy.html">Fantasía</a></li>
-        </ul>
-      </section>
+        <form class="search" action="search.php" method="get">
+            <input class="input-search" type="search" name="campo" placeholder="Buscar..." />
+            <button class="submit-search" type="submit">
+                <img src="img/lupa.png" alt="Buscar" />
+            </button>
+        </form>
     </nav>
-  </header>
-  
-  <main>
-    <section>
-      <section class="carousel">
-        <button class="arrow left">&#8249;</button>
-        <!--<figure>  (rompe la disposicion de la imagen y los botones)-->
-          <img class="carousel-img" src="img/publicar-libros-online.jpg" alt="Imagen de promoción">
-        <!--</figure>-->
-        <button class="arrow right">&#8250;</button>
-        <nav class="buttons-carousel">
-          <ul>
-            <li><button class="input-page-carousel"></button></li>
-            <li><button class="input-page-carousel"></button></li>
-            <li><button class="input-page-carousel"></button></li>
-          </ul>
-        </nav>
-      </section>
-    </section>
-    <section class="sell-section">
+</header>
+<main>
+
+<!--Las secciones slides sera pre-procesadas por el servidor-->
+<div class="slideshow-container">
+    <div class="mySlides fade">
+        <div class="numbertext">1 / 3</div>
+        <img src="./img/publicar-libros-online.jpg" alt="Imagen de promoción">
+        <div class="text">Caption 1</div>
+    </div>
+
+    <div class="mySlides fade">
+        <div class="numbertext">1 / 3</div>
+        <img src="./img/publicar-libros-online2.jpg" alt="Imagen de promoción">
+        <div class="text">Caption 2</div>
+    </div>
+
+    <div class="mySlides fade">
+        <div class="numbertext">1 / 3</div>
+        <img src="./img/publicar-libros-online3.jpg" alt="Imagen de promoción">
+        <div class="text">Caption 3</div>
+    </div>
+
+    <a class="prev" onclick="plusSlides(-1)">❮</a>
+    <a class="next" onclick="plusSlides(1)">❯</a>
+</div>
+<div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span> 
+    <span class="dot" onclick="currentSlide(2)"></span> 
+    <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+
+<section class="sell-section">
       <h1>Mas vendidos</h1>
       <section class="sell-slide">
         <button class="arrow left">&#8249;</button>
@@ -121,7 +131,8 @@
         <button class="arrow right">&#8250;</button>
       </section>
     </section>
-  </main>
+</main>
+
   <footer class="footer-app">
     <section class="social-net">
       <h1>Redes Sociales</h1>
@@ -154,7 +165,9 @@
         </address>
       </section>
   </footer>
-
-  <script src="js/header.js"></script>
+  -->
   </body>
+  <!--El orden de carga de este script es importante,
+    de lo contrario rompe el html (no dibuja carousel)-->
+  <script type="text/javascript" src="./js/slide.js"></script>
 </html>

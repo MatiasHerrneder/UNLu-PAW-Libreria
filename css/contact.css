@@ -1,0 +1,83 @@
+@import url('./colors.css');
+
+#mensaje {
+    width: 98%;
+}
+
+.form-contact {
+    background-color: var(--violeta-claro-3);
+    width: 80%;
+    margin: 0 auto;
+    padding: 1.5% 1% 1.5% 1%;
+}
+
+.form-contact input, label {
+    font-size: 1em;
+    margin: 2.5% 0 2.5% 0;
+    box-sizing: border-box;
+}
+
+.form-contact input, textarea {
+    border: 1px solid black;
+}
+
+.form-contact input[type=text] {
+    border-bottom: 1px solid white;
+    border-radius: 4px;
+}
+
+.form-contact label {
+    
+    font-weight: bold;
+    color: var(--violeta-oscuro-2);
+}
+
+.form-contact input[type=submit] {
+    margin-top: 1.5%;
+}
+
+#asunto {
+    margin-bottom: 2.5%;
+}
+
+h1 {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 2em;
+    margin: 1.5% auto auto 1.5%;
+}
+
+/* Estilos para pantallas de al menos 768px (típico para escritorio o tablet horizontal) */
+@media (min-width: 768px) {
+    h1 {
+        margin-left: 8%;
+    }
+    #asunto {
+        width: 80%;
+        font-size: 1em;
+        margin-top: 1%;
+    }
+    .form-contact {
+        width: 60%;
+    }
+    .form-contact label {
+        font-size: 1.5em;
+    }
+    .form-contact input {
+        width: 100%;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+/*
+    .form-contact textarea {
+        width: 100%;
+        min-height: 80px;
+    }
+*/
+    .form-contact input[type=submit]{
+        margin-left: 25%;
+        width: 40%;
+    }
+}

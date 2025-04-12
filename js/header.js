@@ -18,7 +18,7 @@ burguer.addEventListener("click", function () {
         navLinks.style.right = "0px"
     } else {
         burguer.style.transform = "rotateZ(0)"
-        navLinks.style.right = "100%"
+        //navLinks.style.right = "100%"
     }
     openMenu = !openMenu
 })

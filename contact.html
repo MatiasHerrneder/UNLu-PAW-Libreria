@@ -1,62 +1,68 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8">
-  <title>Contacto</title>
+    <meta charset="utf-8">
+    <title>Contacto</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <script src="js/header.js"></script>
 </head>
 <body>
-  <header>
-    <nav>
-      <section class="nav-icons">
+<header class="header-app">
+    <nav class="nav-bar">
+        <section class="nav-icons">
+            <section class="nav-links">
+                <ul>
+                    <li><a href="books.html">Libros</a></li>
+                    <li><a href="contact.html">Contacto</a></li>
+                    <li><a href="fiction.html">Ficción</a></li>
+                    <li><a href="terror.html">Terror</a></li>
+                    <li><a href="fantasy.html">Fantasía</a></li>
+                </ul>
+            </section>
+        </section>
         <a href="#" class="logo">
-          <img src="logo.png" alt="Mi sitio">
+            <img src="img/PAWPrints.svg" alt="Mi sitio">
         </a>
-        <search>
-          <form action="search.php" method="get" class="search-bar">
-            <input type="search" name="campo" placeholder="Buscar...">
-            <input type="submit" value="Buscar">
-          </form>
-        </search>
-        <a href="account.html">
-          <img src="account.png" alt="Mi cuenta">
+        <a href="account.html" class="account">
+            <img src="img/usuario.png" alt="Mi cuenta">
         </a>
-        <a href="shop.html">
-          <img src="shop.png" alt="Mi carrito">
+        <a href="shop.html" class="shop">
+            <img src="img/carrito-de-compras.png" alt="Mi carrito">
         </a>
-      </section>
-      <section>
-        <ul class="nav-links">
-          <li><a href="books.html">Libros</a></li>
-          <li><a href="contact.html">Contacto</a></li>
-          <li><a href="fiction.html">Ficción</a></li>
-          <li><a href="terror.html">Terror</a></li>
-          <li><a href="fantasy.html">Fantasía</a></li>
-        </ul>
-      </section>
+        <form class="search" action="search.php" method="get">
+            <input class="input-search" type="search" name="campo" placeholder="Buscar..." />
+            <button class="submit-search" type="submit">
+                <img src="img/lupa.png" alt="Buscar" />
+            </button>
+        </form>
     </nav>
-  </header>
-	<main>
+</header>
+<main>
     <h1>Contacto</h1>
-    <form action="contact.php" method="POST">
-      <label for="nombre">Nombre y apellido *</label>
-      <input type="text" id="nombre" name="nombre" required>
-      <label for="correo">Correo *</label>
-      <input type="email" id="correo" name="correo" required>
-      <label for="asunto">Asunto</label>
-      <select id="asunto" name="asunto">
-        <option value="" disabled selected hidden>Elegí una opción</option>
-        <option value="opcion1">Opcion1</option>
-        <option value="opcion2">Opcion2</option>
-        <option value="opcion3">Opcion3</option>
-      </select>
-      <label for="orden">Número de orden</label>
-      <input type="text" id="orden" name="orden">
-      <label for="mensaje">Tu mensaje</label>
-      <textarea name="mensaje" id="mensaje"></textarea>
-      <input type="submit" value="Enviar">
+    <form class="form-contact" action="contact.php" method="POST">
+        <label for="nombre">Nombre y apellido *</label>
+        <input type="text" id="nombre" name="nombre" required>
+        <label for="correo">Correo *</label>
+        <input type="email" id="correo" name="correo" required>
+        <label for="asunto">Asunto</label>
+        <select id="asunto" name="asunto">
+            <option value="" disabled selected hidden>Elegí una opción</option>
+            <option value="opcion1">Opcion1</option>
+            <option value="opcion2">Opcion2</option>
+            <option value="opcion3">Opcion3</option>
+        </select>
+        <label for="orden">Número de orden</label>
+        <input type="text" id="orden" name="orden">
+        <label for="mensaje">Tu mensaje</label>
+        <textarea name="mensaje" id="mensaje"></textarea>
+        <input type="submit" value="Enviar">
     </form>
   </main>
-  <footer>
+<footer>
     <section>
       <h1>Redes Sociales</h1>
       <address>
@@ -90,4 +96,4 @@
   </footer>
 </body>
 </html>
-  
+
