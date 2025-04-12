@@ -1,0 +1,43 @@
+@import url('./colors.css');
+
+main {
+    margin-top: 90px;   
+}
+
+form {
+    margin-top: 20px;
+    width: 100vw;
+}
+
+fieldset {
+    margin-top: 10px;
+    width: 100vw;
+}
+
+form, fieldset {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+}
+
+label {
+    display: none;
+}
+
+input {
+    margin-top: 10px;
+}
+
+legend {
+    text-align: center;
+    font-size: 25px;
+}
+
+.input-text {
+    margin-top: 15px;
+    width: 80vw;
+}
+
+.button-submit {
+    margin: 20px;
+}

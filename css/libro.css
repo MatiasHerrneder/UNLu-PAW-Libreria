@@ -1,0 +1,63 @@
+@import url('./colors.css');
+
+main {
+    margin-top: 220px;
+}
+
+.section-book > h1 {
+    font-size: 30px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.section-book > article {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+}
+
+
+.section-book > article > * {
+    width: 80vw;
+}
+
+.section-book > article > figure img {
+    width: 100%;
+}
+
+.section-book > article p,
+.section-book > article > h3 {
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.section-book > article > h3 {
+    font-weight: bold;
+}
+
+.section-book > article > form {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.section-book > article > form label {
+    display: none;
+}
+
+.section-description {
+    margin-top: 30px;
+    border-top: 3px solid var(--violeta);
+    padding: 30px;
+}
+
+.description-title {
+    font-size: 30px;
+    text-align: center;
+}
+
+.description {
+    margin-top: 30px;
+    font-size: 20px;
+    text-align: justify;
+}

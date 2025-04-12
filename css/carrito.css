@@ -1,0 +1,24 @@
+@import url('./colors.css');
+
+main {
+    margin-top: 200px;
+    border: 2px solid var(--violeta);
+}
+
+main > h1 {
+    display: none;
+}
+
+main form {
+    width: 10%;
+}
+
+main table {
+    width: 100%;
+}
+
+main img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
