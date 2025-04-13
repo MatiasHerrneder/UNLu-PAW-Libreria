@@ -45,6 +45,7 @@
     padding: 10px;
     font-size: 20px;
     border: 1px solid black;
+    box-sizing: border-box;
 }
 
 .details-pay {

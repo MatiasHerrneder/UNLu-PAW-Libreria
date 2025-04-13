@@ -1,3 +1,5 @@
+@import url('./colors.css');
+
 main {
     margin-top: 90px;
 }
@@ -8,4 +10,70 @@ main {
 
 .contact-send {
     margin-top: 20px;
+}
+
+.mail-icon, .location-icon {
+    height: 2rem;
+    margin: 10px;
+}
+
+.mail-box {
+    display: flex;
+}
+
+.mail-box p {
+    display: inline;
+    align-self: center;
+}
+
+.location-box {
+    display: flex;
+}
+
+.location-box section {
+    display: inline;
+}
+
+.location-box * {
+    align-self: center;
+}
+
+.location-box a {
+    margin-left: auto;
+    margin-right: 2rem;
+    outline: 1px solid var(--violeta);
+    padding: 10px 12px;
+    color: #000;
+    text-decoration: none;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.contact-send h2 {
+    padding-left: 10px;
+    font-size: 1.5rem;
+}
+
+select {
+    margin-top: 15px;
+    width: 80vw;
+    padding: 10px;
+    font-size: 20px;
+    border: 1px solid black;
+}
+
+.tarjeta-wrapper {
+    margin: 0;
+    display: flex;
+    gap: 1rem;
+    width: 80vw;
+}
+
+.tarjeta-wrapper input {
+    flex: 1;
+    min-width: 0;
+}
+
+#vencimiento {
+    flex: 2;
 }

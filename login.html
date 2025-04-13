@@ -2,30 +2,41 @@
 <html lang="es">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Login</title>
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/elements.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/compraDestino.css">
+  <link rel="stylesheet" href="css/medioPago.css">
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/login.css">
 </head>
 <body>
-  <header>
+  <header class="header-app">
     <nav>
       <section class="nav-icons">
         <a href="#" class="logo">
-          <img src="logo.png" alt="Mi sitio">
+          <img src="img/PAWPrints.svg" alt="Mi sitio">
         </a>
         <search>
           <form action="search.php" method="get" class="search-bar">
-            <input type="search" name="campo" placeholder="Buscar...">
-            <input type="submit" value="Buscar">
+            <input type="search" name="campo" placeholder="Buscar..." class="input-search">
+            <button type="submit" class="submit-search">
+              <img src="img/lupa.png" alt="Buscar">
+            </button>
           </form>
         </search>
         <a href="account.html">
-          <img src="account.png" alt="Mi cuenta">
+          <img src="img/usuario.png" alt="Mi cuenta">
         </a>
         <a href="shop.html">
-          <img src="shop.png" alt="Mi carrito">
+          <img src="img/carrito-de-compras.png" alt="Mi carrito">
         </a>
       </section>
-      <section>
-        <ul class="nav-links">
+      <section class="nav-links">
+        <ul>
           <li><a href="books.html">Libros</a></li>
           <li><a href="contact.html">Contacto</a></li>
           <li><a href="fiction.html">Ficción</a></li>
@@ -39,34 +50,34 @@
     <h1>Iniciar sesión</h1>
     <form action="login.php" method="POST">
       <label for="correo">Correo *</label>
-      <input type="email" id="correo" name="correo" required>
+      <input class="input-text" type="email" id="correo" name="correo" required>
       <label for="contrasenia">Contraseña *</label>
-      <input type="password" id="contrasenia" name="contrasenia" required>
+      <input class="input-text" type="password" id="contrasenia" name="contrasenia" required>
       <a href="recuperar.html">¿Olvidaste tu contraseña?</a>
       <input type="submit" value="Acceder">
     </form>
     <p>¿No tienes una cuenta? <a href="register.html">Crear cuenta</a></p>
   </main>
-  <footer>
-    <section>
+  <footer class="footer-app">
+    <section class="social-net">
       <h1>Redes Sociales</h1>
       <address>
       <ul>
           <li>
             <a href="https://www.instagram.com/milibreria">
-              <img src="logo_ig.png" alt="Instagram">
+              <img src="img/instagram.png" alt="Instagram">
             </a>
           </li>
           <li>
             <a href="https://www.facebook.com/milibreria">
-              <img src="logo_fb.png" alt="Facebook">
+              <img src="img/facebook.png" alt="Facebook">
             </a>
           </li>
         </ul>
       </address>
     </section>
-      <section>
-        <h2>Contacto</h2>
+      <section class="contact">
+        <h1>Contacto</h1>
         <address>
           <ul>
             <li>
@@ -79,5 +90,7 @@
         </address>
       </section>
   </footer>
+
+  <script src="js/header.js"></script>
 </body>
 </html>
