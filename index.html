@@ -14,36 +14,39 @@
     <script type="text/javascript" src="./js/slide.js" defer></script>
 </head>
 <body>
-<header class="header-app">
-    <nav class="nav-bar">
-        <section class="nav-icons">
-            <section class="nav-links">
-                <ul>
-                <li><a href="books.html">Libros</a></li>
-                <li><a href="contact.html">Contacto</a></li>
-                <li><a href="fiction.html">Ficción</a></li>
-                <li><a href="terror.html">Terror</a></li>
-                <li><a href="fantasy.html">Fantasía</a></li>
-                </ul>
-            </section>
-        </section>
-        <a href="#" class="logo">
-            <img src="img/PAWPrints.svg" alt="Mi sitio">
-        </a>
-        <a href="account.html" class="account">
-            <img src="img/usuario.png" alt="Mi cuenta">
-        </a>
-        <a href="shop.html" class="shop">
-            <img src="img/carrito-de-compras.png" alt="Mi carrito">
-        </a>
-        <form class="search" action="search.php" method="get">
-            <input class="input-search" type="search" name="campo" placeholder="Buscar..." />
-            <button class="submit-search" type="submit">
-                <img src="img/lupa.png" alt="Buscar" />
-            </button>
-        </form>
-    </nav>
-</header>
+    <header class="header-app">
+        <nav>
+          <section class="nav-icons">
+            <a href="#" class="logo">
+              <img src="img/PAWPrints.svg" alt="Mi sitio">
+            </a>
+            <search>
+              <form action="search.php" method="get" class="search-bar">
+                <input type="search" name="campo" placeholder="Buscar..." class="input-search">
+                <button type="submit" class="submit-search">
+                  <img src="img/lupa.png" alt="Buscar">
+                </button>
+              </form>
+            </search>
+            <a href="account.html">
+              <img src="img/usuario.png" alt="Mi cuenta">
+            </a>
+            <a href="shop.html">
+              <img src="img/carrito-de-compras.png" alt="Mi carrito">
+            </a>
+          </section>
+          <section class="nav-links">
+            <ul>
+              <li><a href="books.html">Libros</a></li>
+              <li><a href="contact.html">Contacto</a></li>
+              <li><a href="fiction.html">Ficción</a></li>
+              <li><a href="terror.html">Terror</a></li>
+              <li><a href="fantasy.html">Fantasía</a></li>
+            </ul>
+          </section>
+        </nav>
+      </header>
+    
 <main>
 
 <!--Las secciones slides sera pre-procesadas por el servidor-->
