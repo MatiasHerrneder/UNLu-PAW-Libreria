@@ -141,10 +141,12 @@
 
     .header-app {
         position: static;
-        max-width: 80%;
+        width: 80%;
+        max-width: 1100px;
+        max-height: 227px;
         margin: 0 auto;
         padding: 20px;
-        background-color: #D8CBDF;
+        background-color: var(--violeta-claro-4);
     }
 
     .input-search {

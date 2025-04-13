@@ -40,7 +40,7 @@
     margin-bottom: 2.5%;
 }
 
-h1 {
+main > h1 {
     font-style: normal;
     font-weight: bold;
     font-size: 2em;
@@ -49,8 +49,9 @@ h1 {
 
 /* Estilos para pantallas de al menos 768px (típico para escritorio o tablet horizontal) */
 @media (min-width: 768px) {
-    h1 {
+    main > h1 {
         margin-left: 8%;
+        margin-bottom: 1.5%;
     }
     #asunto {
         width: 80%;

@@ -3,20 +3,20 @@
 .footer-app {
     display: flex;
     justify-content: center;
-    margin-top: 30px;
+    margin-top: 5%;
     border-top: 2px solid var(--violeta);
 }
 
 .footer-app > section {
     margin: 20px;
-    width: 150px;
+    width: 50%; /* Funciona <=> hay 2 secciones en el footer */
     display: flex;
     flex-flow: column wrap;
     align-items: center;
 }
 
 .footer-app h1 {
-    font-size: 20px;
+    font-size: 1em;
     font-weight: bold;
 }
 
@@ -26,7 +26,10 @@
 
 .footer-app .social-net li  {
     width: 40px;
+    margin-top: 50%;
+    /*
     margin-top: 20px;
+    */
 }
 
 .footer-app .contact h1 {
@@ -34,5 +37,18 @@
 }
 
 .footer-app .contact li {
-    margin-top: 10px;
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+
+.contact a {
+    color: var(--violeta-oscuro-3);
+}
+
+/* Estilos para pantallas de al menos 768px (típico para escritorio o tablet horizontal) */
+@media (min-width: 768px) {
+    .footer-app {
+        border-top: 3px solid var(--violeta-claro-3);
+        background-color: var(--violeta-claro-4);
+    }
 }
