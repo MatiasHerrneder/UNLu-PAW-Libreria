@@ -1,5 +1,9 @@
 main {
-    margin-top: 1.5%;
+    margin-top: 45%;
+}
+
+.header-app {
+    z-index: 10;
 }
 
 .section-carousel {
@@ -7,12 +11,16 @@ main {
     flex-direction: column;
 }
 
+body {
+    position: relative;
+}
+
 /* Slideshow container */
 .slideshow-container {
-    background-color: blue;
+    /* background-color: blue; */
     max-width: 90%;
     box-sizing: border-box;
-    position: static;
+    position: relative;
     margin: auto;
 }
 
@@ -99,12 +107,17 @@ main {
 }
 
 .mySlides {
-    display: none
+    display: none;
+    max-height: 200px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .mySlides img {
     width: 100%;
-    height: 100%;
+    height: auto;
     object-fit: contain;
 }
 
@@ -148,7 +161,7 @@ main {
 
 /* Estilos para pantallas de al menos 768px (típico para escritorio o tablet horizontal) */
 @media (min-width: 768px) {
-/* The dots/bullets/indicators */
+    /* The dots/bullets/indicators */
     .dot {
         min-width: 30px;
         min-height: 30px;
@@ -165,5 +178,13 @@ main {
     .text { /* caption text */
         min-width: 80%;
         margin-left: 4.5%;
+    }
+
+    main{
+        margin-top: 10%;
+    }
+
+    .mySlides {
+        max-height: 600px;
     }
 }
