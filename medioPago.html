@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="css/header.css">
   <link rel="stylesheet" href="css/elements.css">
   <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/compraDestino.css">
   <link rel="stylesheet" href="css/medioPago.css">
 </head>
 <body>
@@ -40,37 +41,37 @@
     <section class="contact-send">
       <h2>Información de contacto y envío</h2>
       <section>
-        <section>
-          <img src="mail.png" alt="Mi correo">
+        <section class="mail-box">
+          <img src="img/mail.png" alt="Mi correo" class="mail-icon">
           <p><strong>correo@example.com</strong></p>
         </section>
-        <section>
-          <img src="location.png" alt="Mi ubicación">
+        <section class="location-box">
+          <img src="img/location.png" alt="Mi ubicación" class="location-icon">
+          <section>  
             <p>Dirección</p>
             <p>Código postal</p>
             <p>Ciudad</p>
             <p>Teléfono</p>
+          </section>
           <a href="compraDestino.html">Cambiar</a>
         </section>
       </section>
     </section>
     <section>
-      <h2>Medio de pago</h2>
-
       <form action="realizar-pedido.php" method="POST">
-
+        <legend>Medio de pago</legend>
         <label for="tarjeta">Número de tarjeta</label>
         <input class="input-text" type="text" id="tarjeta" name="tarjeta" placeholder="Número de tarjeta" required>
 
         <label for="titular">Titular de la tarjeta</label>
         <input class="input-text" type="text" id="titular" name="titular" placeholder="Titular de la tarjeta" required>
-
-        <label for="vencimiento">Vencimiento (MM/AA)</label>
-        <input class="input-text" type="text" id="vencimiento" name="vencimiento" placeholder="MM/AA" required>
-        
-        <label for="cvv">CVV</label>
-        <input class="input-text" type="text" id="cvv" name="cvv" placeholder="CVV" required>
-
+        <div class="tarjeta-wrapper">
+          <label for="vencimiento">Vencimiento (MM/AA)</label>
+          <input class="input-text" type="text" id="vencimiento" name="vencimiento" placeholder="MM/AA" required>
+          
+          <label for="cvv">CVV</label>
+          <input class="input-text" type="text" id="cvv" name="cvv" placeholder="CVV" required>
+        </div>
         <label for="cuotas">Cuotas</label>
         <select id="cuotas" name="cuotas" required>
           <option value="">Seleccionar</option>
@@ -88,10 +89,10 @@
         </select>
 
         <label for="doc">Documento</label>
-        <input type="text" id="doc" name="doc" placeholder="Documento (el anterior default)" required>
+        <input class="input-text" type="text" id="doc" name="doc" placeholder="Documento (el anterior default)" required>
 
         <label for="telefono">Teléfono</label>
-        <input type="text" id="telefono" name="telefono" placeholder="Teléfono (el anterior default)" required>
+        <input class="input-text" type="text" id="telefono" name="telefono" placeholder="Teléfono (el anterior default)" required>
 
         <input type="submit" class="button-submit" value="Realizar pedido">
       </form>

@@ -2,3 +2,140 @@ main {
     margin-top: 200px;
 }
 
+main > header section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60vw;
+    max-width: 20rem;
+    justify-self: center;;
+}
+
+main > header section * {
+    display: block;
+}
+
+main > header section select {
+    margin-top: 0;
+    width: 100%;
+}
+
+main > header section label {
+    margin: 0;
+}
+
+/* 
+    ### MENU FILTROS COMIENZA ESCONDIDO ###
+*/
+main > section > search {
+    display: none;
+    position: fixed;
+    background-color: #fff;
+    top: 0;
+    left: 0;
+    width: 60vw;
+    height: 100vh;
+    max-width: 20rem;
+    overflow-y: auto;
+}
+
+main > section > search h2 {
+    margin: 2rem 0 0 10px;
+    font-size: 1.5rem;
+}
+
+.filter-editorial {
+    margin-top: 1rem;
+}
+
+.filter-editorial label {
+    display: none;
+}
+
+.filter-editorial select {
+    width: calc(90% - 10px);
+    margin: 0 1rem 0 1rem;
+    box-sizing: border-box;
+}
+
+.filter-precio {
+    margin-top: 1rem;
+}
+
+.filter-precio form {
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.filter-precio form input[type="number"] {
+    text-align: center;
+    margin:0 5% 0 5%;
+    height: 2rem;
+    min-width: 0px;
+}
+
+.filter-precio form input[type="submit"] {
+    grid-column: 1 / span 2;
+    text-align: center;
+    margin: 0.5rem 20% 0 20%;
+}
+
+.filter-precio label{
+    display: none;
+}
+
+.filter-precio input {
+    text-align: center;
+}
+
+.filter-categorias {
+    margin-top: 1rem;
+}
+
+.filter-categorias li {
+    border-bottom: 1px solid black;
+}
+
+.filter-categorias li a {
+    display: block;
+    padding: 1rem;
+    text-decoration: none;
+    color: var(--violeta-claro-1);
+    font-weight: bold;
+}
+
+.all-books-container {
+    width: 100%;
+}
+
+.all-books-container ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(8rem, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.all-books-container li {
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+.all-books-container article {
+    display: flex;
+    flex-direction: column;
+}
+
+.all-books-container figure img {
+    width: 100%;
+    height: auto;
+}
+
+.all-books-container article h2 {
+    margin: 1rem 0 0 0;
+    font-weight: bold;
+}
+
+.all-books-container article p {
+    margin: 0 0 1rem 0;
+}
