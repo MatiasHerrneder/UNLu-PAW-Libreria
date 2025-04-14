@@ -12,21 +12,13 @@
 }
 
 .form-contact input, label {
-    margin-top: 10px;
-    font-size: 18px;
-}
-
-.form-contact input, textarea {
-    border: 1px solid black;
-}
-
-.form-contact input[type=text] {
-    border-bottom: 1px solid white;
-    border-radius: 4px;
+    margin-top: 0.8rem;
+    font-size: 1.5rem;
 }
 
 .form-contact label {
     font-weight: bold;
+    margin-bottom: 20px;
 }
 
 main {
@@ -40,37 +32,25 @@ main > h1 {
     text-align: center;
 }
 
+select {
+    background: white;
+}
+
+textarea {
+    height: 9rem;
+}
+
+.button-submit {
+    margin-top: 2rem !important;
+}
+
+
 /* Estilos para pantallas de al menos 768px (típico para escritorio o tablet horizontal) */
 @media (min-width: 768px) {
-    main > h1 {
-        margin-bottom: 1.5%;
-    }
-    #asunto {
-        width: 80%;
-        font-size: 1em;
-        margin-top: 1%;
-    }
     .form-contact {
-        width: 60%;
+        width: 43rem !important;
     }
-    .form-contact label {
-        font-size: 1.5em;
-    }
-    .form-contact input {
+    .form-input-text {
         width: 100%;
-        padding: 14px 20px;
-        margin: 8px 0;
-        border-radius: 4px;
-        cursor: pointer;
-    }
-/*
-    .form-contact textarea {
-        width: 100%;
-        min-height: 80px;
-    }
-*/
-    .form-contact input[type=submit]{
-        margin-left: 25%;
-        width: 40%;
     }
 }
