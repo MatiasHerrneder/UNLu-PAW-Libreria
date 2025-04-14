@@ -1,5 +1,9 @@
 @import url('./colors.css');
 
+main {
+    margin-top: 200px;
+}
+
 .header-app {
     position: fixed;
     padding: 1.2rem;
