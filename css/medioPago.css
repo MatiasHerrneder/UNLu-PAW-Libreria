@@ -9,7 +9,24 @@ main {
 }
 
 .contact-send {
+    display: flex;
+    flex-wrap: wrap;
     margin-top: 20px;
+    align-items: center;
+    flex-direction: column;
+}
+
+.contact-send > h2 {
+    width: 80%;
+    max-width: 30rem;
+}
+
+.contact-send > section {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 80%;
+    max-width: 30rem;
 }
 
 .mail-icon, .location-icon {
@@ -40,7 +57,7 @@ main {
 
 .location-box a {
     margin-left: auto;
-    margin-right: 2rem;
+    margin-right: 0;
 }
 
 .contact-send h2 {
@@ -53,6 +70,7 @@ main {
     display: flex;
     gap: 1rem;
     width: 80vw;
+    max-width: 30rem;
 }
 
 .tarjeta-wrapper input {

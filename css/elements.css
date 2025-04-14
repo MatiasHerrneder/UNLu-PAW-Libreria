@@ -82,6 +82,7 @@
     padding: 10px;
     font-size: 20px;
     border: 1px solid black;
+    max-width: 30rem;
 }
 
 .button-1 {
@@ -99,7 +100,7 @@
 
 .fieldset-checkout {
     margin-top: 10px;
-    width: 100vw;
+    width: 100%;
 }
 
 .form-checkout, .fieldset-checkout {
@@ -110,7 +111,8 @@
 
 .form-input-text {
     margin-top: 15px;
-    width: 80vw;
+    width: 80%;
+    max-width: 30rem;
 }
 
 .legend-checkout {
