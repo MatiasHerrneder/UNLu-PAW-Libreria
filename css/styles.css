@@ -1,0 +1,12 @@
+@import url('./reset.css');
+
+@font-face {
+    font-family: 'openSans';
+    src: url('../fonts/OpenSans-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+html {
+    font-family: "openSans";
+}
