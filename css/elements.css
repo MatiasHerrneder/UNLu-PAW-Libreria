@@ -41,7 +41,7 @@
     border-radius: 20px;
 }
 
-.input-text {
+.input-text, .form-input-text {
     padding: 10px;
     font-size: 20px;
     border: 1px solid black;
@@ -74,4 +74,54 @@
 
 .logo-pay img {
     width: 100%;
+}
+
+/* main input[type=submit] {
+    outline: 1px solid var(--violeta);
+    padding: 10px 15px;
+    color: #000;
+    border-radius: 2px;
+    background-color: transparent;
+} */
+
+.select-big {
+    margin-top: 15px;
+    width: 80%;
+    padding: 10px;
+    font-size: 20px;
+    border: 1px solid black;
+}
+
+.button-1 {
+    outline: 1px solid var(--violeta);
+    padding: 10px 12px;
+    color: #000;
+    text-decoration: none;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.form-checkout {
+    margin-top: 20px;
+}
+
+.fieldset-checkout {
+    margin-top: 10px;
+    width: 100vw;
+}
+
+.form-checkout, .fieldset-checkout {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+}
+
+.form-input-text {
+    margin-top: 15px;
+    width: 80vw;
+}
+
+.legend-checkout {
+    text-align: center;
+    font-size: 25px;
 }

@@ -6,17 +6,17 @@ label {
     display: inline;
 }
 
-.input-text {
+.form-input-text {
     margin: 0 0 1rem 0;
 }
 
-main input[type=submit] {
+/* main input[type=submit] {
     outline: 1px solid var(--violeta);
     padding: 10px 15px;
     color: #000;
     border-radius: 2px;
     background-color: transparent;
-}
+} */
 
 main p {
     margin: 2rem 10vw 1rem 10vw;

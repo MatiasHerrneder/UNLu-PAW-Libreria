@@ -4,14 +4,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Login</title>
-  <link rel="stylesheet" href="css/header.css">
-  <link rel="stylesheet" href="css/elements.css">
   <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/header.css">
   <link rel="stylesheet" href="css/footer.css">
-  <link rel="stylesheet" href="css/compraDestino.css">
-  <link rel="stylesheet" href="css/medioPago.css">
-  <link rel="stylesheet" href="css/index.css">
-  <link rel="stylesheet" href="css/login.css">
+  <link rel="stylesheet" href="css/elements.css">
+  <link rel="stylesheet" href="css/auth.css">
 </head>
 <body>
   <header class="header-app">
@@ -48,13 +45,13 @@
   </header>
 	<main>
     <h1>Iniciar sesión</h1>
-    <form action="login.php" method="POST">
+    <form class="form-checkout" action="login.php" method="POST">
       <label for="correo">Correo *</label>
-      <input class="input-text" type="email" id="correo" name="correo" required>
+      <input class="form-input-text" type="email" id="correo" name="correo" required>
       <label for="contrasenia">Contraseña *</label>
-      <input class="input-text" type="password" id="contrasenia" name="contrasenia" required>
+      <input class="form-input-text" type="password" id="contrasenia" name="contrasenia" required>
       <a href="recuperar.html">¿Olvidaste tu contraseña?</a>
-      <input type="submit" value="Acceder">
+      <input class="button-submit" type="submit" value="Acceder">
     </form>
     <p>¿No tienes una cuenta? <a href="register.html">Crear cuenta</a></p>
   </main>

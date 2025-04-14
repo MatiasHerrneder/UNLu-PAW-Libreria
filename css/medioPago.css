@@ -41,25 +41,11 @@ main {
 .location-box a {
     margin-left: auto;
     margin-right: 2rem;
-    outline: 1px solid var(--violeta);
-    padding: 10px 12px;
-    color: #000;
-    text-decoration: none;
-    border-radius: 2px;
-    cursor: pointer;
 }
 
 .contact-send h2 {
     padding-left: 10px;
     font-size: 1.5rem;
-}
-
-select {
-    margin-top: 15px;
-    width: 80vw;
-    padding: 10px;
-    font-size: 20px;
-    border: 1px solid black;
 }
 
 .tarjeta-wrapper {
@@ -76,4 +62,17 @@ select {
 
 #vencimiento {
     flex: 2;
+}
+
+label {
+    display: none;
+}
+
+.input-text {
+    margin-top: 15px;
+    width: 80vw;
+}
+
+.button-submit {
+    margin: 20px;
 }

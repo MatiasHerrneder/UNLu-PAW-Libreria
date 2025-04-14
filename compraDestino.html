@@ -4,9 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Compra</title>
+  <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/header.css">
   <link rel="stylesheet" href="css/elements.css">
-  <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/compraDestino.css">
 </head>
 <body>
@@ -36,42 +36,42 @@
       </table>
       <p>$$$</p>
     </section>
-    <form action="destinatario.php" method="POST">
-      <fieldset>
-        <legend>Datos del destinatario</legend>
+    <form class="form-checkout" action="destinatario.php" method="POST">
+      <fieldset class="fieldset-checkout">
+        <legend class="legend-checkout">Datos del destinatario</legend>
     
         <label for="nombre">Nombre</label>
-        <input class="input-text" type="text" id="nombre" name="nombre" placeholder="Nombre" required>
+        <input class="form-input-text" type="text" id="nombre" name="nombre" placeholder="Nombre" required>
     
         <label for="apellido">Apellido</label>
-        <input class="input-text" type="text" id="apellido" name="apellido" placeholder="Apellido" required>
+        <input class="form-input-text" type="text" id="apellido" name="apellido" placeholder="Apellido" required>
     
         <label for="telefono">Teléfono</label>
-        <input class="input-text" type="tel" id="telefono" name="telefono" placeholder="Teléfono" required>
+        <input class="form-input-text" type="tel" id="telefono" name="telefono" placeholder="Teléfono" required>
     
         <label for="codigoPostal">Código postal</label>
-        <input class="input-text" type="text" id="codigoPostal" name="codigoPostal" placeholder="Código postal" required>
+        <input class="form-input-text" type="text" id="codigoPostal" name="codigoPostal" placeholder="Código postal" required>
     
         <label for="calle">Calle</label>
-        <input class="input-text" type="text" id="calle" name="calle" placeholder="Calle" required>
+        <input class="form-input-text" type="text" id="calle" name="calle" placeholder="Calle" required>
     
         <label for="numero">Número</label>
-        <input class="input-text" type="text" id="numero" name="numero" placeholder="Número" required>
+        <input class="form-input-text" type="text" id="numero" name="numero" placeholder="Número" required>
     
         <label for="departamento">Departamento</label>
-        <input class="input-text" type="text" id="departamento" name="departamento" placeholder="Departamento (opcional)">
+        <input class="form-input-text" type="text" id="departamento" name="departamento" placeholder="Departamento (opcional)">
     
         <label for="barrio">Barrio</label>
-        <input class="input-text" type="text" id="barrio" name="barrio" placeholder="Barrio (opcional)">
+        <input class="form-input-text" type="text" id="barrio" name="barrio" placeholder="Barrio (opcional)">
     
         <label for="ciudad">Ciudad</label>
-        <input class="input-text" type="text" id="ciudad" name="ciudad" placeholder="Ciudad" required>
+        <input class="form-input-text" type="text" id="ciudad" name="ciudad" placeholder="Ciudad" required>
       </fieldset>
     
-      <fieldset>
-        <legend>Datos de facturación</legend>
+      <fieldset class="fieldset-checkout">
+        <legend class="legend-checkout">Datos de facturación</legend>
         <label for="dni">DNI o CUIT</label>
-        <input class="input-text" type="text" id="dni" name="dni" placeholder="DNI o CUIT" required>
+        <input class="form-input-text" type="text" id="dni" name="dni" placeholder="DNI o CUIT" required>
       </fieldset>
     
       <input type="submit" class="button-submit" value="Continuar con el pago">
