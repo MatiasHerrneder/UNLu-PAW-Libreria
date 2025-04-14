@@ -141,7 +141,7 @@ main {
     }
     
     .header-app .account, .shopping-cart {
-        position: fixed;
+        position: fixed !important;
     }
 
     .header-app .account {

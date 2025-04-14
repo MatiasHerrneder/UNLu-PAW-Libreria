@@ -11,3 +11,7 @@ label {
 .button-submit {
     margin: 20px;
 }
+
+.header-app {
+    padding: 20px !important;
+}
