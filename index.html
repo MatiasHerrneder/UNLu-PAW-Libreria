@@ -2,65 +2,91 @@
 <html lang="es">
 <head>
     <meta charset="utf-8">
-    <title>Mi libreria</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <!--Como estos scripts manipulan el DOM.
+        Se agrefo el "defer" Atribute-->
+    <script src="js/header.js" defer></script>
+    <script type="text/javascript" src="./js/slide.js" defer></script>
 </head>
 <body>
-	<header>
+  <header class="header-app">
     <nav>
       <section class="nav-icons">
-        <a href="#" class="logo">
-          <img src="logo.png" alt="Mi sitio">
+        <a href="index.html" class="logo">
+          <img src="img/PAWPrints.svg" alt="Mi sitio">
         </a>
         <search>
           <form action="search.php" method="get" class="search-bar">
-            <input type="search" name="campo" placeholder="Buscar...">
-            <input type="submit" value="Buscar">
+            <input type="search" name="campo" placeholder="Buscar..." class="input-search">
+            <button type="submit" class="submit-search">
+              <img src="img/lupa.png" alt="Buscar">
+            </button>
           </form>
         </search>
-        <a href="account.html">
-          <img src="account.png" alt="Mi cuenta">
+        <a href="login.html" class="account">
+          <img src="img/usuario.png" alt="Mi cuenta">
         </a>
-        <a href="shop.html">
-          <img src="shop.png" alt="Mi carrito">
+        <a href="carrito.html" class="shopping-cart">
+          <img src="img/carrito-de-compras.png" alt="Mi carrito">
         </a>
       </section>
-      <section>
-        <ul class="nav-links">
-          <li><a href="books.html">Libros</a></li>
+      <section class="nav-links">
+        <ul>
+          <li><a href="tienda.html">Libros</a></li>
           <li><a href="contact.html">Contacto</a></li>
-          <li><a href="fiction.html">Ficción</a></li>
-          <li><a href="terror.html">Terror</a></li>
-          <li><a href="fantasy.html">Fantasía</a></li>
+          <li><a href="tienda.html">Ficción</a></li>
+          <li><a href="tienda.html">Terror</a></li>
+          <li><a href="tienda.html">Fantasía</a></li>
         </ul>
       </section>
     </nav>
-  </header>
-  <main>
-    <section>
-      <section class="carousel">
-        <button>&#8249;</button>
-        <figure>
-          <img src="promo.jpg" alt="Imagen de promoción">
-        </figure>
-        <button>&#8250;</button>
-      </section>
-      <nav>
-        <ul>
-          <li><button class="input-page-carousel"></button></li>
-          <li><button class="input-page-carousel"></button></li>
-          <li><button class="input-page-carousel"></button></li>
-        </ul>
-      </nav>
-    </section>
-    <section>
+</header>
+    
+<main>
+
+<!--Las secciones slides sera pre-procesadas por el servidor-->
+<div class="slideshow-container">
+    <div class="mySlides fade">
+        <div class="numbertext">1 / 3</div>
+        <img src="./img/publicar-libros-online.jpg" alt="Imagen de promoción">
+        <div class="text">Caption 1</div>
+    </div>
+
+    <div class="mySlides fade">
+        <div class="numbertext">1 / 3</div>
+        <img src="./img/publicar-libros-online2.jpg" alt="Imagen de promoción">
+        <div class="text">Caption 2</div>
+    </div>
+
+    <div class="mySlides fade">
+        <div class="numbertext">1 / 3</div>
+        <img src="./img/publicar-libros-online3.jpg" alt="Imagen de promoción">
+        <div class="text">Caption 3</div>
+    </div>
+
+    <a class="prev" onclick="plusSlides(-1)">❮</a>
+    <a class="next" onclick="plusSlides(1)">❯</a>
+</div>
+<div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span> 
+    <span class="dot" onclick="currentSlide(2)"></span> 
+    <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+
+<section class="sell-section">
       <h1>Mas vendidos</h1>
-      <section>
-        <button>&#8249;</button>
+      <section class="sell-slide">
+        <button class="arrow left">&#8249;</button>
         <ul>
           <li>
             <article>
               <figure>
-                <img src="img-libro.jpg" alt="Imagen de libro">
+                <img src="img/libro-abierto.png" alt="Imagen de libro">
               </figure>
               <h2>Mi libro</h2>
               <p>Juan Perez</p>
@@ -70,7 +96,7 @@
           <li>
             <article>
               <figure>
-                <img src="img-libro.jpg" alt="Imagen de libro">
+                <img src="img/libro-abierto.png" alt="Imagen de libro">
               </figure>
               <h2>Mi libro</h2>
               <p>Juan Perez</p>
@@ -80,7 +106,27 @@
           <li>
             <article>
               <figure>
-                <img src="img-libro.jpg" alt="Imagen de libro">
+                <img src="img/libro-abierto.png" alt="Imagen de libro">
+              </figure>
+              <h2>Mi libro</h2>
+              <p>Juan Perez</p>
+              <p>$123123</p>
+            </article>
+          </li>
+          <li>
+            <article>
+              <figure>
+                <img src="img/libro-abierto.png" alt="Imagen de libro">
+              </figure>
+              <h2>Mi libro</h2>
+              <p>Juan Perez</p>
+              <p>$123123</p>
+            </article>
+          </li>
+          <li>
+            <article>
+              <figure>
+                <img src="img/libro-abierto.png" alt="Imagen de libro">
               </figure>
               <h2>Mi libro</h2>
               <p>Juan Perez</p>
@@ -88,30 +134,31 @@
             </article>
           </li>
         </ul>
-        <button>&#8250;</button>
+        <button class="arrow right">&#8250;</button>
       </section>
     </section>
-  </main>
-  <footer>
-    <section>
+</main>
+
+  <footer class="footer-app">
+    <section class="social-net">
       <h1>Redes Sociales</h1>
       <address>
       <ul>
           <li>
             <a href="https://www.instagram.com/milibreria">
-              <img src="logo_ig.png" alt="Instagram">
+              <img src="img/instagram.png" alt="Instagram">
             </a>
           </li>
           <li>
-            <a href="https://www.facebook.com/milibreria">
-              <img src="logo_fb.png" alt="Facebook">
+            <a href="https://www.facebook.com/milibreria" id="facebook-link" alt="Facebook">
+              <img src="img/facebook.png" alt="Facebook">
             </a>
           </li>
         </ul>
       </address>
     </section>
-      <section>
-        <h2>Contacto</h2>
+      <section class="contact">
+        <h1>Contacto</h1>
         <address>
           <ul>
             <li>
@@ -124,5 +171,5 @@
         </address>
       </section>
   </footer>
-</body>
+  </body>
 </html>

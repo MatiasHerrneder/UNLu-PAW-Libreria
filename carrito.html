@@ -2,39 +2,47 @@
 <html lang="es">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Carrito</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/carrito.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/elements.css">
 </head>
 <body>
-  <header>
+  <header class="header-app">
     <nav>
       <section class="nav-icons">
-        <a href="#" class="logo">
-          <img src="logo.png" alt="Mi sitio">
+        <a href="index.html" class="logo">
+          <img src="img/PAWPrints.svg" alt="Mi sitio">
         </a>
         <search>
           <form action="search.php" method="get" class="search-bar">
-            <input type="search" name="campo" placeholder="Buscar...">
-            <input type="submit" value="Buscar">
+            <input type="search" name="campo" placeholder="Buscar..." class="input-search">
+            <button type="submit" class="submit-search">
+              <img src="img/lupa.png" alt="Buscar">
+            </button>
           </form>
         </search>
-        <a href="account.html">
-          <img src="account.png" alt="Mi cuenta">
+        <a href="login.html" class="account">
+          <img src="img/usuario.png" alt="Mi cuenta">
         </a>
-        <a href="shop.html">
-          <img src="shop.png" alt="Mi carrito">
+        <a href="carrito.html" class="shopping-cart">
+          <img src="img/carrito-de-compras.png" alt="Mi carrito">
         </a>
       </section>
-      <section>
-        <ul class="nav-links">
-          <li><a href="books.html">Libros</a></li>
+      <section class="nav-links">
+        <ul>
+          <li><a href="tienda.html">Libros</a></li>
           <li><a href="contact.html">Contacto</a></li>
-          <li><a href="fiction.html">Ficción</a></li>
-          <li><a href="terror.html">Terror</a></li>
-          <li><a href="fantasy.html">Fantasía</a></li>
+          <li><a href="tienda.html">Ficción</a></li>
+          <li><a href="tienda.html">Terror</a></li>
+          <li><a href="tienda.html">Fantasía</a></li>
         </ul>
       </section>
     </nav>
-  </header>
+</header>
   <main>
     <h1>Carrito</h1>
     <section class="books">
@@ -42,43 +50,56 @@
         <table>
           <tr>
             <th>Producto</th>
+            <th></th>
             <th>Precio</th>
             <th>Cantidad</th>
             <th>Subtotal</th>
           </tr>
           <tr>
             <!-- ejemplos para mostrar el maquetado -->
-            <td>       
+            <td class="td-figure">       
               <figure>
                 <picture>
-                  <img src="tapa.png" alt="">
+                  <img src="img/libro-abierto.png" alt="">
                 </picture>
               </figure>
+            </td>
+            <td>
               <p>Libro</p>
             </td>
             <td>$123123</td>
             <td>
-              <input type="number" name="cantidad_nexus" id="ejemplo1" value="1" min="1" step="1">
+              <div class="quantity-wrapper">
+                <button class="button-book minus">−</button>
+                <input type="number" class="input-number" name="cantidad_nexus" id="ejemplo" value="1" min="1" step="1">
+                <button class="button-book plus">+</button>
+              </div>
             </td>
             <td>$123123</td>
           </tr>
           <tr>
-            <td>
+            <td class="td-figure">
               <figure>
                 <picture>
-                  <img src="tapa.png" alt="">
+                  <img src="img/libro-abierto.png" alt="">
                 </picture>
               </figure>
+            </td>
+            <td>
               <p>Libro</p>
             </td>
             <td>$123123</td>
             <td>
-              <input type="number" name="cantidad_nexus" id="ejemplo2" value="1" min="1" step="1">
+              <div class="quantity-wrapper">
+                <button class="button-book minus">−</button>
+                <input type="number" class="input-number" name="cantidad_nexus" id="ejemplo" value="1" min="1" step="1">
+                <button class="button-book plus">+</button>
+              </div>
             </td>
             <td>$123123</td>
           </tr>
         </table>
-        <a href="tienda.html">Seguir Comprando</a>
+        <a href="tienda.html" class="button-submit">Seguir Comprando</a>
       </section>
       <section class="finish-purchase">
         <h2>Total del carrito</h2>
@@ -96,30 +117,30 @@
             <td>$123234</td>
           </tr>
         </table>
-        <a href="compraDestino.html">Finalizar compra</a>
+        <a href="compraDestino.html" class="button-submit">Finalizar compra</a>
       </form>
     </section>
   </main>
-  <footer>
-    <section>
+  <footer class="footer-app">
+    <section class="social-net">
       <h1>Redes Sociales</h1>
       <address>
       <ul>
           <li>
             <a href="https://www.instagram.com/milibreria">
-              <img src="logo_ig.png" alt="Instagram">
+              <img src="img/instagram.png" alt="Instagram">
             </a>
           </li>
           <li>
             <a href="https://www.facebook.com/milibreria">
-              <img src="logo_fb.png" alt="Facebook">
+              <img src="img/facebook.png" alt="Facebook">
             </a>
           </li>
         </ul>
       </address>
     </section>
-      <section>
-        <h2>Contacto</h2>
+      <section class="contact">
+        <h1>Contacto</h1>
         <address>
           <ul>
             <li>
@@ -132,5 +153,6 @@
         </address>
       </section>
   </footer>
+  <script src="js/header.js"></script>
 </body>
 </html>

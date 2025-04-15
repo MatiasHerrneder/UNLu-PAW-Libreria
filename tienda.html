@@ -2,57 +2,67 @@
 <html lang="es">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tienda</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/elements.css">
+  <link rel="stylesheet" href="css/tienda.css">
 </head>
 <body>
-  <header>
+  <header class="header-app">
     <nav>
       <section class="nav-icons">
-        <a href="#" class="logo">
-          <img src="logo.png" alt="Mi sitio">
+        <a href="index.html" class="logo">
+          <img src="img/PAWPrints.svg" alt="Mi sitio">
         </a>
         <search>
           <form action="search.php" method="get" class="search-bar">
-            <input type="text" name="campo" placeholder="Buscar...">
-            <input type="submit" value="Buscar">
+            <input type="search" name="campo" placeholder="Buscar..." class="input-search">
+            <button type="submit" class="submit-search">
+              <img src="img/lupa.png" alt="Buscar">
+            </button>
           </form>
         </search>
-        <a href="account.html">
-          <img src="account.png" alt="Mi cuenta">
+        <a href="login.html" class="account">
+          <img src="img/usuario.png" alt="Mi cuenta">
         </a>
-        <a href="shop.html">
-          <img src="shop.png" alt="Mi carrito">
+        <a href="carrito.html" class="shopping-cart">
+          <img src="img/carrito-de-compras.png" alt="Mi carrito">
         </a>
-      </section> 
-      <section>
-        <ul class="nav-links">
-          <li><a href="books.html">Libros</a></li>
+      </section>
+      <section class="nav-links">
+        <ul>
+          <li><a href="tienda.html">Libros</a></li>
           <li><a href="contact.html">Contacto</a></li>
-          <li><a href="fiction.html">Ficción</a></li>
-          <li><a href="terror.html">Terror</a></li>
-          <li><a href="fantasy.html">Fantasía</a></li>
+          <li><a href="tienda.html">Ficción</a></li>
+          <li><a href="tienda.html">Terror</a></li>
+          <li><a href="tienda.html">Fantasía</a></li>
         </ul>
       </section>
     </nav>
-  </header>
+</header>
   <main>
     <header>
-    <h1>Tienda</h1>
-      <section class="breadcrumb">
+      <h1>Tienda</h1>
+      <!-- <section class="breadcrumb">
         <ol>
           <li><a href="index.html">Inicio</a></li>
           <li><a href="#">Tienda</a></li>
         </ol>
-      </section>
+      </section> -->
       <section>
         <label for="ordenar">Ordenar por:</label>
-        <select id="ordenar" name="ordenar">
+        <select class="select-big" id="ordenar" name="ordenar">
           <option value="popularidad">Popularidad</option>
+          <option value="menor-precio">Menor precio</option>
+          <option value="mayor-precio">Mayor precio</option>
         </select>
       </section>
-  </header>
-  <section>
-    <search>
+    </header>
+    <section>
+      <search>
         <section class="filter-editorial">
           <h2>Filtrar por Editorial</h2>
           <label for="editorial">Selecciona una editorial:</label>
@@ -64,9 +74,9 @@
           <h2>Filtrar por Precios</h2>
           <form>
             <label for="min-precio">Mín:</label>
-            <input type="number" id="min-precio" name="min-precio" min="2000" max="100000">
+            <input type="number" id="min-precio" placeholder="Min" name="min-precio" min="2000" max="100000">
             <label for="max-precio">Máx:</label>
-            <input type="number" id="max-precio" name="max-precio" min="2000" max="100000">
+            <input type="number" id="max-precio" placeholder="Max" name="max-precio" min="2000" max="100000">
             <input type="submit" value="Filtrar">
           </form>
         </section>
@@ -80,16 +90,18 @@
             <li><a href="#">Ficción</a></li>
             <li><a href="#">Historia y arqueología</a></li>
             <li><a href="#">Infantil y Juvenil</a></li>
+            <li><a href="#">Test scroll</a></li>
+            <li><a href="#">Test scroll</a></li>
           </ol>
         </section>
       </search>
     </section>
-    <section>
+    <section class="all-books-container">
       <ul>
         <li>
           <article>
             <figure>
-              <img src="img-libro.jpg" alt="">
+              <img src="img/libro.jpg" alt="">
             </figure>
             <h2>Mi libro</h2>
             <p>Juan Perez</p>
@@ -99,7 +111,37 @@
         <li>
           <article>
             <figure>
-              <img src="img-libro.jpg" alt="">
+              <img src="img/libro.jpg" alt="">
+            </figure>
+            <h2>Mi libro</h2>
+            <p>Juan Perez</p>
+            <p>$123123</p>
+          </article>
+        </li>
+        <li>
+          <article>
+            <figure>
+              <img src="img/libro.jpg" alt="">
+            </figure>
+            <h2>Mi libro</h2>
+            <p>Juan Perez</p>
+            <p>$123123</p>
+          </article>
+        </li>
+        <li>
+          <article>
+            <figure>
+              <img src="img/libro.jpg" alt="">
+            </figure>
+            <h2>Mi libro</h2>
+            <p>Juan Perez</p>
+            <p>$123123</p>
+          </article>
+        </li>
+        <li>
+          <article>
+            <figure>
+              <img src="img/libro.jpg" alt="">
             </figure>
             <h2>Mi libro</h2>
             <p>Juan Perez</p>
@@ -109,26 +151,26 @@
       </ul>
     </section>
   </main>
-  <footer>
-    <section>
+  <footer class="footer-app">
+    <section class="social-net">
       <h1>Redes Sociales</h1>
       <address>
       <ul>
           <li>
             <a href="https://www.instagram.com/milibreria">
-              <img src="logo_ig.png" alt="Instagram">
+              <img src="img/instagram.png" alt="Instagram">
             </a>
           </li>
           <li>
             <a href="https://www.facebook.com/milibreria">
-              <img src="logo_fb.png" alt="Facebook">
+              <img src="img/facebook.png" alt="Facebook">
             </a>
           </li>
         </ul>
       </address>
     </section>
-      <section>
-        <h2>Contacto</h2>
+      <section class="contact">
+        <h1>Contacto</h1>
         <address>
           <ul>
             <li>
@@ -141,5 +183,6 @@
         </address>
       </section>
   </footer>
+  <script src="js/header.js"></script>
 </body>
 </html>

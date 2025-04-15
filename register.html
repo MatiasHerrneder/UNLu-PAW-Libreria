@@ -2,74 +2,82 @@
 <html lang="es">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Registro</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/elements.css">
+  <link rel="stylesheet" href="css/auth.css">
 </head>
 <body>
-  <header>
+  <header class="header-app">
     <nav>
       <section class="nav-icons">
-        <a href="#" class="logo">
-          <img src="logo.png" alt="Mi sitio">
+        <a href="index.html" class="logo">
+          <img src="img/PAWPrints.svg" alt="Mi sitio">
         </a>
         <search>
           <form action="search.php" method="get" class="search-bar">
-            <input type="search" name="campo" placeholder="Buscar...">
-            <input type="submit" value="Buscar">
+            <input type="search" name="campo" placeholder="Buscar..." class="input-search">
+            <button type="submit" class="submit-search">
+              <img src="img/lupa.png" alt="Buscar">
+            </button>
           </form>
         </search>
-        <a href="account.html">
-          <img src="account.png" alt="Mi cuenta">
+        <a href="login.html" class="account">
+          <img src="img/usuario.png" alt="Mi cuenta">
         </a>
-        <a href="shop.html">
-          <img src="shop.png" alt="Mi carrito">
+        <a href="carrito.html" class="shopping-cart">
+          <img src="img/carrito-de-compras.png" alt="Mi carrito">
         </a>
       </section>
-      <section>
-        <ul class="nav-links">
-          <li><a href="books.html">Libros</a></li>
+      <section class="nav-links">
+        <ul>
+          <li><a href="tienda.html">Libros</a></li>
           <li><a href="contact.html">Contacto</a></li>
-          <li><a href="fiction.html">Ficción</a></li>
-          <li><a href="terror.html">Terror</a></li>
-          <li><a href="fantasy.html">Fantasía</a></li>
+          <li><a href="tienda.html">Ficción</a></li>
+          <li><a href="tienda.html">Terror</a></li>
+          <li><a href="tienda.html">Fantasía</a></li>
         </ul>
       </section>
     </nav>
-  </header>
+</header>
 	<main>
     <h1>Crear cuenta</h1>
-      <form action="register.php" method="POST">
-        <label for="nombre">Nombre y apellido *</label>
-        <input type="text" id="nombre" name="nombre" required>
-        <label for="correo">Correo *</label>
-        <input type="email" id="correo" name="correo" required>
-        <label for="contrasenia">Contraseña *</label>
-        <input type="password" id="contrasenia" name="contrasenia" required>
-        <label for="confirmarContrasenia">Confirmar contraseña *</label>
-        <input type="password" id="confirmarContrasenia" name="confirmarContrasenia" required>
-        <input type="submit" value="Acceder">
-      </form>
-      <p>¿Ya tienes una cuenta? <a href="login.html">Iniciar sesión</a></p>
-    </main>
-  <footer>
-    <section>
+    <form class="form-checkout" action="register.php" method="POST">
+      <label for="nombre">Nombre y apellido *</label>
+      <input class="form-input-text" type="text" id="nombre" name="nombre" required>
+      <label for="correo">Correo *</label>
+      <input class="form-input-text" type="email" id="correo" name="correo" required>
+      <label for="contrasenia">Contraseña *</label>
+      <input class="form-input-text" type="password" id="contrasenia" name="contrasenia" required>
+      <label for="confirmarContrasenia">Confirmar contraseña *</label>
+      <input class="form-input-text" type="password" id="confirmarContrasenia" name="confirmarContrasenia" required>
+      <input class="button-submit" type="submit" value="Acceder">
+    </form>
+    <p>¿Ya tienes una cuenta? <a href="login.html">Iniciar sesión</a></p>
+  </main>
+  <footer class="footer-app">
+    <section class="social-net">
       <h1>Redes Sociales</h1>
       <address>
       <ul>
           <li>
             <a href="https://www.instagram.com/milibreria">
-              <img src="logo_ig.png" alt="Instagram">
+              <img src="img/instagram.png" alt="Instagram">
             </a>
           </li>
           <li>
             <a href="https://www.facebook.com/milibreria">
-              <img src="logo_fb.png" alt="Facebook">
+              <img src="img/facebook.png" alt="Facebook">
             </a>
           </li>
         </ul>
       </address>
     </section>
-      <section>
-        <h2>Contacto</h2>
+      <section class="contact">
+        <h1>Contacto</h1>
         <address>
           <ul>
             <li>
@@ -82,5 +90,7 @@
         </address>
       </section>
   </footer>
+
+  <script src="js/header.js"></script>
 </body>
 </html>
