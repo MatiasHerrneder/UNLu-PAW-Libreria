@@ -34,19 +34,24 @@ select {
 
 textarea {
     height: 9rem;
+    width: 100%;
 }
 
 .button-submit {
     margin-top: 2rem !important;
 }
 
+.select-big {
+    width: 100%;
+}
 
-/* Estilos para pantallas de al menos 768px (típico para escritorio o tablet horizontal) */
+.form-input-text {
+    width: 100% !important;
+}
+
 @media (min-width: 600px) {
     .form-contact {
         width: 30rem !important;
     }
-    .form-input-text {
-        width: 100% !important;
-    }
+    
 }
