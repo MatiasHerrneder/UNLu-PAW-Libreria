@@ -25,6 +25,10 @@
     width: 30px;
 }
 
+.button-book {
+    margin-top: -2px;
+}
+
 .button-submit {
     padding: 10px 20px 10px 20px;
     font-size: 20px;
