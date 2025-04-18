@@ -1,25 +1,10 @@
 @import url('./colors.css');
 
-main {
-    margin-top: 220px;
-}
-
-h1 {
-    display: none;
-}
-
-.section-book > h1 {
-    font-size: 30px;
-    text-align: center;
-    font-weight: bold;
-}
-
 .section-book > article {
     display: flex;
     flex-flow: column wrap;
     align-items: center;
 }
-
 
 .section-book > article > * {
     width: 80%;
@@ -81,6 +66,10 @@ h1 {
 
 .book-info > h3 {
     font-weight: bold;
+}
+
+.header-app {
+    z-index: 10;
 }
 
 @media(min-width: 700px) {
