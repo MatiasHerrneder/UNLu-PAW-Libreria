@@ -1,16 +1,15 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sobre nosotros</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/about_us.css">
-    <link rel="stylesheet" href="css/footer.css">
-    <!--Como estos scripts manipulan el DOM.
-        Se agrefo el "defer" Atribute-->
-    <script src="js/header.js" defer></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/elements.css">
+  <link rel="stylesheet" href="css/auth.css">
+  <script src="js/header.js" defer></script>
 </head>
 <body>
   <header class="header-app">
@@ -45,21 +44,19 @@
       </section>
     </nav>
 </header>
-<main>
-	<section class="box">
-    	<h1 class="title">Sobre nosotros</h1>
-		<p>
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-			Fusce euismod placerat ante. 
-			Nunc nunc odio, pharetra a mollis eget, lobortis eu augue.
-			In commodo purus vitae egestas dapibus.
-			Mauris consectetur dictum sem quis interdum.
-			Pellentesque id ipsum ipsum. Sed quis bibendum neque, sit amet pretium neque. 
-			Nullam sed rutrum mauris. Y coso.
-		</p>
-	</section>
-</main>
-<footer class="footer-app">
+	<main>
+    <h1>Iniciar sesión</h1>
+    <form class="form-checkout" action="login.php" method="POST">
+      <label for="correo">Correo *</label>
+      <input class="form-input-text" type="email" id="correo" name="correo" required>
+      <label for="contrasenia">Contraseña *</label>
+      <input class="form-input-text" type="password" id="contrasenia" name="contrasenia" required>
+      <a href="recuperar.html">¿Olvidaste tu contraseña?</a>
+      <input class="button-submit" type="submit" value="Acceder">
+    </form>
+    <p>¿No tienes una cuenta? <a href="register.html">Crear cuenta</a></p>
+  </main>
+  <footer class="footer-app">
     <section class="social-net">
       <h1>Redes Sociales</h1>
       <address>
@@ -70,7 +67,7 @@
             </a>
           </li>
           <li>
-            <a href="https://www.facebook.com/milibreria" id="facebook-link" alt="Facebook">
+            <a href="https://www.facebook.com/milibreria">
               <img src="img/facebook.png" alt="Facebook">
             </a>
           </li>
@@ -86,6 +83,9 @@
             </li>
             <li>
               <a href="contact.html">Escribinos</a>
+            </li>
+            <li>
+                <a href="about_us.html">Sobre nosotros</a>
             </li>
           </ul>
         </address>

@@ -1,97 +1,60 @@
-# Propuesta Integrador
+# Arquitectura General
+## Modelo
+Responsable de administrar los datos de la aplicación, procesar la logica y las reglas de negocio, y responder los pedidos de informacion de otros componentes.
 
-Aplicación web cuyo propósito es ser una forma de pedir panchos personalizados o menúes ya armados, ya sea para delivery como pedir en el local.
+## Vista
+Representacion de la informacion. Recibe datos del controlador y envia datos de usuario al controlador.
 
-# 1. Funcionalidades Principales (Presupuesto Funcional)
+## Controlador
+Intermediario entre los componentes. Se encarga de procesar inputs del usuario, actualiza el modelo y la vista para reflejar los cambios en el modelo. Contiene la logica de la aplicacion como la validacion de inputs y transformacion de datos.
 
-La aplicación web se dividirá en las siguientes secciones y funcionalidades clave:
+## Problematicas:
+Considerando lo anterior se propone las siguientes soluciones para cada problematica:
+* **Analisis de la peticiones HTTP**: Trabajo conjunto entre el modulo de controlador y la resolucion de rutas.
+* **Mapeo de URLs en funcionalidades de la aplicación**: Un controlador de encargara de capturar y procesar las rutas para enviarlo a un controlador que la soluciona.
+* **Generación de las respuestas HTTP**: Un controlador se encargara de generar dichas respuestas.
+* **Generación de registros**: Los registros seran manejados por un controlador.
+* **Persistencia**: Trabajo conjunto entre la capa de modelos y una base de datos.
+* **Configuración**: Ningun modulo se encargara de la configuracion, es transversal a la arquitectura.
+* **Generación de diferentes representaciones de la información**: Trabajo conjunto entre los modulos del controlador y las vistas.
 
-# 1.1. Página de Inicio (Index)
-
-Top 5 de Combinaciones Más Pedidas: Sección destacada mostrando las cinco combinaciones de panchos más populares, con imágenes y una breve descripción.
-Destacados/Promociones: Posibilidad de mostrar ofertas especiales o productos destacados.
-Llamada a la Acción: Botón claro para comenzar a realizar un pedido o explorar el menú.
-
-# 1.2. Página de Selección de Ingredientes y Pedido
-
-Menú de Ingredientes:
-Categorización de ingredientes (panes, salchichas, salsas, toppings, extras).
-Visualización de imágenes de los ingredientes para facilitar la elección.
-Posibilidad de seleccionar la cantidad de cada ingrediente.
-Opción de crear combinaciones personalizadas.
-Posibilidad de seleccionar combinaciones predefinidas.
-
-Carrito de Compras:
-Visualización del pedido actual con los ingredientes seleccionados y sus cantidades.
-Cálculo automático del precio total.
-Opción de modificar o eliminar ítems del carrito.
-Proceso de Pago:
-Integración con múltiples pasarelas de pago digitales (ej. Mercado Pago).
-Formulario para ingresar datos de envío (dirección, etc.).
-        Confirmación del pedido y envío de notificación al cliente y al administrador.
-
-# 1.3. Mapa
-
-Integración de Mapas: Uso de una API de mapas (ej. Google Maps) para mostrar la ubicación del negocio.
-Información del pedido: Posibilidad de mostrar el estado del pedido y el tiempo estimado de llegada.
-
-# 1.4. Página de Contacto y Sobre Nosotros
-
-Información de Contacto:
-Número de teléfono, correo electrónico, dirección física (si aplica).
-Formulario de contacto para consultas generales.
-Enlaces a redes sociales.
-
-Sobre Nosotros:
-Breve historia y valores de la organización.
-Información sobre la calidad de los productos y el servicio.
-
-# 2. Sitemap del Sitio Web
-Archivo adjunto en el repo
-
-# 3. Presupuesto Temporal (Aproximado)
-
-Fase 1: Planificación y Diseño (1-2 semanas)
-Implica:
-Creación de wireframes y prototipos de las interfaces.
-Diseño visual de la página web (colores, tipografía, etc.).
-
-Fase 2: Desarrollo Front-End (3-4 semanas)
-Implica:
-Implementación de la interfaz de usuario (HTML, CSS, JavaScript).
-Desarrollo de la página de inicio, menú, carrito, etc.
-
-Fase 3: Desarrollo Back-End (4-6 semanas)
-Desarrollo del sistema de gestión de pedidos y pagos.
-Integración con pasarelas de pago.
-Implementación del sistema de seguimiento del delivery.
-Desarrollo de la base de datos.
-
-Fase 4: Integración y Pruebas (2-3 semanas)
-Integración de todas las funcionalidades.
-Pruebas exhaustivas de usabilidad y funcionalidad.
-Pruebas de seguridad.
-
-Fase 5: Lanzamiento y Mantenimiento (Continuo)
-Despliegue de la página web en un servidor.
-Monitoreo y mantenimiento continuo.
-Posibles actualizaciones y adición de nuevas funcionalidades.
-
-Tiempo Total Estimado: 12 - 18 semanas (3 - 4 meses)
-
-# 4. Presupuesto Funcional (Estimación de Costos)
-
-Componentes:
-Diseño UX/UI: Diseño de la experiencia de usuario y la interfaz visual.
-Desarrollo Front-End: Desarrollo de la parte visible del sitio web.
-Desarrollo Back-End: Desarrollo de la lógica del servidor y la base de datos.
-Integración de Pasarelas de Pago: Costos asociados a la integración con los sistemas de pago.
-Integración de Mapas: Costos asociados a la API de mapas (algunas APIs tienen costos según el uso).
-Pruebas y Control de Calidad: Pruebas exhaustivas para asegurar el correcto funcionamiento.
-Hosting y Dominio: Costos recurrentes para mantener el sitio web en línea.
-
-
-# Conclusión
-
-Esta propuesta general proporciona una visión clara de las funcionalidades, el sitemap y una estimación de tiempo y presupuesto para el desarrollo de la aplicación web de venta de panchos.
-
+# Apache
+Se configuro un servidor apache para servir en:
+```
+    /home/<usuario>/srv/http/
+```
+El problema es que es una implementacion muy casera.
+Se requiere que cada participante configure su propio servidor o usar un contenedor.
+# Consigna
+Agregue la funcionalidad de listado y búsqueda de los libros del catálogo. Para ello, tenga en cuenta que:
+* La base de datos de libros puede estar contenida en un archivo de texto o incluso en el mismo código. Sin embargo, en un próximo trabajo práctico se le pedirá que la traslade a una base de datos.
+* Es importante determinar el método HTTP y el formato del envío de los parámetros de la consulta en la petición de búsqueda.
+* El catálogo se debe presentar de forma paginada. Adicionalmente se debe permitir recuperar la cantidad de registros por página.
+* Determine e implemente el comportamiento del catálogo ante un intento de acceso a un libro inexistente o a una página inexistente.
+* La vista actual del catálogo debe poder descargarse en formato CSV.
+## Arquitectura
+Se coloco los prototipos php para la realizacion del punto 4 del trabajo practico 3, en la carpeta src:
+```
+/src
+├── main.php               ← Punto de entrada
+├── data/
+│   └── books.json
+├── controllers/
+│   └── Controlador.php
+├── model/
+│   └── LibroModel.php
+├── view/
+│   ├── Formulario.php
+│   └── TablaLibro.php
+```
+Aca se detalla una simple implementacion de php para mostrar la categoria seleccionada en un formulario.
+* La base de datos, de momento, esta en un archivo json llamado "books.json"
+* La pagina "main.php" es el punto de ingreso, carga el modelo, el formulario.
+* La pagina "Controlador.php" toma los datos enviados por GET, toma la "libros.json", filtra los resultados y lo envia a "TablaLibro.php"
+* "TablaLibro" recibe datos de "Controlador.php" y renderiza una tabla con los datos suministrados.
+## Uso
+Si ya esta levantado el servidor apache y estan los permisos configurados, ir a "main.php". Se renderizara un formulario de entrada de datos.
+# Limitaciones
+* No interactua con la pagina web original (hay que hacer toda una tarea de refactorizacion).
+* Esta implementado en un Apache con configuracion minima.
+* Esta Hardcodeado, requiere declaracion de interfaces y clases completas.
