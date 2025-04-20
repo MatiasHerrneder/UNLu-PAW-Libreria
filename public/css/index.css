@@ -127,12 +127,6 @@ main {
     margin-top: 40px;
 }
 
-.sell-section > h1 {
-    font-size: 30px;
-    font-weight: bold;
-    text-align: center;
-}
-
 .sell-slide {
     overflow: scroll;
 }
@@ -146,19 +140,12 @@ main {
 .sell-slide > ul li {
     width: 200px;
     padding: 10px;
-   /* margin-left: 20px;
-   */
     margin-left: 2.5%;
+/*
     border: 2px solid black;
     box-shadow: 0px 0px 6px black inset;
-}
-
-.sell-slide > ul li figure {
-    padding: 20px;
-}
-    
-.sell-slide > ul li figure img {
-    width: 100%;
+*/
+    background-color: var(--violeta-claro-2);
 }
 
 /* Estilos para pantallas de al menos 768px (típico para escritorio o tablet horizontal) */

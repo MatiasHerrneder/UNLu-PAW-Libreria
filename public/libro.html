@@ -3,12 +3,13 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Index</title>
+    <title>Libro</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/elements.css">
     <link rel="stylesheet" href="css/libro.css">
+    <script src="js/header.js" defer></script>
 </head>
 <body>
 	<header class="header-app">
@@ -45,23 +46,24 @@
 </header>
   <main>
     <section class="section-book">
-      <h1 class="book-title">Libro</h1>
+        <h1>Titulo del libro Here</h1>
       <article>
-        <figure>
-          <img src="img/libro.jpg" alt="Portada del libro">
+        <figure class="book">
+          <img src="img/libro.jpg" alt="Titulo del libro here">
+          <figcaption class="figcaption_center">Titulo del libro here</figcaption>
         </figure>
         <section class="book-info">
-          <h3>Nombre</h3>
-          <p>Autor</p>
-          <p>$123123</p>
-          <p>ISBN: 123123123</p>
-          <form method="POST">
-            <label for="ejemplo">Cantidad:</label>
-            <div class="quantity-wrapper">
-              <button class="button-book minus">−</button>
-              <input type="number" class="input-number" name="cantidad_nexus" id="ejemplo" value="1" min="1" step="1">
-              <button class="button-book plus">+</button>
-            </div>
+            <h3>Titulo del libro Here</h3>
+            <p>Autor</p>
+            <p>$123123</p>
+            <p>ISBN: 123123123</p>
+            <form method="POST">
+                <label for="ejemplo">Cantidad:</label>
+                <div class="quantity-wrapper">
+                    <button class="button-book minus">−</button>
+                    <input type="number" class="input-number" name="cantidad_nexus" id="ejemplo" value="1" min="1" step="1">
+                    <button class="button-book plus">+</button>
+                </div>
             <button type="submit" class="button-submit">Comprar</button>
           </form>
         </section>
@@ -103,11 +105,12 @@
             <li>
               <a href="contact.html">Escribinos</a>
             </li>
+            <li>
+                <a href="about_us.html">Sobre nosotros</a>
+            </li>
           </ul>
         </address>
       </section>
   </footer>
-  <script src="js/header.js"></script>
 </body>
 </html>
-    
