@@ -1,0 +1,20 @@
+{
+    "name": "paw/libreria",
+    "description": "Pagina web de una libreria",
+    "keywords": ["php", "mvc"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Federico Matias Claros Garcia",
+            "email": "federicoclarosv.15@gmail.com"
+        }
+    ],
+    "require": {
+        "php" : ">= 8.4.6"
+    },
+    "autoload": {
+        "psr-4": {
+            "Paw\\" : "src/"
+        }
+    }
+}
