@@ -13,7 +13,7 @@ class Router {
 
     // La asignacion de valores x defecto evitan que tengamos que reescribir
     // todas las llamadas a este metodo.
-    private function loadRoutes(string $path, string $action, string $method = "GET"):void
+    public function loadRoutes(string $path, string $action, string $method = "GET"):void
     {
         $this->routes[$method][$path] = $action;
     }
@@ -41,16 +41,17 @@ class Router {
 
     public function direct(string $path, string $method = "GET"):void
     {
+        echo $this->routes;
         if(!$this->exists($path, $method))
         {
-            throw RouteNotFoundException("No hay ruta para {$path}");
+            throw new RouteNotFoundException("No hay ruta para este path");
         }
 
-        list($controller, $method) = $this->getController($path, $http_method);
+        list($controller, $method) = $this->getController($path, $method);
 
         // Con el nombre del controlador lo instancio.
 
-        $controller_name = new "Paw\\App\\Controllers\\{$controller}";
+        $controller_name = "Paw\\App\\Controllers\\{$controller}";
 
         // Notar que se usa '$method' y no 'method'
         // De esta manera se evalua el nombre del metodo y luego se lo invoca.
