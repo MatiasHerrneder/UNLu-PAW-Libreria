@@ -1,21 +1,33 @@
 {
     "name": "paw/libreria",
-    "description": "Pagina web de una libreria",
-    "keywords": ["php", "mvc"],
+    "description": "Proyecto libreria para PAW",
+    "keyword": ["php","mvc"],
     "license": "MIT",
     "authors": [
         {
-            "name": "Federico Matias Claros Garcia",
-            "email": "federicoclarosv.15@gmail.com"
+            "name": "Puyelli Thiago",
+            "email": "placeholder@gmail.com",
+            "role":"Creator / Main developer"
+        },
+        {
+            "name": "Claros Federico",
+            "email": "placeholder@gmail.com",
+            "role":"Creator / Main developer"
+        },
+        {
+            "name": "Herrneder Matias",
+            "email": "matiasherrneder@gmail.com",
+            "role":"Creator / Main developer"
         }
     ],
     "require": {
-        "php" : ">= 8.4.6",
+        "php": ">= 8.4.6",
+        "filp/whoops": "~2",
         "monolog/monolog": "^3.9"
     },
     "autoload": {
         "psr-4": {
-            "Paw\\" : "src/"
+            "Paw\\": "src/"
         }
     }
 }
