@@ -4,10 +4,10 @@ namespace Paw\Core;
 
 use Paw\Core\Exceptions\RouteNotFoundException;
 
-class Router()
+class Router
 {
     // Dado un metodo, tenemos un conjunto de rutas
-    public array routes = [
+    public array $routes = [
         "GET" => [],
         "POST" => []
     ];
@@ -51,7 +51,7 @@ class Router()
 
         // Con el nombre del controlador lo instancio.
 
-        $controller_name = new "Paw\\App\\Controllers\\{$controller}";
+        $controller_name = "Paw\\App\\Controllers\\{$controller}";
 
         // Notar que se usa '$method' y no 'method'
         // De esta manera se evalua el nombre del metodo y luego se lo invoca.
