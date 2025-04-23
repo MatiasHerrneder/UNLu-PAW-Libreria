@@ -6,7 +6,7 @@ class ErrorController{
     public string $viewsDir;
 
     public function __construct() {
-        $this->viewsDir = __DIR__ . "/../views";
+        $this->viewsDir = __DIR__ . "/../views/";
         $this->menu = [
             [
                 "href" => "/",

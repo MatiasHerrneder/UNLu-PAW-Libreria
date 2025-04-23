@@ -25,5 +25,5 @@ $router->loadRoutes('/login', 'PageController@login');
 $router->loadRoutes('/medioPago', 'PageController@medioPago');
 $router->loadRoutes('/register', 'PageController@register');
 $router->loadRoutes('/tienda', 'PageController@tienda');
-$router->loadRoutes('/not_found', 'ErrorController@notFound');
-$router->loadRoutes('/internal_error', 'ErrorController@internalError');
+$router->loadRoutes('not_found', 'ErrorController@notFound');
+$router->loadRoutes('internal_error', 'ErrorController@internalError');
