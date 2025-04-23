@@ -1,0 +1,13 @@
+ATENCION: con "composer install" deberia solo generar las dependencias, 
+¿una vez que se instalo una libreria, los demas deben correr composer install en sus maquinas?
+
+
+COMO LEVANTAR EL SERVER:
+php -S localhost:8888 -t public
+
+
+
+
+comandos que se corrieron:
+- composer update
+- composer require monolog/monolog 
