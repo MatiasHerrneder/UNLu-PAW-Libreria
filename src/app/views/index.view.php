@@ -6,7 +6,11 @@
 </head>
 <body>
     <?php
-        require 'parts/nav.view.php';
+        require 'parts/header.view.php';
+    ?>
+<!--TODO: RESTO HTML-->
+    <?
+        require 'parts/footer.view.php';
     ?>
 </body>
 </html>
