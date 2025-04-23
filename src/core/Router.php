@@ -15,6 +15,12 @@ class Router {
 
     public function direct($path) {
 
+        if ($path !== '/') {
+            $path = rtrim($path, '/');
+        }    
+        $path = '/' . ltrim($path, '/');
+
+
         if (!array_key_exists($path, $this->routes)) {
             throw new RouteNotFoundException("Route not found for this path");
         }

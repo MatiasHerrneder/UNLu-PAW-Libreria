@@ -25,18 +25,18 @@ class PageController{
 
     public function index() {
         $titulo = htmlspecialchars($_GET["nombre"] ?? "PAW");
-        require $this->viewsDir . 'index.view.php';
+        require $this->viewsDir . '/index.view.php';
     }
 
     public function about() {
         $titulo = "Sobre Nosotros";
         $main = "Pagina Institucional";
-        require $this->viewsDir . 'about.view.php';
+        require $this->viewsDir . '/about.view.php';
     }
 
     public function contact() {
         $titulo = "Contacto";
         $main = "Formas de contacto";
-        require $this->viewsDir . 'contact.view.php';
+        require $this->viewsDir . '/contact.view.php';
     }
 }
