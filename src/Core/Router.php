@@ -41,6 +41,12 @@ class Router
 
     public function direct(string $path, string $http_method = "GET"):void
     {
+        // Normalizo las barras de adelante y atras del path
+        if ($path !== '/') {
+            $path = rtrim($path, '/');
+        }    
+        $path = '/' . ltrim($path, '/');
+
         if(!$this->exists($path, $http_method))
         {
             throw new RouteNotFoundException("No hay ruta para {$path}");
