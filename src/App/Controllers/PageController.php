@@ -9,7 +9,7 @@ class PageController
     public array $social_networks;
 
     public function __construct() {
-        $this->viewsDir = __DIR__ . "/../views/";
+        $this->viewsDir = __DIR__ . "/../Views/";
         $this->contactos = [
             [
                 "href" => "mailto/milibreria@gmail.com",
@@ -80,6 +80,46 @@ class PageController
 
     public function index() {
         $titulo = "index";
+        $libros = [ // Para poner ejemplos variados, poner mas aca
+            [
+                "src" => "/assets/img/libro.jpg",
+                "titulo" => "Dracula",
+                "autor" => "Abraham Stoker",
+                "precio" => 123123.99
+            ],
+            [
+                "src" => "/assets/img/libro.jpg",
+                "titulo" => "Farenheit 451",
+                "autor" => "Ray Bradbury",
+                "precio" => 123123.99
+            ],
+            [
+                "src" => "/assets/img/libro.jpg",
+                "titulo" => "El hombre de la mascara de hierro",
+                "autor" => "Alexander Dumas",
+                "precio" => 123123.99
+            ],
+            [
+                "src" => "/assets/img/libro.jpg",
+                "titulo" => "Orgullo y prejuicio",
+                "autor" => "Jane Austen",
+                "precio" => 123123.99
+            ],
+        ];
+        $slides = [ // Para poner ejemplos variados, poner mas aca
+            [
+                "src" => "/assets/img/publicar-libros-online.jpg",
+                "alt" => "Imagen de promoción 1",
+            ],
+            [
+                "src" => "/assets/img/publicar-libros-online2.jpg",
+                "alt" => "Imagen de promoción 2",
+            ],
+            [
+                "src" => "/assets/img/publicar-libros-online3.jpg",
+                "alt" => "Imagen de promoción 3",
+            ],
+        ];
         require $this->viewsDir . 'index.view.php';
     }
 

@@ -1,24 +1,24 @@
 <header class="header-app">
     <nav>
       <section class="nav-icons">
-        <a href="index.html" class="logo">
-          <img src="Resources/img/PAWPrints.svg" alt="Mi sitio">
+        <a href="/" class="logo">
+          <img src="/assets/img/PAWPrints.svg" alt="Mi sitio">
         </a>
         <search>
             <!--ATENCION A ESTE FORMULARIO-->
             <form action="search.php" method="get" class="search-bar">
             <input type="search" name="campo" placeholder="Buscar..." class="input-search">
             <button type="submit" class="submit-search">
-              <img src="Resources/img/lupa.png" alt="Buscar">
+              <img src="/assets/img/lupa.png" alt="Buscar">
             </button>
           </form>
         </search>
         <!--Encontrar la manera de pasarlo a index para que lo redireccione correctamente-->
         <a href="login.html" class="account">
-          <img src="Resources/img/usuario.png" alt="Mi cuenta">
+          <img src="/assets/img/usuario.png" alt="Mi cuenta">
         </a>
         <a href="carrito.html" class="shopping-cart">
-          <img src="Resources/img/carrito-de-compras.png" alt="Mi carrito">
+          <img src="/assets/img/carrito-de-compras.png" alt="Mi carrito">
         </a>
       </section>
       <section class="nav-links">

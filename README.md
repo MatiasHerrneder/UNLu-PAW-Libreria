@@ -1,18 +1,14 @@
 # Cambios/TODO
-* Se agrego el resto de las rutas (register/login/medio pago, etc.) al PageController.
-* Se elimino ```src/App/views/parts/nav.view.php``` en cambio se uso los fragmentos de codigo para los headers y footers.
-* Se agrego ```src/App/views/parts/header.view.php``` para renderizar el header completo de cada pagina.
-* Se agrego ```src/App/views/parts/footer.view.php``` para renderizar el footer completo de cada pagina.
-* Se agrego ```src/App/views/index.view.php``` para renderizar el index (no incluye todavia el resto del body).
-* Se agregaron rutas a ```App/src/core/Router.php``` todas aquellas que aparecian en la branch anterior ```ultra_mega_merge```.
-* Se agrego el path ```src/App/views/Resources/img/``` para incluir las imagenes en las vistas, esta vacio.
-* Se actualizo el bootstrap para que ```App/src/core/Router.php``` refleje los cambios antes mencionados.
+* Se agrego contenido estatico a la ruta ```public/assets/```.
+* Se agrego ```src/App/views/parts/head.view.php``` para renderizar un head comun.
+* Se agrego ```src/App/views/about/view.php``` para renderizar 'about us'.
+* Se modifico ```src/App/views/parts/index.view.php``` para soportar listado dinamico de libros, provistos por ```src/App/Controllers/PageController.php```.
 
 ## TODO:
 - [ ] Hacer que los links **```<a>```**  llamen a ```public/index.php``` ya que automatiza las redirecciones. O ```App/src/core/Router.php```, pero no se esta seguro o se toco por las dudas.
-- [ ] Agregar ```<body>``` a ```src/App/views/index.view.php```
+- [x] Agregar ```<body>``` a ```src/App/views/index.view.php```
 - [ ] Faltan de hacer las views (las versiones completas).
-- [ ] Las imagenes de las redes sociales deben estar en minuscula, ya que es asi como se generan auto. en ```src/App/views/parts/footer.view.php```
+- [x] Las imagenes de las redes sociales deben estar en minuscula, ya que es asi como se generan auto. en ```src/App/views/parts/footer.view.php```
 
 # Instalacion
 **ATENCION**: con "composer install" deberia solo generar las dependencias, 
@@ -73,19 +69,37 @@ Agregue la funcionalidad de listado y búsqueda de los libros del catálogo. Par
 * Determine e implemente el comportamiento del catálogo ante un intento de acceso a un libro inexistente o a una página inexistente.
 * La vista actual del catálogo debe poder descargarse en formato CSV.
 ## Arquitectura
-Se coloco los prototipos php para la realizacion del punto 4 del trabajo practico 3, en la carpeta src:
+A continuacion se incluye la vista general del proyecto, se omitio el direcotorio ```logs/``` y las carpetas de contenido estatico por motivos de simplificacion.
 ```
 /src
-├── main.php               ← Punto de entrada
-├── data/
-│   └── books.json
-├── controllers/
-│   └── Controlador.php
-├── model/
-│   └── LibroModel.php
-├── view/
-│   ├── Formulario.php
-│   └── TablaLibro.php
+├── public/
+│   ├── assets/
+│   │    ├── css/
+│   │    ├── img/
+│   |    └── js/
+│   └── index.php
+├── src/
+│   ├── App/
+|   │   ├── Controllers/
+│   │   |    ├── ErrorController.php
+│   │   |    └── PageController.php
+│   │   └── Views/
+│   │        ├── parts/
+│   │        │   ├── footer.view.php
+│   │        │   ├── head.view.php
+│   │        │   └── header.view.php
+│   │        ├── about.view.php
+│   │        ├── contact.view.php
+│   │        ├── index.view.php
+│   │        ├── internal-error.php
+│   │        └── not-found.php
+│   ├── Core/
+│   │    ├── Exceptions/
+│   │    │    └── RouteNotFoundException.php
+│   │    └── Router.php
+|   └── bootstrap.php
+├── composer.json
+└── README.md
 ```
 Aca se detalla una simple implementacion de php para mostrar la categoria seleccionada en un formulario.
 * La base de datos, de momento, esta en un archivo json llamado "books.json"

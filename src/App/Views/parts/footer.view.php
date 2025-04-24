@@ -4,9 +4,8 @@
         <address>
             <ul><?php foreach ($this->social_networks as $social) { ?>
                 <li>
-<!--Esto x ejemplo devuelve html <a href="/facebook..." alt="facebook" id="facebook">-->
                     <a href ="<?php $social["href"]?>" alt="<?php $social["name"]?>" id="<?php $social["name"]?>">
-                        <img src="img/<?php $social["name"]?>.png" alt="<?php $social["name"]?>">
+                        <img src="/assets/img/<?php $social["name"]?>.png" alt="<?php $social["name"]?>">
                     </a>
                 </li>
             <?php } ?></ul>
