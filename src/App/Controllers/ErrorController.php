@@ -4,6 +4,7 @@ namespace Paw\App\Controllers;
 
 class ErrorController{
     public string $viewsDir;
+    public array $menu;
 
     public function __construct() {
         $this->viewsDir = __DIR__ . "/../Views/";

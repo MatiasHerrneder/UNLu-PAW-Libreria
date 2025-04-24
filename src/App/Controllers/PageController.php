@@ -7,6 +7,7 @@ class PageController
     public string $viewsDir;
     public array $menu;
     public array $social_networks;
+    public array $contactos;
 
     public function __construct() {
         $this->viewsDir = __DIR__ . "/../Views/";
