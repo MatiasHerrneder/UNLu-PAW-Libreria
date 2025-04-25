@@ -41,7 +41,9 @@ class Router
 
     public function direct(string $path, string $http_method = "GET"):void
     {
+        // Saco la normalizacion por que no soporta las rutas de Error (no tienen '/')
         // Normalizo las barras de adelante y atras del path
+/*
         if ($path !== '/') {
             $path = rtrim($path, '/');
         }    
@@ -51,7 +53,7 @@ class Router
         {
             throw new RouteNotFoundException("No hay ruta para {$path}");
         }
-
+*/
         list($controller, $method) = $this->getController($path, $http_method);
 
         // Con el nombre del controlador lo instancio.

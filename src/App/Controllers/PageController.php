@@ -80,8 +80,8 @@ class PageController
     }
 
     public function index() {
-        $titulo = "index";
-        $libros = [ // Para poner ejemplos variados, poner mas aca
+        $titulo = "Inicio";
+        $libros = [
             [
                 "src" => "/assets/img/libro.jpg",
                 "titulo" => "Dracula",
@@ -127,17 +127,29 @@ class PageController
     public function libro() {
         require $this->viewsDir . 'register.view.php';
     }
-
-    public function login() {
+    // Borrar parametro $resultados
+    public function login(bool $procesado = false, $resultados = null) {
+        $titulo = "Login";
         require $this->viewsDir . 'login.view.php';
+    }
+
+    public function loginProccess() {
+        $resultados = $_POST;
+        $this->login(true, $resultados);
     }
 
     public function medioPago() {
         require $this->viewsDir . 'register.view.php';
     }
 
-    public function register() {
+    public function register(bool $procesado = false, array $resultados = null) {
+        $titulo = "Register";
         require $this->viewsDir . 'register.view.php';
+    }
+
+    public function registerProccess() {
+        $resultados = $_POST;
+        $this->register(true, $resultados);
     }
 
     public function tienda() {

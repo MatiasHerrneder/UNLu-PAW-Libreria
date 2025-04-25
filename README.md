@@ -1,8 +1,15 @@
 # Cambios/TODO
-* Se agrego contenido estatico a la ruta ```public/assets/```.
-* Se agrego ```src/App/views/parts/head.view.php``` para renderizar un head comun.
-* Se agrego ```src/App/views/about/view.php``` para renderizar 'about us'.
-* Se modifico ```src/App/views/parts/index.view.php``` para soportar listado dinamico de libros, provistos por ```src/App/Controllers/PageController.php```.
+* Se agrego ```src/App/views/login.view.php``` para renderizar 'login'.
+* Se agrego ```src/App/views/register.view.php``` para renderizar 'register'.
+* Se modifico ```src/bootstrap.php``` para diferenciar entre los metodos GET y POST en 'login' y 'register'.
+* Se modifico ```src/App/views/parts/header.view.php``` para renderizar llamar correctamente a 'carrito' y 'login'.
+* Se comento las lineas que normalizan los path en ```src/Core/Router::direct()``` ya que los path de error (ej. 'internal_error'), no tienen '/' en su path, las paginas comunes, sí.
+
+> [!ALERT]
+> El codigo en ```src/App/Controllers/PageController::loginProccess()``` y ```src/App/Controllers/PageController::registerProccess()``` debe ser correjido una vez probada este commit, ya que imprime los datos de los formularios en la pagina web.
+
+> [!WARNING]
+> Tanto 'login' como 'register' referencian ```<link rel="stylesheet" href="css/elements.css">``` y ```<link rel="stylesheet" href="css/auth.css">``` a tener en cuenta en el futuros refactors.
 
 ## TODO:
 - [ ] Hacer que los links **```<a>```**  llamen a ```public/index.php``` ya que automatiza las redirecciones. O ```App/src/core/Router.php```, pero no se esta seguro o se toco por las dudas.
@@ -35,6 +42,38 @@ Instalacion:
 ```
 
 # Arquitectura General
+A continuacion se incluye la vista general del proyecto, se omitio el direcotorio ```logs/``` y las carpetas de contenido estatico por motivos de simplificacion.
+```
+root/
+├── public/
+│   ├── assets/
+│   │    ├── css/
+│   │    ├── img/
+│   |    └── js/
+│   └── index.php
+├── src/
+│   ├── App/
+|   │   ├── Controllers/
+│   │   |    ├── ErrorController.php
+│   │   |    └── PageController.php
+│   │   └── Views/
+│   │        ├── parts/
+│   │        │   ├── footer.view.php
+│   │        │   ├── head.view.php
+│   │        │   └── header.view.php
+│   │        ├── about.view.php
+│   │        ├── contact.view.php
+│   │        ├── index.view.php
+│   │        ├── internal-error.php
+│   │        └── not-found.php
+│   ├── Core/
+│   │    ├── Exceptions/
+│   │    │    └── RouteNotFoundException.php
+│   │    └── Router.php
+|   └── bootstrap.php
+├── composer.json
+└── README.md
+```
 ## Modelo
 Responsable de administrar los datos de la aplicación, procesar la logica y las reglas de negocio, y responder los pedidos de informacion de otros componentes.
 
@@ -68,47 +107,3 @@ Agregue la funcionalidad de listado y búsqueda de los libros del catálogo. Par
 * El catálogo se debe presentar de forma paginada. Adicionalmente se debe permitir recuperar la cantidad de registros por página.
 * Determine e implemente el comportamiento del catálogo ante un intento de acceso a un libro inexistente o a una página inexistente.
 * La vista actual del catálogo debe poder descargarse en formato CSV.
-## Arquitectura
-A continuacion se incluye la vista general del proyecto, se omitio el direcotorio ```logs/``` y las carpetas de contenido estatico por motivos de simplificacion.
-```
-/src
-├── public/
-│   ├── assets/
-│   │    ├── css/
-│   │    ├── img/
-│   |    └── js/
-│   └── index.php
-├── src/
-│   ├── App/
-|   │   ├── Controllers/
-│   │   |    ├── ErrorController.php
-│   │   |    └── PageController.php
-│   │   └── Views/
-│   │        ├── parts/
-│   │        │   ├── footer.view.php
-│   │        │   ├── head.view.php
-│   │        │   └── header.view.php
-│   │        ├── about.view.php
-│   │        ├── contact.view.php
-│   │        ├── index.view.php
-│   │        ├── internal-error.php
-│   │        └── not-found.php
-│   ├── Core/
-│   │    ├── Exceptions/
-│   │    │    └── RouteNotFoundException.php
-│   │    └── Router.php
-|   └── bootstrap.php
-├── composer.json
-└── README.md
-```
-Aca se detalla una simple implementacion de php para mostrar la categoria seleccionada en un formulario.
-* La base de datos, de momento, esta en un archivo json llamado "books.json"
-* La pagina "main.php" es el punto de ingreso, carga el modelo, el formulario.
-* La pagina "Controlador.php" toma los datos enviados por GET, toma la "libros.json", filtra los resultados y lo envia a "TablaLibro.php"
-* "TablaLibro" recibe datos de "Controlador.php" y renderiza una tabla con los datos suministrados.
-## Uso
-Si ya esta levantado el servidor apache y estan los permisos configurados, ir a "main.php". Se renderizara un formulario de entrada de datos.
-# Limitaciones
-* No interactua con la pagina web original (hay que hacer toda una tarea de refactorizacion).
-* Esta implementado en un Apache con configuracion minima.
-* Esta Hardcodeado, requiere declaracion de interfaces y clases completas.

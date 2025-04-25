@@ -14,10 +14,10 @@
           </form>
         </search>
         <!--Encontrar la manera de pasarlo a index para que lo redireccione correctamente-->
-        <a href="login.html" class="account">
+        <a href="/login" class="account">
           <img src="/assets/img/usuario.png" alt="Mi cuenta">
         </a>
-        <a href="carrito.html" class="shopping-cart">
+        <a href="/carrito" class="shopping-cart">
           <img src="/assets/img/carrito-de-compras.png" alt="Mi carrito">
         </a>
       </section>
