@@ -30,6 +30,7 @@
             <button class="arrow left">&#8249;</button>
             <ul><?php foreach ($libros as $libro) {?>
                 <li>
+                    <a href="/libro?titulo=<?=urlencode($libro['titulo'])?>&autor=<?=urlencode($libro['autor'])?>&precio=<?=$libro['precio']?>&src=<?=$libro['src']?>">
                     <article>
                         <figure class="book">
                             <img src="<?=$libro["src"]?>" alt="<?=$libro["titulo"]?>">
@@ -41,6 +42,7 @@
                         <p><?=$libro["autor"]?></p>
                         <p>$<?=$libro["precio"]?></p>
                     </article>
+                    </a>
                 </li>
             <?php } ?>
         <button class="arrow right">&#8250;</button>

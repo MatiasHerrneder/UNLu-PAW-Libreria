@@ -66,11 +66,11 @@ class PageController
     }
 
     public function carrito() {
-        require $this->viewsDir . 'register.view.php';
+        require $this->viewsDir . 'carrito.view.php';
     }
 
     public function compraDestino() {
-        require $this->viewsDir . 'register.view.php';
+        require $this->viewsDir . 'compra_destino.view.php';
     }
 
     public function contact() {
@@ -125,7 +125,9 @@ class PageController
     }
 
     public function libro() {
-        require $this->viewsDir . 'register.view.php';
+        $titulo = "Libro";
+        $libro = $_GET;
+        require $this->viewsDir . 'libro.view.php';
     }
     // Borrar parametro $resultados
     public function login(bool $procesado = false, $resultados = null) {
@@ -139,7 +141,7 @@ class PageController
     }
 
     public function medioPago() {
-        require $this->viewsDir . 'register.view.php';
+        require $this->viewsDir . 'medio_pago.view.php';
     }
 
     public function register(bool $procesado = false, array $resultados = null) {

@@ -1,21 +1,39 @@
-# Cambios/TODO
-* Se agrego ```src/App/views/login.view.php``` para renderizar 'login'.
-* Se agrego ```src/App/views/register.view.php``` para renderizar 'register'.
-* Se modifico ```src/bootstrap.php``` para diferenciar entre los metodos GET y POST en 'login' y 'register'.
-* Se modifico ```src/App/views/parts/header.view.php``` para renderizar llamar correctamente a 'carrito' y 'login'.
-* Se comento las lineas que normalizan los path en ```src/Core/Router::direct()``` ya que los path de error (ej. 'internal_error'), no tienen '/' en su path, las paginas comunes, sí.
-
-> [!ALERT]
-> El codigo en ```src/App/Controllers/PageController::loginProccess()``` y ```src/App/Controllers/PageController::registerProccess()``` debe ser correjido una vez probada este commit, ya que imprime los datos de los formularios en la pagina web.
+# Cambios/TODO/Sugerencias
+* Se agrego ```src/App/Views/libro.view.php``` para renderizar 'libro'.
+* Se agrego ```src/App/Views/carrito.view.php``` para renderizar 'libro'.
+* Se modifico ```src/App/Views/index.view.php``` para que al apretar un libro (x medio de **```<a>```**) se mande datos en el **HTTP GET** para que ```src/App/views/libro.view.php``` lo pueda renderizar.
 
 > [!WARNING]
-> Tanto 'login' como 'register' referencian ```<link rel="stylesheet" href="css/elements.css">``` y ```<link rel="stylesheet" href="css/auth.css">``` a tener en cuenta en el futuros refactors.
+> Carrito no esta del todo implementado requiere toda una solucion 'carrito de compras' con cookies para seleccionar, agregar, acumular total y llegar a 'compra destino'. Ademas el orden de las etiquetas **```<form>```** y **```<table>```** estan al reves, table debe ayudar a dar forma al formulario, no ser un campo del [mismo](www.geeksforgeeks.org/how-to-use-tables-to-structure-forms/).
+
+> [!WARNING]
+> Como no existe, por ahora, una BD con libros, los datos estan en ```src/App/Controllers/PageController::index()``` y se pasara un elemento de esos libros via **HTTP GET**, mostrando todo eso en la URL. Cuando se tenga BD, el **id** es lo unico que se pasara y libro recibira el resultado del **SELECT**.
+
+> [!WARNING]
+> Tanto el campo Descripcion como ISBN en ```src/App/Views/libro.view.php``` estan 'hardcoded'. Cuando exista BD, el **id** es lo unico que se pasara y libro recibira el resultado del **SELECT**, entre los campos de este estara el ISBN y la Descripcion.
 
 ## TODO:
-- [ ] Hacer que los links **```<a>```**  llamen a ```public/index.php``` ya que automatiza las redirecciones. O ```App/src/core/Router.php```, pero no se esta seguro o se toco por las dudas.
-- [x] Agregar ```<body>``` a ```src/App/views/index.view.php```
+- [ ] Hacer que los links **```<a>```**  llamen a ```public/index.php``` ya que automatiza las redirecciones. O ```App/src/Core/Router.php```, pero no se esta seguro o se toco por las dudas.
+- [x] Agregar ```<body>``` a ```src/App/Views/index.view.php```
 - [ ] Faltan de hacer las views (las versiones completas).
-- [x] Las imagenes de las redes sociales deben estar en minuscula, ya que es asi como se generan auto. en ```src/App/views/parts/footer.view.php```
+- [x] Las imagenes de las redes sociales deben estar en minuscula, ya que es asi como se generan auto. en ```src/App/Views/parts/footer.view.php```
+- [ ] Darle funcionalidad al **```<form>```** en ```src/App/Views/libro.view.php```.
+- [ ] Implementar la funcionalidad del carrito de compras.
+
+## Sugerencias
+### BD Tabla Libro
+|  Libro      | Tipo   |  Descripcion                             |
+|-------------|--------|------------------------------------------|
+| ISBN        | PK     | ISBN del libro (o un ID generico)        |
+| Titulo      | TEXT   |                 -                        |
+| Autor       | TEXT   | ISBN del libro                           |
+| Precio      | FLOAT  | (no necesariamente en esta tabla)        |
+| Descripcion | TEXT   |                 -                        |
+| src         | TEXT   | path donde se guarda la imagen del libro |
+
+### HTML
+* En ```src/App/Views/index.view.php``` hay etiquetas sobre etiquetas que dan la misma informacion redundante, se sugiere sacar lo repetido y, en ultima instancia dar mas participacion a css para que lo renderice.
+
 
 # Instalacion
 **ATENCION**: con "composer install" deberia solo generar las dependencias, 

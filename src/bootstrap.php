@@ -20,7 +20,7 @@ $router->loadRoutes('/', 'PageController@index');
 $router->loadRoutes('/about', 'PageController@about');
 $router->loadRoutes('/carrito', 'PageController@carrito');
 $router->loadRoutes('/contact', 'PageController@contact');
-$router->loadRoutes('/libro', 'PageController@libro');
+$router->get('/libro', 'PageController@libro');
 $router->get('/login', 'PageController@login');
 $router->post('/login', 'PageController@loginProccess');
 $router->loadRoutes('/medioPago', 'PageController@medioPago');
