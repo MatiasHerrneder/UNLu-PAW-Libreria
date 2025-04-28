@@ -75,17 +75,31 @@ Agregue la funcionalidad de listado y búsqueda de los libros del catálogo. Par
 ## Arquitectura
 Se coloco los prototipos php para la realizacion del punto 4 del trabajo practico 3, en la carpeta src:
 ```
-/src
-├── main.php               ← Punto de entrada
-├── data/
-│   └── books.json
-├── controllers/
-│   └── Controlador.php
-├── model/
-│   └── LibroModel.php
-├── view/
-│   ├── Formulario.php
-│   └── TablaLibro.php
+root
+|  \_public
+|        \_index.php
++-src
+| | \_App
+| |     \_controllers
+| |    |    \ \_Error.controller.php
+| |    |     \_PageController.php
+| |    +-views
+| |      | \_parts
+| |      |    \ \_footer.view.php
+| |      |     \_header.view.php
+| |      +-Resources
+| |      +-about.view.php
+| |      +-contact.view.php
+| |      +-index.view.php
+| |      +-internal-error.view.php
+| |      +-not-found.view.php
+| +-core
+| |  | \_Exceptions
+| |  |     \_RouteNotFoundException.php
+| |  +-Router.php
+| +-bootstrap.php
++-composer.json
+
 ```
 Aca se detalla una simple implementacion de php para mostrar la categoria seleccionada en un formulario.
 * La base de datos, de momento, esta en un archivo json llamado "books.json"
