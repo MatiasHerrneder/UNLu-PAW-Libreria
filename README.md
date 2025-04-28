@@ -1,18 +1,39 @@
-# Cambios/TODO
-* Se agrego el resto de las rutas (register/login/medio pago, etc.) al PageController.
-* Se elimino ```src/App/views/parts/nav.view.php``` en cambio se uso los fragmentos de codigo para los headers y footers.
-* Se agrego ```src/App/views/parts/header.view.php``` para renderizar el header completo de cada pagina.
-* Se agrego ```src/App/views/parts/footer.view.php``` para renderizar el footer completo de cada pagina.
-* Se agrego ```src/App/views/index.view.php``` para renderizar el index (no incluye todavia el resto del body).
-* Se agregaron rutas a ```App/src/core/Router.php``` todas aquellas que aparecian en la branch anterior ```ultra_mega_merge```.
-* Se agrego el path ```src/App/views/Resources/img/``` para incluir las imagenes en las vistas, esta vacio.
-* Se actualizo el bootstrap para que ```App/src/core/Router.php``` refleje los cambios antes mencionados.
+# Cambios/TODO/Sugerencias
+* Se agrego ```src/App/Views/libro.view.php``` para renderizar 'libro'.
+* Se agrego ```src/App/Views/carrito.view.php``` para renderizar 'libro'.
+* Se modifico ```src/App/Views/index.view.php``` para que al apretar un libro (x medio de **```<a>```**) se mande datos en el **HTTP GET** para que ```src/App/views/libro.view.php``` lo pueda renderizar.
+
+> [!WARNING]
+> Carrito no esta del todo implementado requiere toda una solucion 'carrito de compras' con cookies para seleccionar, agregar, acumular total y llegar a 'compra destino'. Ademas el orden de las etiquetas **```<form>```** y **```<table>```** estan al reves, table debe ayudar a dar forma al formulario, no ser un campo del [mismo](www.geeksforgeeks.org/how-to-use-tables-to-structure-forms/).
+
+> [!WARNING]
+> Como no existe, por ahora, una BD con libros, los datos estan en ```src/App/Controllers/PageController::index()``` y se pasara un elemento de esos libros via **HTTP GET**, mostrando todo eso en la URL. Cuando se tenga BD, el **id** es lo unico que se pasara y libro recibira el resultado del **SELECT**.
+
+> [!WARNING]
+> Tanto el campo Descripcion como ISBN en ```src/App/Views/libro.view.php``` estan 'hardcoded'. Cuando exista BD, el **id** es lo unico que se pasara y libro recibira el resultado del **SELECT**, entre los campos de este estara el ISBN y la Descripcion.
 
 ## TODO:
-- [ ] Hacer que los links **```<a>```**  llamen a ```public/index.php``` ya que automatiza las redirecciones. O ```App/src/core/Router.php```, pero no se esta seguro o se toco por las dudas.
-- [ ] Agregar ```<body>``` a ```src/App/views/index.view.php```
+- [ ] Hacer que los links **```<a>```**  llamen a ```public/index.php``` ya que automatiza las redirecciones. O ```App/src/Core/Router.php```, pero no se esta seguro o se toco por las dudas.
+- [x] Agregar ```<body>``` a ```src/App/Views/index.view.php```
 - [ ] Faltan de hacer las views (las versiones completas).
-- [ ] Las imagenes de las redes sociales deben estar en minuscula, ya que es asi como se generan auto. en ```src/App/views/parts/footer.view.php```
+- [x] Las imagenes de las redes sociales deben estar en minuscula, ya que es asi como se generan auto. en ```src/App/Views/parts/footer.view.php```
+- [ ] Darle funcionalidad al **```<form>```** en ```src/App/Views/libro.view.php```.
+- [ ] Implementar la funcionalidad del carrito de compras.
+
+## Sugerencias
+### BD Tabla Libro
+|  Libro      | Tipo   |  Descripcion                             |
+|-------------|--------|------------------------------------------|
+| ISBN        | PK     | ISBN del libro (o un ID generico)        |
+| Titulo      | TEXT   |                 -                        |
+| Autor       | TEXT   | ISBN del libro                           |
+| Precio      | FLOAT  | (no necesariamente en esta tabla)        |
+| Descripcion | TEXT   |                 -                        |
+| src         | TEXT   | path donde se guarda la imagen del libro |
+
+### HTML
+* En ```src/App/Views/index.view.php``` hay etiquetas sobre etiquetas que dan la misma informacion redundante, se sugiere sacar lo repetido y, en ultima instancia dar mas participacion a css para que lo renderice.
+
 
 # Instalacion
 **ATENCION**: con "composer install" deberia solo generar las dependencias, 
@@ -39,6 +60,38 @@ Instalacion:
 ```
 
 # Arquitectura General
+A continuacion se incluye la vista general del proyecto, se omitio el direcotorio ```logs/``` y las carpetas de contenido estatico por motivos de simplificacion.
+```
+root/
+├── public/
+│   ├── assets/
+│   │    ├── css/
+│   │    ├── img/
+│   |    └── js/
+│   └── index.php
+├── src/
+│   ├── App/
+|   │   ├── Controllers/
+│   │   |    ├── ErrorController.php
+│   │   |    └── PageController.php
+│   │   └── Views/
+│   │        ├── parts/
+│   │        │   ├── footer.view.php
+│   │        │   ├── head.view.php
+│   │        │   └── header.view.php
+│   │        ├── about.view.php
+│   │        ├── contact.view.php
+│   │        ├── index.view.php
+│   │        ├── internal-error.php
+│   │        └── not-found.php
+│   ├── Core/
+│   │    ├── Exceptions/
+│   │    │    └── RouteNotFoundException.php
+│   │    └── Router.php
+|   └── bootstrap.php
+├── composer.json
+└── README.md
+```
 ## Modelo
 Responsable de administrar los datos de la aplicación, procesar la logica y las reglas de negocio, y responder los pedidos de informacion de otros componentes.
 

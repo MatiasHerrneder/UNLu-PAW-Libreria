@@ -1,0 +1,57 @@
+@import url('./colors.css');
+
+.title-contact {
+    margin-bottom: 1.2rem;
+}
+
+.form-contact {
+    margin: 0 auto;
+    display: flex;
+    flex-flow: column wrap;
+    width: 80%;
+}
+
+.form-contact input, label, select {
+    margin-top: 0.8rem;
+    font-size: 1rem;
+    width: 100%;
+}
+
+main {
+    margin-top: 12rem;
+}
+
+main > h1 {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 2em;
+    text-align: center;
+}
+
+select {
+    background: white;
+}
+
+textarea {
+    height: 9rem;
+    width: 100%;
+}
+
+.button-submit {
+    margin-top: 2rem !important;
+}
+
+.select-big {
+    width: 100%;
+}
+
+.form-input-text {
+    width: 100% !important;
+}
+
+@media (min-width: 600px) {
+    .form-contact {
+        width: 30rem !important;
+    }
+    
+}

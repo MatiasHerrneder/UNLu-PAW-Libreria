@@ -11,7 +11,7 @@
         },
         {
             "name": "Claros Federico",
-            "email": "placeholder@gmail.com",
+            "email": "federicoclarosv.15@gmail.com",
             "role":"Creator / Main developer"
         },
         {
@@ -22,7 +22,7 @@
     ],
     "require": {
         "php": ">= 8.4.6",
-        "filp/whoops": "~2",
+        "filp/whoops": "^2.18",
         "monolog/monolog": "^3.9"
     },
     "autoload": {
