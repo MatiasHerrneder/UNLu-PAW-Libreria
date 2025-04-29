@@ -3,7 +3,6 @@
 <head>
   <?php require 'parts/head.view.php'?>
   <link rel="stylesheet" href="/assets/css/carrito.css">
-  <link rel="stylesheet" href="/assets/css/elements.css">
 </head>
 <body>
 <?php require 'parts/header.view.php' ?>

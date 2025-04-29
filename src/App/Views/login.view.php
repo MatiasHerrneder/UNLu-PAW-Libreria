@@ -2,7 +2,6 @@
 <html lang="es">
 <head>
     <?php require 'parts/head.view.php'?>
-    <link rel="stylesheet" href="/assets/css/elements.css">
     <link rel="stylesheet" href="/assets/css/auth.css">
 </head>
 <body>
