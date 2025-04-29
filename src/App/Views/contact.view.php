@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <?php require 'parts/head.view.php' ?>
-    <link rel="stylesheet" href="/assets/css/contact.css">
+	<?php require 'parts/head.view.php' ?>
+	<link rel="stylesheet" href="/assets/css/contact.css">
 </head>
 <body>
 <?php require 'parts/header.view.php' ?>
 <main>
-    <h1 class="title-contact">Contacto</h1>
-    <form class="form-contact" action="contact.php" method="POST">
+	<h1 class="title-contact">Contacto</h1>
+	<form class="form-contact" action="contact.php" method="POST">
         <label for="nombre campo_obligatorio">Nombre y apellido *</label>
         <input class="form-input-text" type="text" id="nombre" name="nombre" required>
 

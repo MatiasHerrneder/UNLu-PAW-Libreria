@@ -124,6 +124,25 @@ class PageController
     }
 
     public function medioPago() {
+        $titulo = "Medio de pago";
+        $cuotas = [
+            [
+                "cantidad_cuotas" => 1,
+                "descripcion" => "1 cuota",
+            ],
+            [
+                "cantidad_cuotas" => 3,
+                "descripcion" => "3 cuotas",
+            ],
+            [
+                "cantidad_cuotas" => 6,
+                "descripcion" => "6 cuotas",
+            ],
+            [
+                "cantidad_cuotas" => 12,
+                "descripcion" => "12 cuotas",
+            ],
+        ];
         require $this->viewsDir . 'medio_pago.view.php';
     }
 

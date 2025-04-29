@@ -1,7 +1,7 @@
 # Cambios/TODO/Sugerencias
 * Se agrego **```src/App/Views/tienda.view.php```** para renderizar 'tienda'.
 * Se agrego **```src/App/Views/compraDestino.view.php```** para renderizar 'libro'.
-* Se agrego una nueva clase '**campo_obligatorio**' en `**``src/App/Views/compraDestino.view.php```**  y **```src/App/Views/contacto.view.php```** para indicar los campos obligatorios.
+* Se agrego una nueva clase '**campo_obligatorio**' en **```src/App/Views/compraDestino.view.php```**  y **```src/App/Views/contacto.view.php```** para indicar los campos obligatorios.
 * Se modifico **```src/App/Views/contacto.view.php```** para renderizar correctamente 'contacto'.
 * Se modifico **```src/App/Views/index.view.php```** para que la lista '**HARDCODED**' de libros sea accesible al resto de las vistas.
 
@@ -14,18 +14,19 @@
 > [!WARNING]
 > Tanto el campo Descripcion como ISBN en **```src/App/Views/libro.view.php```** estan '**HARDCODED**'. Cuando exista BD, el **id** es lo unico que se pasara y libro recibira el resultado del **SELECT**, entre los campos de este estara el ISBN y la Descripcion.
 
-> [!ALERT]
+> [!WARNING]
 > En **```src/App/Views/compraDestino.view.php```** se renderiza una tabla que tiene **```<th>```** vacios.
 
 ## TODO:
-- [ ] Hacer que los links **```<a>```**  llamen a **```public/index.php```** ya que automatiza las redirecciones. O ```App/src/Core/Router.php```, pero no se esta seguro o se toco por las dudas.
+- [ ] Hacer que los links **```<a>```**  llamen a **```public/index.php```** ya que automatiza las redirecciones. O **```App/src/Core/Router.php```**, pero no se esta seguro o se toco por las dudas.
 - [x] Agregar **```<body>```** a **```src/App/Views/index.view.php```**.
-- [ ] Faltan de hacer las views (las versiones completas).
+- [x] Faltan de hacer las views (las versiones completas).
 - [x] Las imagenes de las redes sociales deben estar en minuscula, ya que es asi como se generan auto. en **```src/App/Views/parts/footer.view.php```**.
-- [ ] Darle funcionalidad al **```<form>```** en **```src/App/Views/libro.view.php```**.
+- [ ] Dar funcionalidad al **```<form>```** en **```src/App/Views/libro.view.php```**.
 - [ ] Implementar, en css, la clase 'campo_obligatorio' usado por **```src/App/Views/compraDestino.view.php```**, **```src/App/Views/contacto.view.php```** y probablemente por otros formularios.
 - [ ] Implementar la funcionalidad del carrito de compras.
 - [ ] Implementar los filtros de busqueda en tienda.
+- [ ] Implementar path '**/realizarPedido**' requerido por **```src/App/Views/medioPago.view.php```**.
 - [ ] Sacar los datos '**HARDCODED**' de los libros y migrarlos a una base de datos.
 
 ## Sugerencias
@@ -40,7 +41,7 @@
 | src         | TEXT   | Path donde se guarda la imagen del libro |
 
 ### HTML
-* En ```src/App/Views/index.view.php``` hay etiquetas sobre etiquetas (en especial en la seccion de libros) que dan la misma informacion redundante, se sugiere sacar lo repetido y, en ultima instancia dar mas participacion a css para que lo renderice.
+* En **```src/App/Views/index.view.php```** hay etiquetas sobre etiquetas (en especial en la seccion de libros) que dan la misma informacion redundante, se sugiere sacar lo repetido y, en ultima instancia dar mas participacion a css para que lo renderice.
 
 # Iniciar el Servidor:
 ```
@@ -102,10 +103,10 @@ root/
 │   │        ├── internal-error.php
 │   │        ├── libro.view.php
 │   │        ├── login.view.php
+│   │        ├── medioPago.view.php
 │   │        ├── not-found.view.php
 │   │        ├── register.view.php
-│   │        ├── tienda.view.php
-│   │        └── not-found.php
+│   │        └── tienda.php
 │   ├── Core/
 │   │    ├── Exceptions/
 │   │    │    └── RouteNotFoundException.php
