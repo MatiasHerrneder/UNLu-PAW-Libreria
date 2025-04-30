@@ -2,61 +2,13 @@
 
 namespace Paw\App\Controllers;
 
-class PageController
+//use App\Core\Database\QueryBuilder;
+use Paw\Core\Controlador;
+class PageController extends Controlador
 {
-    public string $viewsDir;
-    public array $menu;
-    public array $social_networks;
-    public array $contactos;
-
-    public function __construct() {
-        $this->viewsDir = __DIR__ . "/../Views/";
-        $this->contactos = [
-            [
-                "href" => "mailto/milibreria@gmail.com",
-                "data" => "mailto/milibreria@gmail.com",
-            ],
-            [
-                "href" => "/contact",
-                "data" => "Escribinos",
-            ],
-        ];
-        $this->social_networks = [
-            [
-                "href" => "https://www.instagram.com/milibreria",
-                "name" => "instagram",
-            ],
-            [
-                "href" => "https://www.facebook.com/milibreria",
-                "name" => "facebook",
-            ],
-        ];
-        $this->menu = [
-            [
-                "href" => "/tienda",
-                "name" => "Libros",
-            ],
-            [
-                "href" => "/contact",
-                "name" => "Contacto",
-            ],
-            [
-                "href" => "/tienda",
-                "name" => "Ficcion",
-            ],
-            [
-                "href" => "/tienda",
-                "name" => "Terror",
-            ],
-            [
-                "href" => "/tienda",
-                "name" => "Fantasia",
-            ],
-            [
-                "href" => "/about", 
-                "name" => "Quienes Somos",
-            ],
-        ];
+    public function __construct()
+    {
+        parent::__construct();
     }
 
     public function about() {
@@ -124,11 +76,13 @@ class PageController
         require $this->viewsDir . 'index.view.php';
     }
 
-    public function libro() {
-        $titulo = "Libro";
-        $libro = $_GET;
-        require $this->viewsDir . 'libro.view.php';
-    }
+    //public function libro() {
+    //    $titulo = "Libro";
+    //    $params = $_GET;
+    //    if (isset($params["id_libro"])) {
+    //        require $this->viewsDir . 'libro.view.php';
+    //    }
+    //}
     // Borrar parametro $resultados
     public function login(bool $procesado = false, $resultados = null) {
         $titulo = "Login";
@@ -144,7 +98,7 @@ class PageController
         require $this->viewsDir . 'medio_pago.view.php';
     }
 
-    public function register(bool $procesado = false, array $resultados = null) {
+    public function register(bool $procesado = false) {
         $titulo = "Register";
         require $this->viewsDir . 'register.view.php';
     }

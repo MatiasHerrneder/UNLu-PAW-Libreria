@@ -12,7 +12,7 @@
       <h1 class="book-title"><?=$libro['titulo']?></h1>
       <article>
         <figure>
-          <img src="<?=$libro['src']?>" alt="<?=$libro['titulo']?>">
+          <img src="<?=$libro['image']?>" alt="<?=$libro['titulo']?>">
         </figure>
         <section class="book-info">
           <h3><?=$libro['titulo']?></h3>

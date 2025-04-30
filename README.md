@@ -165,3 +165,21 @@ Si ya esta levantado el servidor apache y estan los permisos configurados, ir a 
 * No interactua con la pagina web original (hay que hacer toda una tarea de refactorizacion).
 * Esta implementado en un Apache con configuracion minima.
 * Esta Hardcodeado, requiere declaracion de interfaces y clases completas.
+
+
+# COSAS NUEVAS DE PDO
+
+Se agregaron las configuraciones para PDO lo cual es importante que hagan varias cosas
+
+1_ Tener postgreSQL con una base de datos y usuario creado en el .env y el pdo de postgre 
+(si no saben que es lo de pdo pregunten a gpt)
+
+2_ Tener instalado phinx
+
+Una vez que tienen instalado phinx lanzan el siguiente comando en la carpeta raiz del proyecto 
+
+- phinx migrate -e development
+
+
+Luego de esto el proyecto deberia funcar, en si le falta mucho tramite porque en si no anda el template de la tienda
+pero queda pendiente un discord para charlarlo
