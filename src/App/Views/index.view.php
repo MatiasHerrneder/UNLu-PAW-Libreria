@@ -28,7 +28,7 @@
         <h1>Mas vendidos</h1>
         <section class="sell-slide">
             <button class="arrow left">&#8249;</button>
-            <ul><?php foreach ($libros as $libro) {?>
+            <ul><?php foreach ($this->libros as $libro) {?>
                 <li>
                     <a href="/libro?titulo=<?=urlencode($libro['titulo'])?>&autor=<?=urlencode($libro['autor'])?>&precio=<?=$libro['precio']?>&src=<?=$libro['src']?>">
                     <article>

@@ -2,7 +2,7 @@
     <nav>
       <section class="nav-icons">
         <a href="/" class="logo">
-          <img src="/assets/img/PAWPrints.svg" alt="Mi sitio">
+          <img src="/assets/img/PAWPrints.svg" alt="Al indice">
         </a>
         <search>
             <!--ATENCION A ESTE FORMULARIO-->

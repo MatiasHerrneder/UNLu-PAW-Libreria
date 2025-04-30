@@ -1,24 +1,33 @@
 # Cambios/TODO/Sugerencias
-* Se agrego ```src/App/Views/libro.view.php``` para renderizar 'libro'.
-* Se agrego ```src/App/Views/carrito.view.php``` para renderizar 'libro'.
-* Se modifico ```src/App/Views/index.view.php``` para que al apretar un libro (x medio de **```<a>```**) se mande datos en el **HTTP GET** para que ```src/App/views/libro.view.php``` lo pueda renderizar.
+* Se agrego **```src/App/Views/tienda.view.php```** para renderizar 'tienda'.
+* Se agrego **```src/App/Views/compraDestino.view.php```** para renderizar 'libro'.
+* Se agrego una nueva clase '**campo_obligatorio**' en **```src/App/Views/compraDestino.view.php```**  y **```src/App/Views/contacto.view.php```** para indicar los campos obligatorios.
+* Se modifico **```src/App/Views/contacto.view.php```** para renderizar correctamente 'contacto'.
+* Se modifico **```src/App/Views/index.view.php```** para que la lista '**HARDCODED**' de libros sea accesible al resto de las vistas.
 
 > [!WARNING]
 > Carrito no esta del todo implementado requiere toda una solucion 'carrito de compras' con cookies para seleccionar, agregar, acumular total y llegar a 'compra destino'. Ademas el orden de las etiquetas **```<form>```** y **```<table>```** estan al reves, table debe ayudar a dar forma al formulario, no ser un campo del [mismo](www.geeksforgeeks.org/how-to-use-tables-to-structure-forms/).
 
 > [!WARNING]
-> Como no existe, por ahora, una BD con libros, los datos estan en ```src/App/Controllers/PageController::index()``` y se pasara un elemento de esos libros via **HTTP GET**, mostrando todo eso en la URL. Cuando se tenga BD, el **id** es lo unico que se pasara y libro recibira el resultado del **SELECT**.
+> Como no existe, por ahora, una BD con libros, los datos estan en **```src/App/Controllers/PageController::index()```** y se pasara un elemento de esos libros via **HTTP GET**, mostrando todo eso en la URL. Cuando se tenga BD, el **id** es lo unico que se pasara y libro recibira el resultado del **SELECT**.
 
 > [!WARNING]
-> Tanto el campo Descripcion como ISBN en ```src/App/Views/libro.view.php``` estan 'hardcoded'. Cuando exista BD, el **id** es lo unico que se pasara y libro recibira el resultado del **SELECT**, entre los campos de este estara el ISBN y la Descripcion.
+> Tanto el campo Descripcion como ISBN en **```src/App/Views/libro.view.php```** estan '**HARDCODED**'. Cuando exista BD, el **id** es lo unico que se pasara y libro recibira el resultado del **SELECT**, entre los campos de este estara el ISBN y la Descripcion.
+
+> [!WARNING]
+> En **```src/App/Views/compraDestino.view.php```** se renderiza una tabla que tiene **```<th>```** vacios.
 
 ## TODO:
-- [ ] Hacer que los links **```<a>```**  llamen a ```public/index.php``` ya que automatiza las redirecciones. O ```App/src/Core/Router.php```, pero no se esta seguro o se toco por las dudas.
-- [x] Agregar ```<body>``` a ```src/App/Views/index.view.php```
-- [ ] Faltan de hacer las views (las versiones completas).
-- [x] Las imagenes de las redes sociales deben estar en minuscula, ya que es asi como se generan auto. en ```src/App/Views/parts/footer.view.php```
-- [ ] Darle funcionalidad al **```<form>```** en ```src/App/Views/libro.view.php```.
+- [ ] Hacer que los links **```<a>```**  llamen a **```public/index.php```** ya que automatiza las redirecciones. O **```App/src/Core/Router.php```**, pero no se esta seguro o se toco por las dudas.
+- [x] Agregar **```<body>```** a **```src/App/Views/index.view.php```**.
+- [x] Faltan de hacer las views (las versiones completas).
+- [x] Las imagenes de las redes sociales deben estar en minuscula, ya que es asi como se generan auto. en **```src/App/Views/parts/footer.view.php```**.
+- [ ] Dar funcionalidad al **```<form>```** en **```src/App/Views/libro.view.php```**.
+- [ ] Implementar, en css, la clase 'campo_obligatorio' usado por **```src/App/Views/compraDestino.view.php```**, **```src/App/Views/contacto.view.php```** y probablemente por otros formularios.
 - [ ] Implementar la funcionalidad del carrito de compras.
+- [ ] Implementar los filtros de busqueda en tienda.
+- [ ] Implementar path '**/realizarPedido**' requerido por **```src/App/Views/medioPago.view.php```**.
+- [ ] Sacar los datos '**HARDCODED**' de los libros y migrarlos a una base de datos.
 
 ## Sugerencias
 ### BD Tabla Libro
@@ -29,13 +38,17 @@
 | Autor       | TEXT   | ISBN del libro                           |
 | Precio      | FLOAT  | (no necesariamente en esta tabla)        |
 | Descripcion | TEXT   |                 -                        |
-| src         | TEXT   | path donde se guarda la imagen del libro |
+| src         | TEXT   | Path donde se guarda la imagen del libro |
 
 ### HTML
-* En ```src/App/Views/index.view.php``` hay etiquetas sobre etiquetas que dan la misma informacion redundante, se sugiere sacar lo repetido y, en ultima instancia dar mas participacion a css para que lo renderice.
+* En **```src/App/Views/index.view.php```** hay etiquetas sobre etiquetas (en especial en la seccion de libros) que dan la misma informacion redundante, se sugiere sacar lo repetido y, en ultima instancia dar mas participacion a css para que lo renderice.
 
+# Iniciar el Servidor:
+```
+    php -S localhost:8888 -t public
+```
 
-# Instalacion
+# Instalacion de componentes
 **ATENCION**: con "composer install" deberia solo generar las dependencias, 
 ¿una vez que se instalo una libreria, los demas deben correr composer install en sus maquinas?
 
@@ -50,17 +63,19 @@ Libreria PHP de logueo, cuyas caracteristicas son:
 * __**Niveles Log**__: Definen los diferentes niveles de logueo (e.g., DEBUG, INFO, WARNING, ERROR, CRITICAL) para controlar el grado de 'verbosidad' en los logs.
 * __**Procesadores**__: Permite modificar los registros log antes de ser manejados para, por ejemplo, agregar mas info. de contexto u omitir informacion sensible del proyecto.
 * __**Context**__: Los mensajes log pueden ser mas informativos, incluyendo datos adicionales.
-Instalacion:
+Para instalarlo escribir:
 ```
     composer require monolog/monolog 
 ```
-## COMO LEVANTAR EL SERVER:
-```
-    php -S localhost:8888 -t public
-```
-
-# Arquitectura General
-A continuacion se incluye la vista general del proyecto, se omitio el direcotorio ```logs/``` y las carpetas de contenido estatico por motivos de simplificacion.
+# Consigna
+Agregue la funcionalidad de listado y búsqueda de los libros del catálogo. Para ello, tenga en cuenta que:
+* La base de datos de libros puede estar contenida en un archivo de texto o incluso en el mismo código. Sin embargo, en un próximo trabajo práctico se le pedirá que la traslade a una base de datos.
+* Es importante determinar el método HTTP y el formato del envío de los parámetros de la consulta en la petición de búsqueda.
+* El catálogo se debe presentar de forma paginada. Adicionalmente se debe permitir recuperar la cantidad de registros por página.
+* Determine e implemente el comportamiento del catálogo ante un intento de acceso a un libro inexistente o a una página inexistente.
+* La vista actual del catálogo debe poder descargarse en formato CSV.
+## Arquitectura General
+A continuacion se incluye la vista general del proyecto, se omitio el direcotorio **```logs/```** y las carpetas de contenido estatico por motivos de simplificacion.
 ```
 root/
 ├── public/
@@ -78,12 +93,20 @@ root/
 │   │        ├── parts/
 │   │        │   ├── footer.view.php
 │   │        │   ├── head.view.php
-│   │        │   └── header.view.php
+│   │        │   ├── header.view.php
+│   │        │   └── smallHeader.view.php
 │   │        ├── about.view.php
+│   │        ├── carrito.view.php
+│   │        ├── compraDestino.view.php
 │   │        ├── contact.view.php
 │   │        ├── index.view.php
 │   │        ├── internal-error.php
-│   │        └── not-found.php
+│   │        ├── libro.view.php
+│   │        ├── login.view.php
+│   │        ├── medioPago.view.php
+│   │        ├── not-found.view.php
+│   │        ├── register.view.php
+│   │        └── tienda.php
 │   ├── Core/
 │   │    ├── Exceptions/
 │   │    │    └── RouteNotFoundException.php
@@ -118,47 +141,6 @@ Se configuro un servidor apache para servir en:
 ```
 El problema es que es una implementacion muy casera.
 Se requiere que cada participante configure su propio servidor o usar un contenedor.
-# Consigna
-Agregue la funcionalidad de listado y búsqueda de los libros del catálogo. Para ello, tenga en cuenta que:
-* La base de datos de libros puede estar contenida en un archivo de texto o incluso en el mismo código. Sin embargo, en un próximo trabajo práctico se le pedirá que la traslade a una base de datos.
-* Es importante determinar el método HTTP y el formato del envío de los parámetros de la consulta en la petición de búsqueda.
-* El catálogo se debe presentar de forma paginada. Adicionalmente se debe permitir recuperar la cantidad de registros por página.
-* Determine e implemente el comportamiento del catálogo ante un intento de acceso a un libro inexistente o a una página inexistente.
-* La vista actual del catálogo debe poder descargarse en formato CSV.
-## Arquitectura
-Se coloco los prototipos php para la realizacion del punto 4 del trabajo practico 3, en la carpeta src:
-```
-root
-|  \_public
-|        \_index.php
-+-src
-| | \_App
-| |     \_controllers
-| |    |    \ \_Error.controller.php
-| |    |     \_PageController.php
-| |    +-views
-| |      | \_parts
-| |      |    \ \_footer.view.php
-| |      |     \_header.view.php
-| |      +-Resources
-| |      +-about.view.php
-| |      +-contact.view.php
-| |      +-index.view.php
-| |      +-internal-error.view.php
-| |      +-not-found.view.php
-| +-core
-| |  | \_Exceptions
-| |  |     \_RouteNotFoundException.php
-| |  +-Router.php
-| +-bootstrap.php
-+-composer.json
-
-```
-Aca se detalla una simple implementacion de php para mostrar la categoria seleccionada en un formulario.
-* La base de datos, de momento, esta en un archivo json llamado "books.json"
-* La pagina "main.php" es el punto de ingreso, carga el modelo, el formulario.
-* La pagina "Controlador.php" toma los datos enviados por GET, toma la "libros.json", filtra los resultados y lo envia a "TablaLibro.php"
-* "TablaLibro" recibe datos de "Controlador.php" y renderiza una tabla con los datos suministrados.
 ## Uso
 Si ya esta levantado el servidor apache y estan los permisos configurados, ir a "main.php". Se renderizara un formulario de entrada de datos.
 # Limitaciones
