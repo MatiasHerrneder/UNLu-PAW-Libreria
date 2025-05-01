@@ -1,10 +1,6 @@
 # Cambios/TODO/Sugerencias
-* Se agrego **```src/App/Views/tienda.view.php```** para renderizar 'tienda'.
-* Se agrego **```src/App/Views/compraDestino.view.php```** para renderizar 'libro'.
-* Se agrego una nueva clase '**campo_obligatorio**' en **```src/App/Views/compraDestino.view.php```**  y **```src/App/Views/contacto.view.php```** para indicar los campos obligatorios.
-* Se modifico **```src/App/Views/contacto.view.php```** para renderizar correctamente 'contacto'.
-* Se modifico **```src/App/Views/index.view.php```** para que la lista '**HARDCODED**' de libros sea accesible al resto de las vistas.
-
+* Se agrego la posibilidad de instalar postgres en docker.
+* Falta $libros en Controller o ControllerPage. O directamente hacer un **```SELECT * FROM libros```** desde la BD (llamando al modelo correspondiente).
 > [!WARNING]
 > Carrito no esta del todo implementado requiere toda una solucion 'carrito de compras' con cookies para seleccionar, agregar, acumular total y llegar a 'compra destino'. Ademas el orden de las etiquetas **```<form>```** y **```<table>```** estan al reves, table debe ayudar a dar forma al formulario, no ser un campo del [mismo](www.geeksforgeeks.org/how-to-use-tables-to-structure-forms/).
 
@@ -165,3 +161,37 @@ Una vez que tienen instalado phinx lanzan el siguiente comando en la carpeta rai
 
 Luego de esto el proyecto deberia funcar, en si le falta mucho tramite porque en si no anda el template de la tienda
 pero queda pendiente un discord para charlarlo
+
+# Postgresql
+A continuacion se detallan los pasos para instalar/configurar el motor de bases de datos postgres.
+## Docker
+Para instalarlo en docker se hicieron los siguientes pasos.
+> **Nota:** Los archivos de instalacion/config. estan en la carpeta **```Docker```**
+
+### Build Imagen
+Desde la carpeta docker hacer:
+```
+    docker build -t mi-postgres .
+```
+### Ejecutar contenedor via CLI
+```
+    $ docker run --name <nombre_contenedor> -e POSTGRES_PASSWORD=<contraseña> -d <nombre_contenedor>
+```
+**Ejemplo:**
+```
+    docker run -d --name mi-postgres -p 5432:5432 mi-postgres
+```
+### Abrir CLI
+Una vez que el contenedor se ejecute, usar este comando para interactuar con la CLI.
+```
+    docker exec -it mi-postgres sh
+```
+### Ejecutar (contenedor) psql
+Dentro del CLI del contenedor ejecutar:
+```
+    psql -h <hostname_or_ip> -U <username> [-d <database>]
+```
+**Ejemplo:**
+```
+    psql -h localhost -U postgres
+```

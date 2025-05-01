@@ -41,4 +41,3 @@
 <?php require 'parts/footer.view.php' ?>
 </body>
 </html>
-    
