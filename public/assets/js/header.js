@@ -2,7 +2,7 @@ const navIcons = document.querySelector(".nav-icons")
 const navLinks = document.querySelector(".nav-links")
 const burguer = document.createElement("button")
 const imgBurguer = document.createElement("img")
-imgBurguer.setAttribute("src", "img/menu.png")
+imgBurguer.setAttribute("src", "/assets/img/menu.png")
 imgBurguer.setAttribute("alt", "Menu")
 
 burguer.appendChild(imgBurguer)
