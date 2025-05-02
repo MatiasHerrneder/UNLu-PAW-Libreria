@@ -30,7 +30,7 @@ class Config
         $this->configs['DB_PORT'] = getenv('DB_PORT') ?? '5432';
         $this->configs['DB_CHARSET'] = getenv('DB_CHARSET') ?? 'utf8';
 */
-        echo var_dump($this->configs);
+        //echo var_dump($this->configs);
     }
 
     public function joinPaths()
