@@ -1,6 +1,7 @@
 # Cambios/TODO/Sugerencias
-* Se agrego la posibilidad de instalar postgres en docker.
+* Se agrego datos x defecto a la BD. Se encuentran en **init.sql**.
 * Falta $libros en Controller o ControllerPage. O directamente hacer un **```SELECT * FROM libros```** desde la BD (llamando al modelo correspondiente).
+
 > [!WARNING]
 > Carrito no esta del todo implementado requiere toda una solucion 'carrito de compras' con cookies para seleccionar, agregar, acumular total y llegar a 'compra destino'. Ademas el orden de las etiquetas **```<form>```** y **```<table>```** estan al reves, table debe ayudar a dar forma al formulario, no ser un campo del [mismo](www.geeksforgeeks.org/how-to-use-tables-to-structure-forms/).
 
@@ -173,13 +174,22 @@ Desde la carpeta docker hacer:
 ```
     docker build -t mi-postgres .
 ```
-### Ejecutar contenedor via CLI
+### Borrar contenedor
 ```
-    $ docker run --name <nombre_contenedor> -e POSTGRES_PASSWORD=<contraseña> -d <nombre_contenedor>
+    docker rm -f mi-postgres
+    docker volume prune
 ```
-**Ejemplo:**
+### Levantar contenedor
 ```
     docker run -d --name mi-postgres -p 5432:5432 mi-postgres
+```
+### Test rapido
+```
+    docker exec -it mi-postgres psql -U postgres -d libreria
+```
+### Ver logs del contenedor
+```
+    docker logs <nombre_del_contenedor>
 ```
 ### Abrir CLI
 Una vez que el contenedor se ejecute, usar este comando para interactuar con la CLI.
@@ -189,9 +199,17 @@ Una vez que el contenedor se ejecute, usar este comando para interactuar con la 
 ### Ejecutar (contenedor) psql
 Dentro del CLI del contenedor ejecutar:
 ```
-    psql -h <hostname_or_ip> -U <username> [-d <database>]
-```
-**Ejemplo:**
-```
     psql -h localhost -U postgres
+```
+### Ver tablas (psql)
+```
+    \dt
+```
+### Conectarse libreria (psql)
+```
+    \c libreria
+```
+### Ver la estructura de la tabla (psql)
+```
+    \d libro
 ```
