@@ -21,7 +21,7 @@
         }
     ],
     "require": {
-        "php": ">= 8.4.6",
+        "php": ">= 8.4.2",
         "filp/whoops": "^2.18",
         "monolog/monolog": "^3.9"
     },
